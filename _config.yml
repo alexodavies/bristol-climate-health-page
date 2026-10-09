@@ -24,5 +24,6 @@ defaults:
   - scope: { path: "", type: "posts" }
     values: { layout: "post" }
 
+timezone: Europe/London
 permalink: /blog/:year/:month/:day/:title.html
 exclude: [assets/video/hero.mp4, Gemfile, Gemfile.lock, scripts, README.md, vendor]

@@ -1,0 +1,11 @@
+{%- comment -%} Input: include.m (a member). Sets `photo` (URL path or ""): explicit `image:` (filename in assets/images/people/ or a path), else auto-detects assets/images/people/<file-name>.* {%- endcomment -%}
+{%- assign m = include.m -%}
+{%- assign photo = "" -%}
+{%- if m.image -%}
+  {%- if m.image contains "/" -%}{%- assign photo = m.image -%}{%- else -%}{%- assign photo = "/assets/images/people/" | append: m.image -%}{%- endif -%}
+{%- else -%}
+  {%- assign pslug = m.slug | default: m.name | slugify -%}
+  {%- for f in site.static_files -%}
+    {%- if f.path contains "/assets/images/people/" and f.basename == pslug and photo == "" -%}{%- assign photo = f.path -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

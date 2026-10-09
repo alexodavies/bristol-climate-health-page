@@ -1,0 +1,4 @@
+{%- comment -%} Input: include.slug (member file name). Prints avatar + name; nothing if unknown. {%- endcomment -%}
+{%- for m in site.members -%}{%- if m.slug == include.slug -%}
+<span class="byline">{% include avatar.html m=m %}<a href="{{ m.url | relative_url }}">{{ m.name }}</a></span>
+{%- endif -%}{%- endfor -%}

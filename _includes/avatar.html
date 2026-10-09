@@ -1,0 +1,4 @@
+{%- assign m = include.m -%}
+{%- assign v = m.order | default: 0 | modulo: 2 -%}
+{%- include member-photo.html m=m -%}
+<a class="avatar p{{ v }}" href="{{ m.url | relative_url }}" title="{{ include.title | default: m.name }}">{% if photo != "" %}<img src="{{ photo | relative_url }}" alt="{{ include.title | default: m.name }}" loading="lazy">{% else %}<span aria-hidden="true">{{ m.initials }}</span>{% endif %}</a>

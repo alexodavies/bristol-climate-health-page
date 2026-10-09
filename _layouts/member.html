@@ -18,6 +18,14 @@ layout: default
   </aside>
   <div class="member-main">
     <div class="prose">{{ content }}</div>
+    {%- assign my_posts = site.posts | where: "author", page.slug -%}
+    {% if my_posts.size > 0 %}
+    <h2 class="sub">Posts</h2>
+    <ul class="post-list">
+      {% for p in my_posts %}<li><a href="{{ p.url | relative_url }}"><b>{{ p.title }}</b></a> <small>{{ p.date | date: "%-d %b %Y" }}</small>{% if p.excerpt %}<br><span>{{ p.excerpt | strip_html | strip }}</span>{% endif %}</li>{% endfor %}
+    </ul>
+    <p class="feed-link"><a href="{{ '/members/' | append: page.slug | append: '/feed.xml' | relative_url }}">Subscribe to {{ page.name }}’s posts (Atom feed) ↗</a></p>
+    {% endif %}
     <h2 class="sub">Publications</h2>
     {% if papers.size > 0 %}{% include pub-filter.html %}{% endif %}
     {%- if page.orcid -%}

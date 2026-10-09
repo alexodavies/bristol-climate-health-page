@@ -20,9 +20,7 @@ title: Home
 
 <section id="people" class="people">
   {% include section-head.html eyebrow="02 / People" title="Led across climate science<br><em>&amp; human health.</em>" %}
-  <div class="people-grid">
   {% assign members = site.members | where: "group", "leads" | sort: "order" %}
-  {% for m in members %}{% include member-card.html m=m %}{% endfor %}
-  </div>
+  {% include hex-cluster.html list=members cls="big flat" %}
   <a class="round-link inverse" href="{{ '/team/' | relative_url }}">Meet the team <span>↗</span></a>
 </section>

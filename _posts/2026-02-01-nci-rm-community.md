@@ -2,6 +2,7 @@
 title: Climate impacts & risks community
 tag: Community × impact
 image: /assets/images/systems.jpg
+author: eunice-lo
 link: https://www.climatebristol.org/projects/nci-rm/
 excerpt: Building a national community around climate impacts, adaptation and climate-health research through the NCI-RM meetings.
 ---

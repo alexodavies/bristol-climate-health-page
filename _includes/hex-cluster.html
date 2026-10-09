@@ -1,0 +1,11 @@
+{%- comment -%} Staggered hexagon portraits. Input: include.list (members, already ordered), include.cls (modifier class). Odd members sit up (caption above), even members sit down (caption below). {%- endcomment -%}
+<div class="hexes {{ include.cls }}">
+{%- assign pc = 0 -%}
+{%- for m in include.list -%}
+  {%- assign pc = pc | plus: 1 -%}
+  {%- assign phase = pc | modulo: 2 -%}
+  {%- capture cap -%}<small class="who"><b>{{ m.name }}</b><span>{{ m.title | truncate: 46 }}</span></small>{%- endcapture -%}
+  {%- capture av -%}{% include avatar.html m=m title=m.name %}{%- endcapture -%}
+  {%- if phase == 1 -%}<span class="person up">{{ cap }}{{ av }}</span>{%- else -%}<span class="person down">{{ av }}{{ cap }}</span>{%- endif -%}
+{%- endfor -%}
+</div>

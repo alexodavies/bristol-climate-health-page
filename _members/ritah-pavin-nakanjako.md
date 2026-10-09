@@ -2,6 +2,7 @@
 name: Ritah Pavin Nakanjako
 initials: RN
 role: PhD
+group: phds
 title: Heatwave adaptation & mitigation
 order: 6
 image:

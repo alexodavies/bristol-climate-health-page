@@ -134,6 +134,7 @@
   n_authors: 35
   positions:
     0000-0002-0117-3486: 29
+    0000-0002-7389-7272: 7
 - title: Projected Changes to Tropical Cyclones in the Southwest Indian Ocean Using
     High‐Resolution Global Climate Models
   authors:
@@ -309,10 +310,12 @@
   doi: 10.1088/2752-5309/ae87bf
   orcids:
   - 0000-0002-7389-7272
+  - 0009-0000-4698-5368
   link: https://doi.org/10.1088/2752-5309/ae87bf
   n_authors: 9
   positions:
     0000-0002-7389-7272: 2
+    0009-0000-4698-5368: 1
 - title: Decadal variability of Madden–Julian oscillation teleconnections in a coupled
     climate model
   authors:
@@ -597,13 +600,17 @@
   orcids:
   - 0000-0002-5174-5657
 - title: Towards Addressing Frontiers in Graph Generation
-  authors: []
-  journal: THIRTY-NINTH AAAI CONFERENCE ON ARTIFICIAL INTELLIGENCE, AAAI-25, VOL 39
-    NO 28
+  authors:
+  - Alex O. Davies
+  journal: Proceedings of the AAAI Conference on Artificial Intelligence
   year: 2025
-  doi: null
+  doi: 10.1609/aaai.v39i28.35204
   orcids:
   - 0000-0002-5174-5657
+  link: https://doi.org/10.1609/aaai.v39i28.35204
+  n_authors: 1
+  positions:
+    0000-0002-5174-5657: 1
 - title: 'Acute effects of daylight saving time clock changes on mental and physical
     health in England: population based retrospective cohort study'
   authors:
@@ -640,7 +647,8 @@
   - 0000-0002-7389-7272
   link: https://doi.org/10.1002/qj.70012
   n_authors: 8
-  positions: {}
+  positions:
+    0000-0002-7389-7272: 5
 - title: Sociodemographic vulnerability to cold and stormy weather in relation to
     health and life
   authors:
@@ -765,6 +773,7 @@
   n_authors: 20
   positions:
     0000-0002-0117-3486: 1
+    0000-0002-7389-7272: 2
 - title: Heatwave attribution based on reliable operational weather forecasts
   authors:
   - Nicholas J. Leach
@@ -1325,7 +1334,8 @@
   - 0000-0002-7389-7272
   link: https://doi.org/10.1016/j.puhip.2024.100549
   n_authors: 11
-  positions: {}
+  positions:
+    0000-0002-7389-7272: 5
 - title: Compound mortality impacts from extreme temperatures and pandemics
   authors:
   - Y. T. Eunice Lo
@@ -1597,12 +1607,18 @@
   positions:
     0000-0002-0117-3486: 2
 - title: 'Size Matters: Large Graph Generation with HiGGs'
-  authors: []
+  authors:
+  - Alex O. Davies
+  - Nirav S. Ajmeri
+  - Telmo M. Silva Filho
   journal: ArXiv
   year: 2023
   doi: null
   orcids:
   - 0000-0002-5174-5657
+  n_authors: 3
+  positions:
+    0000-0002-5174-5657: 1
 - title: Predicting future UK nighttime urban heat islands using observed short-term
     variability and regional climate projections
   authors:
@@ -2255,13 +2271,20 @@
   n_authors: 5
   positions:
     0000-0002-0117-3486: 3
-- title: Violence and mental health are likely get worse in a warming world
-  authors: []
+- title: Violence and mental health are likely to get worse in a warming world
+  authors:
+  - Mary Zhang
+  - Dann Mitchell
+  - Vikki Thompson
   journal: null
   year: 2021
-  doi: null
+  doi: 10.64628/ab.nhhppnx6r
   orcids:
   - 0000-0002-0117-3486
+  link: https://doi.org/10.64628/ab.nhhppnx6r
+  n_authors: 3
+  positions:
+    0000-0002-0117-3486: 2
 - title: How will climate change affect UK heatwaves?
   authors:
   - Y. T. Eunice Lo
@@ -2276,6 +2299,7 @@
   n_authors: 2
   positions:
     0000-0002-0117-3486: 2
+    0000-0002-7389-7272: 1
 - title: The Roles of Latent Heating and Dust in the Structure and Variability of
     the Northern Martian Polar Vortex
   authors:
@@ -2578,6 +2602,7 @@
   n_authors: 5
   positions:
     0000-0002-0117-3486: 1
+    0000-0002-7389-7272: 2
 - title: 'U.K. Climate Projections: Summer Daytime and Nighttime Urban Heat Island
     Changes in England’s Major Cities'
   authors:
@@ -2599,6 +2624,7 @@
   n_authors: 8
   positions:
     0000-0002-0117-3486: 2
+    0000-0002-7389-7272: 1
 - title: Global aridity changes due to differences in surface energy and water balance
     between 1.5 °C and 2 °C warming
   authors:
@@ -2656,21 +2682,45 @@
     0000-0002-0117-3486: 2
     0000-0003-2766-9823: 1
 - title: Historical and future anthropogenic warming effects on droughts, fires and
-    fire emissions of CO2 and PM2.5 in equatorial Asia when 2015-like El Niño events
+    fire emissions of CO 2 and PM 2.5 in equatorial Asia when 2015-like El Niño events
     occur
-  authors: []
+  authors:
+  - Hideo Shiogama
+  - Ryuichi Hirata
+  - Tomoko Hasegawa
+  - Shinichiro Fujimori
+  - Noriko N. Ishizaki
+  - Satoru Chatani
+  - Masahiro Watanabe
+  - Daniel Mitchell
+  - Y. T. Eunice Lo
   journal: Earth System Dynamics
   year: 2020
-  doi: null
+  doi: 10.5194/esd-11-435-2020
   orcids:
   - 0000-0002-0117-3486
-- title: Mapping the Zonal Structure of Titan's Northern Polar Vortex
-  authors: []
+  link: https://doi.org/10.5194/esd-11-435-2020
+  n_authors: 9
+  positions:
+    0000-0002-0117-3486: 8
+- title: Mapping the zonal structure of Titan's northern polar vortex
+  authors:
+  - Jason Sharkey
+  - Nicholas A. Teanby
+  - Melody Sylvestre
+  - Dann M. Mitchell
+  - William J.M. Seviour
+  - Conor A. Nixon
+  - Patrick G.J. Irwin
   journal: Icarus
   year: 2020
-  doi: null
+  doi: 10.1016/j.icarus.2019.113441
   orcids:
   - 0000-0002-0117-3486
+  link: https://doi.org/10.1016/j.icarus.2019.113441
+  n_authors: 7
+  positions:
+    0000-0002-0117-3486: 4
 - title: 'The developmental origins of genetic factors influencing language and literacy:
     Associations with early‐childhood vocabulary'
   authors:
@@ -3086,7 +3136,8 @@
   - 0000-0002-7389-7272
   link: https://doi.org/10.5194/esd-11-435-2020
   n_authors: 9
-  positions: {}
+  positions:
+    0000-0002-7389-7272: 9
 - title: Regional hotspots of temperature extremes under 1.5 °C and 2 °C of global
     mean warming
   authors:
@@ -3227,6 +3278,7 @@
   n_authors: 12
   positions:
     0000-0002-0117-3486: 2
+    0000-0002-7389-7272: 1
 - title: The Impact of Human‐Induced Climate Change on Regional Drought in the Horn
     of Africa
   authors:
@@ -4342,7 +4394,8 @@
   - 0000-0002-7389-7272
   link: https://doi.org/10.1038/srep39169
   n_authors: 4
-  positions: {}
+  positions:
+    0000-0002-7389-7272: 1
 - title: 'Solar signals in CMIP‐5 simulations: effects of atmosphere–ocean coupling'
   authors:
   - S. Misios
@@ -4612,7 +4665,8 @@
   - 0000-0002-7389-7272
   link: https://doi.org/10.1016/j.astropartphys.2013.10.003
   n_authors: 11
-  positions: {}
+  positions:
+    0000-0002-7389-7272: 5
 - title: A lagged response to the 11 year solar cycle in observed winter Atlantic/European
     weather patterns
   authors:

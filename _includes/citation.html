@@ -12,7 +12,25 @@
     {%- if v == c.n_authors -%}{%- assign last = 1 -%}{%- endif -%}
   {%- endfor -%}
 {%- endif -%}
-<li class="citation" data-pos="{{ pos }}" data-last="{{ last }}">
+{%- assign people = "" -%}{%- if include.avatars and c.orcids.size > 0 -%}{%- capture people -%}
+    {%- assign pc = 0 -%}
+    {%- for o in c.orcids -%}{%- for m in site.members -%}{%- if m.orcid == o -%}
+      {%- assign ap = c.positions[o] | default: 0 -%}
+      {%- if ap == 1 -%}{%- assign role = "first author" -%}{%- elsif ap > 0 and ap == c.n_authors -%}{%- assign role = "last author" -%}{%- elsif ap > 0 -%}{%- assign role = "author " | append: ap -%}{%- else -%}{%- assign role = "author" -%}{%- endif -%}
+      {%- assign tip = m.name | append: " (" | append: role | append: ")" -%}
+      {%- assign nparts = m.name | split: " " -%}
+      {%- assign pc = pc | plus: 1 -%}
+      {%- assign phase = pc | modulo: 2 -%}
+      {%- capture pname -%}<small><span>{{ nparts.first }} {{ nparts.last }}</span></small>{%- endcapture -%}
+      {%- capture pavatar -%}{% include avatar.html m=m title=tip %}{%- endcapture -%}
+      {%- if phase == 1 -%}<span class="person up">{{ pname }}{{ pavatar }}</span>{%- else -%}<span class="person down">{{ pavatar }}{{ pname }}</span>{%- endif -%}
+    {%- endif -%}{%- endfor -%}{%- endfor -%}
+{%- endcapture -%}{%- endif -%}
+{%- assign people = people | strip -%}
+<li class="citation{% if people != '' %} has-people{% endif %}" data-pos="{{ pos }}" data-last="{{ last }}">
+  {% if people != '' %}<span class="hexes cite-people">{{ people }}</span>{% endif %}
+  <div class="cite-main">
   {% if href != '' %}<a class="cite-title" href="{{ href }}">{{ c.title | escape }}</a>{% else %}<span class="cite-title">{{ c.title | escape }}</span>{% endif %}
-  <span class="cite-meta">{% if c.authors.size > 6 %}{{ c.authors | slice: 0, 5 | join: ", " }} et al.{% else %}{{ c.authors | join: ", " }}{% endif %}{% if c.journal %} · <i>{{ c.journal | escape }}</i>{% endif %}{% if c.year %} · {{ c.year }}{% endif %}</span>
+  <span class="cite-meta">{% if c.authors.size == 0 %}<i>Author list not available</i>{% elsif c.authors.size > 6 %}{{ c.authors | slice: 0, 5 | join: ", " }} et al.{% else %}{{ c.authors | join: ", " }}{% endif %}{% if c.journal %} · <i>{{ c.journal | escape }}</i>{% endif %}{% if c.year %} · {{ c.year }}{% endif %}</span>
+  </div>
 </li>

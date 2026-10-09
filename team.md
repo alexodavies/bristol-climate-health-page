@@ -11,9 +11,7 @@ lede: Led across climate science and human health.
 {% if list.size > 0 %}
 {% include sort-by-surname.html list=list %}
 <h2 class="sub group-head">{{ g.label }}</h2>
-<div class="people-grid wide">
-{% for m in sorted_members %}{% include member-card.html m=m %}{% endfor %}
-</div>
+{% include hex-cluster.html list=sorted_members cls="big" %}
 {% endif %}
 {% endfor %}
 {% assign others = "" | split: "" %}
@@ -21,7 +19,5 @@ lede: Led across climate science and human health.
 {% if others.size > 0 %}
 {% include sort-by-surname.html list=others %}
 <h2 class="sub group-head">Members</h2>
-<div class="people-grid wide">
-{% for m in sorted_members %}{% include member-card.html m=m %}{% endfor %}
-</div>
+{% include hex-cluster.html list=sorted_members cls="big" %}
 {% endif %}

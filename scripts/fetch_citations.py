@@ -6,7 +6,7 @@ _data/sources.yaml. Works are pulled from the public ORCID API, enriched via
 Crossref when a DOI is present, de-duplicated by DOI (fallback: normalised
 title), and tagged with every ORCID iD that lists them.
 """
-import html, json, re, sys, unicodedata, urllib.request
+import difflib, html, json, re, sys, unicodedata, urllib.parse, urllib.request
 from pathlib import Path
 import yaml
 
@@ -36,13 +36,17 @@ def collect_orcids():
 
 
 def member_names():
-    """orcid -> display name, from _members front matter."""
-    names = {}
+    """orcid -> {"name", "aliases"}, from _members front matter.
+
+    `aliases:` (optional) lists other ways the person's name appears on papers,
+    e.g. ["Y. T. Eunice Lo"].
+    """
+    members = {}
     for p in (ROOT / "_members").glob("*.md"):
         fm = front_matter(p)
         if (fm.get("orcid") or "").strip() and fm.get("name"):
-            names[fm["orcid"].strip()] = fm["name"]
-    return names
+            members[fm["orcid"].strip()] = {"name": fm["name"], "aliases": fm.get("aliases") or []}
+    return members
 
 
 def norm(text):
@@ -50,24 +54,35 @@ def norm(text):
     return "".join(c for c in text if not unicodedata.combining(c)).lower().strip()
 
 
-def author_position(raw_authors, orcid, name):
+def name_tokens(text):
+    return [t for t in re.split(r"[\s.\-]+", norm(text)) if t]
+
+
+def author_position(raw_authors, orcid, member):
     """1-based position of a member in the author list, or None.
 
-    Matches the Crossref author ORCID when present, otherwise surname (last word)
-    plus first initial against the member's name.
+    Order of preference: Crossref author ORCID; an exact `aliases:` match; then
+    same surname plus either the member's first name appearing among the given
+    names ("Y. T. Eunice Lo" for Eunice Lo) or the same first initial
+    ("Daniel M. Mitchell" for Dann Mitchell).
     """
     for i, a in enumerate(raw_authors):
         if orcid in (a.get("ORCID") or ""):
             return i + 1
-    parts = norm(name).split()
+    aliases = {tuple(name_tokens(x)) for x in member.get("aliases", [])}
+    parts = norm(member["name"]).split()
     if not parts:
         return None
-    surname, initial = parts[-1], parts[0][:1]
+    surname, first = parts[-1], parts[0]
     for i, a in enumerate(raw_authors):
-        family = norm(a.get("family")).split()
-        given = norm(a.get("given"))
-        if family and family[-1] == surname and given[:1] == initial:
+        # Crossref splits names inconsistently ("Y. T." + "Eunice Lo"), so use all tokens
+        tokens = name_tokens(a.get("given")) + name_tokens(a.get("family"))
+        if tuple(tokens) in aliases:
             return i + 1
+        if len(tokens) > 1 and tokens[-1] == surname:
+            given = tokens[:-1]
+            if first in given or given[0][:1] == first[:1] or first[:1] in [t for t in given if len(t) == 1]:
+                return i + 1
     return None
 
 
@@ -82,9 +97,10 @@ def orcid_dois_and_titles(orcid, types):
             if ext["external-id-type"] == "doi":
                 doi = ext["external-id-value"].lower().removeprefix("https://doi.org/")
                 break
+        put_code = summary.get("put-code")
         title = ((summary.get("title") or {}).get("title") or {}).get("value", "")
         year = ((summary.get("publication-date") or {}).get("year") or {}).get("value")
-        yield doi, title, year, summary.get("journal-title", {}) and summary["journal-title"].get("value")
+        yield doi, title, year, summary.get("journal-title", {}) and summary["journal-title"].get("value"), put_code
 
 
 def clean(text):
@@ -110,6 +126,38 @@ def crossref(doi):
     }
 
 
+def orcid_contributors(orcid, put_code):
+    """Author names listed on the ORCID record itself (often empty)."""
+    try:
+        data = get(f"https://pub.orcid.org/v3.0/{orcid}/work/{put_code}")
+    except Exception:
+        return []
+    out = []
+    for c in (data.get("contributors") or {}).get("contributor") or []:
+        name = (c.get("credit-name") or {}).get("value")
+        if name:
+            if "," in name:  # "Davies, Alex O." -> "Alex O. Davies"
+                family, _, given = name.partition(",")
+                name = f"{given.strip()} {family.strip()}"
+            out.append(name)
+    return out
+
+
+def crossref_search(title):
+    """Best Crossref match for a work that has no DOI on ORCID (title similarity >= 0.93)."""
+    if not title:
+        return None
+    try:
+        items = get("https://api.crossref.org/works?rows=3&query.bibliographic=" + urllib.parse.quote(title))["message"]["items"]
+    except Exception:
+        return None
+    for it in items:
+        t = clean((it.get("title") or [""])[0])
+        if t and difflib.SequenceMatcher(None, norm(t), norm(title)).ratio() >= 0.93:
+            return it
+    return None
+
+
 def main():
     orcids = collect_orcids()
     sources = yaml.safe_load((ROOT / "_data" / "sources.yaml").read_text()) or {}
@@ -124,15 +172,19 @@ def main():
         except Exception as e:
             print(f"! {orcid}: {e}", file=sys.stderr)
             continue
-        for doi, title, year, journal in found:
+        for doi, title, year, journal, put_code in found:
             key = doi or re.sub(r"\W+", "", title.lower())
             if not key:
                 continue
             w = works.setdefault(key, {"title": title, "authors": [], "journal": journal,
-                                       "year": int(year) if year else None, "doi": doi, "orcids": []})
+                                       "year": int(year) if year else None, "doi": doi, "orcids": [],
+                                       "_src": (orcid, put_code)})
             w["orcids"].append(orcid)
     names = member_names()
     for w in works.values():
+        raw = []
+        if not w["doi"] and (hit := crossref_search(w["title"])):
+            w["doi"] = hit["DOI"].lower()
         if w["doi"]:
             info = crossref(w["doi"])
             raw = info.pop("raw_authors", [])
@@ -142,6 +194,16 @@ def main():
             w["link"] = f"https://doi.org/{w['doi']}"
             if raw:
                 # author position of each listed member (1 = first author)
+                w["n_authors"] = len(raw)
+                pos = {o: author_position(raw, o, names[o]) for o in set(w["orcids"]) if o in names}
+                w["positions"] = {o: n for o, n in sorted(pos.items()) if n}
+        src = w.pop("_src", None)
+        if not w["authors"] and src:
+            # no Crossref record: fall back to contributors on the ORCID entry
+            listed = orcid_contributors(*src)
+            if listed:
+                w["authors"] = listed
+                raw = [{"given": " ".join(n.split()[:-1]), "family": n.split()[-1]} for n in listed]
                 w["n_authors"] = len(raw)
                 pos = {o: author_position(raw, o, names[o]) for o in set(w["orcids"]) if o in names}
                 w["positions"] = {o: n for o, n in sorted(pos.items()) if n}

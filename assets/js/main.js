@@ -48,4 +48,13 @@
     };
     sel.addEventListener('change', apply);
   }
+
+  var postSel = document.getElementById('post-filter');
+  if (postSel) {
+    postSel.addEventListener('change', function () {
+      document.querySelectorAll('#post-grid .post-row').forEach(function (a) {
+        a.hidden = postSel.value !== '' && a.dataset.author !== postSel.value;
+      });
+    });
+  }
 })();

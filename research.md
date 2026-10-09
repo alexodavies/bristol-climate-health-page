@@ -18,7 +18,7 @@ lede: Heat, cold and morbidity; attribution and risk; and forecasting for resili
 <div class="year-block">
 <h3 class="year">{{ y }}</h3>
 <ul class="citations">
-  {% for c in sorted %}{% if c.year == y %}{% include citation.html c=c %}{% endif %}{% endfor %}
+  {% for c in sorted %}{% if c.year == y %}{% include citation.html c=c avatars=true %}{% endif %}{% endfor %}
 </ul>
 </div>
 {% endfor %}
