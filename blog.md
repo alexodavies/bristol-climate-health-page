@@ -2,6 +2,7 @@
 permalink: /blog/
 title: Blog
 eyebrow: 03 / Latest
+description: Short, informal summaries of climate and health research from members of the Climate Health group at the University of Bristol.
 lede: Ideas, evidence and updates.
 ---
 {% assign by_author = site.posts | where_exp: "p", "p.author" | group_by: "author" %}

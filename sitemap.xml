@@ -1,0 +1,16 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in site.pages -%}{%- if p.path contains ".md" or p.path contains ".html" -%}{%- if p.sitemap != false and p.url != "/404.html" %}
+  <url><loc>{{ p.url | absolute_url }}</loc></url>
+{%- endif -%}{%- endif -%}{%- endfor -%}
+{%- for m in site.members %}
+  <url><loc>{{ m.url | absolute_url }}</loc></url>
+{%- endfor -%}
+{%- for p in site.posts %}
+  <url><loc>{{ p.url | absolute_url }}</loc><lastmod>{{ p.date | date_to_xmlschema }}</lastmod></url>
+{%- endfor %}
+</urlset>

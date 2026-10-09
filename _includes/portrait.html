@@ -1,4 +1,5 @@
 {%- assign m = include.m -%}
 {%- assign v = m.order | default: 0 | modulo: 2 -%}
 {%- include member-photo.html m=m -%}
-<div class="portrait p{{ v }}">{% if photo != "" %}<img src="{{ photo | relative_url }}" alt="{{ m.name }}" loading="lazy">{% else %}<span aria-hidden="true">{{ m.initials }}</span>{% endif %}</div>
+{%- include member-stage.html m=m -%}
+<div class="portrait p{{ v }} s-{{ stage }}">{% if photo != "" %}<img src="{{ photo | relative_url }}" alt="{{ m.name }}" loading="lazy">{% else %}<span aria-hidden="true">{{ m.initials }}</span>{% endif %}</div>

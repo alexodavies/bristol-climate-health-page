@@ -1,0 +1,46 @@
+{%- comment -%}
+  Title, description, canonical, Open Graph / Twitter tags and JSON-LD. Per-page overrides in front matter:
+  seo_title, description, image.
+{%- endcomment -%}
+{%- assign group_name = "Climate Health, University of Bristol" -%}
+
+{%- comment -%} Title {%- endcomment -%}
+{%- if page.seo_title -%}{%- assign seo_title = page.seo_title -%}
+{%- elsif page.url == "/" -%}{%- assign seo_title = "Climate Health — climate science and health research at the University of Bristol" -%}
+{%- elsif page.layout == "member" -%}{%- assign seo_title = page.name | append: " — " | append: page.title | append: " | " | append: group_name -%}
+{%- elsif page.layout == "post" -%}{%- assign seo_title = page.title | append: " | Climate Health blog, University of Bristol" -%}
+{%- else -%}{%- assign seo_title = page.title | append: " | " | append: group_name -%}{%- endif -%}
+
+{%- comment -%} Description (~155 characters) {%- endcomment -%}
+{%- if page.description -%}{%- assign seo_desc = page.description -%}
+{%- elsif page.layout == "member" -%}{%- assign seo_desc = page.name | append: ", " | append: page.title | append: " in the Climate Health group at the University of Bristol. " | append: page.excerpt | strip_html | strip -%}
+{%- elsif page.layout == "post" and page.excerpt -%}{%- assign seo_desc = page.excerpt | strip_html | strip -%}
+{%- elsif page.lede -%}{%- assign seo_desc = page.lede -%}
+{%- else -%}{%- assign seo_desc = site.description -%}{%- endif -%}
+{%- assign seo_desc = seo_desc | strip_newlines | normalize_whitespace | truncate: 158 -%}
+
+{%- comment -%} Image (absolute URL) {%- endcomment -%}
+{%- assign seo_image = page.image | default: "/assets/images/hero.jpg" -%}
+{%- if page.layout == "member" -%}
+  {%- include member-photo.html m=page -%}
+  {%- if photo != "" -%}{%- assign seo_image = photo -%}{%- endif -%}
+{%- endif -%}
+{%- assign seo_image = seo_image | absolute_url -%}
+{%- assign canonical = page.url | absolute_url -%}
+{%- if page.layout == "member" -%}{%- assign og_type = "profile" -%}{%- elsif page.layout == "post" -%}{%- assign og_type = "article" -%}{%- else -%}{%- assign og_type = "website" -%}{%- endif -%}
+
+<title>{{ seo_title | escape }}</title>
+<meta name="description" content="{{ seo_desc | escape }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:site_name" content="Climate Health, University of Bristol">
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:title" content="{{ seo_title | escape }}">
+<meta property="og:description" content="{{ seo_desc | escape }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ seo_image }}">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ seo_title | escape }}">
+<meta name="twitter:description" content="{{ seo_desc | escape }}">
+<meta name="twitter:image" content="{{ seo_image }}">
+{% include jsonld.html seo_desc=seo_desc seo_image=seo_image canonical=canonical %}

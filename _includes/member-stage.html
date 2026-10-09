@@ -1,0 +1,10 @@
+{%- comment -%} Input: include.m. Sets `stage` (phd | postdoc | later) for the ring colour: the member's `stage:` if set, else derived from `group:`. {%- endcomment -%}
+{%- assign stage = include.m.stage -%}
+{%- unless stage -%}
+  {%- case include.m.group -%}
+    {%- when "leads" -%}{%- assign stage = "later" -%}
+    {%- when "postdocs" -%}{%- assign stage = "postdoc" -%}
+    {%- when "phds" -%}{%- assign stage = "phd" -%}
+    {%- else -%}{%- assign stage = "none" -%}
+  {%- endcase -%}
+{%- endunless -%}

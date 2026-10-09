@@ -77,10 +77,12 @@ a.card:hover{transform:translateY(-8px)}
 .people-col{flex:none;max-width:100%}
 .people-sub{font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.2vw,34px);letter-spacing:-.03em;line-height:1;margin:0 0 2rem;padding-bottom:.7rem;border-bottom:1px solid #17352b44}
 .people-split .hexes.big.flat{--w:clamp(180px,15vw,260px);--cap:84px;flex:none}
-.honeycomb{--w:clamp(110px,12.3vw,200px);--h:calc(var(--w)*.866);--g:5px;display:flex;flex:none}
-.hc-col{display:flex;flex-direction:column;gap:var(--g);margin-right:calc(var(--w)*-.25 + var(--g))}
+.honeycomb{--w:clamp(110px,12.3vw,200px);--h:calc(var(--w)*.866);display:flex;flex:none}
+/* neighbours touch edge to edge; --ov (1px) is a hairline overlap that hides anti-aliasing seams while both rings stay fully visible */
+.hc-col{display:flex;flex-direction:column;margin-right:calc(var(--w)*-.25 - var(--ov)*.866)}
 .hc-col:last-child{margin-right:0}
-.hc-col:nth-child(even){margin-top:calc(var(--h)/2 + var(--g)/2)}
+.hc-col:nth-child(even){margin-top:calc(var(--h)/2 - var(--ov)*.5)}
+.hc-hex{margin-bottom:calc(var(--ov)*-1)}
 .hc-hex{position:relative;display:block;width:var(--w);height:var(--h);overflow:hidden;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);-webkit-clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);color:#fff;transition:transform .25s}
 .hc-hex img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hc-hex:hover{transform:scale(1.06);z-index:2}
@@ -131,8 +133,8 @@ footer small a{text-decoration:underline}
 .avatar img{width:100%;height:100%;object-fit:cover}
 .hexes{--w:84px;--h:calc(var(--w)*.866);--cap:16px;display:flex;flex-wrap:wrap;align-items:flex-start}
 .cite-people{flex-wrap:nowrap}
-.person{display:flex;flex-direction:column;align-items:center;width:var(--w);flex:none;margin-right:calc(var(--w)*-.25 + 5px)}
-.person.down{margin-top:calc(var(--cap) + var(--h)/2 + 2.5px)}
+.person{display:flex;flex-direction:column;align-items:center;width:var(--w);flex:none;margin-right:calc(var(--w)*-.25 - var(--ov)*.866)}
+.person.down{margin-top:calc(var(--cap) + var(--h)/2 - var(--ov)*.5)}
 .person small{display:flex;justify-content:center;width:var(--w);height:var(--cap);line-height:var(--cap);font-size:11.5px;white-space:nowrap;opacity:.85}
 .hexes .avatar{width:var(--w);height:var(--h);margin:0;font-size:calc(var(--w)*.26);transition:transform .25s}
 .hexes .avatar:hover{transform:scale(1.07);z-index:2}
@@ -181,9 +183,9 @@ footer small a{text-decoration:underline}
 a.cite-title:hover{color:var(--rust)}
 .cite-meta{font-size:13px;opacity:.75;line-height:1.5}
 .citation.has-people{grid-template-columns:230px 1fr;gap:1.8rem;align-items:center;padding:1.3rem 0}
-.member{display:grid;grid-template-columns:minmax(220px,1fr) 3fr;gap:4vw}
-.member aside .portrait{max-width:340px;aspect-ratio:1/.866;border-radius:0;-webkit-clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
-.member aside .portrait span{font-size:80px}
+.member{display:grid;grid-template-columns:minmax(300px,5fr) 7fr;gap:5vw;align-items:start}
+.member aside .portrait{width:100%;max-width:560px;aspect-ratio:1/.866;border-radius:0;-webkit-clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.member aside .portrait span{font-size:clamp(80px,9vw,150px)}
 .member-links{list-style:none;padding:0;margin:1.5rem 0;display:flex;flex-direction:column;gap:.6rem;font-size:14px}
 .member-links a{border-bottom:1px solid;padding-bottom:2px}
 .inverse-pill{border-color:var(--ink)}
@@ -193,6 +195,27 @@ a.cite-title:hover{color:var(--rust)}
 .js .reveal.visible{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}a.card:hover{transform:none}}
 
+/* career-stage rings: a coloured hexagon with the photo hexagon inset inside it */
+:root{--ov:1px;--hex:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.avatar,.hc-hex,.member aside .portrait{--ring:var(--sage)}
+.s-phd{--ring:#8a9d7d}
+.s-postdoc{--ring:#17352b}
+.s-later{--ring:#bd6848}
+.member aside .portrait.s-phd{--ring:#8a9d7d}
+.member aside .portrait.s-postdoc{--ring:#17352b}
+.member aside .portrait.s-later{--ring:#bd6848}
+.avatar,.hc-hex,.member aside .portrait{--bw:2px;position:relative}
+.hexes .avatar,.hc-hex{--bw:calc(var(--w)*.03)}
+.member aside .portrait{--bw:clamp(9px,1.1vw,16px)}
+.avatar.p0,.avatar.p1,.hc-hex.p0,.hc-hex.p1,.member aside .portrait.p0,.member aside .portrait.p1{background:var(--ring)}
+.avatar img,.hc-hex img,.member aside .portrait img,.avatar>span,.hc-initials,.member aside .portrait>span{position:absolute;top:var(--bw);bottom:var(--bw);left:calc(var(--bw)*1.1547);right:calc(var(--bw)*1.1547);width:auto;height:auto;-webkit-clip-path:var(--hex);clip-path:var(--hex);object-fit:cover}
+.avatar img,.hc-hex img,.member aside .portrait img{width:calc(100% - var(--bw)*2.3094);height:calc(100% - var(--bw)*2)}
+.avatar>span,.hc-initials,.member aside .portrait>span{display:grid;place-items:center;opacity:1;color:var(--cream)}
+.avatar.p0>span,.portrait.p0>span,.hc-hex.p0>.hc-initials{background:linear-gradient(30deg,#d5c46c,#75916b)}
+.avatar.p1>span,.portrait.p1>span,.hc-hex.p1>.hc-initials{background:linear-gradient(150deg,#38594d,#9ba979)}
+.hc-hex:after{top:var(--bw);bottom:var(--bw);left:calc(var(--bw)*1.1547);right:calc(var(--bw)*1.1547);inset:var(--bw) calc(var(--bw)*1.1547);-webkit-clip-path:var(--hex);clip-path:var(--hex)}
+.ring-key{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;font-size:13px;margin:0 0 2rem}
+.ring-key span:before{content:"";display:inline-block;width:18px;height:16px;margin-right:.55rem;vertical-align:-3px;background:var(--ring);-webkit-clip-path:var(--hex);clip-path:var(--hex)}
 @media(max-width:800px){
 .nav{height:84px}
 .uob{padding-left:1rem;margin-left:1rem}
@@ -217,6 +240,7 @@ footer p:nth-of-type(2){grid-column:1/-1}
 .page-hero h1{font-size:18vw}
 .page-body{padding:12vw 6vw}
 .member{grid-template-columns:1fr}
+.member aside .portrait{max-width:420px}
 .citation.has-people{grid-template-columns:1fr;gap:.8rem}
 .cite-people{--w:68px;padding-bottom:.2rem}
 .hexes.big{--w:128px;--cap:62px}

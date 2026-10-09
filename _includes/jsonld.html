@@ -1,0 +1,39 @@
+{%- comment -%} Structured data (schema.org JSON-LD): organisation on the home page, Person on profiles, BlogPosting on posts, ScholarlyArticle list on Research. {%- endcomment -%}
+{%- assign uob = '{"@type":"CollegeOrUniversity","name":"University of Bristol","url":"https://www.bristol.ac.uk/"}' -%}
+{%- if page.url == "/" -%}
+{%- assign people = "" -%}
+{%- for m in site.members -%}
+  {%- capture one -%}{"@type":"Person","name":{{ m.name | jsonify }},"jobTitle":{{ m.title | jsonify }},"url":{{ m.url | absolute_url | jsonify }}}{%- endcapture -%}
+  {%- if forloop.first -%}{%- assign people = one -%}{%- else -%}{%- capture people -%}{{ people }},{{ one }}{%- endcapture -%}{%- endif -%}
+{%- endfor -%}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ResearchOrganization","name":"Climate Health research group","alternateName":"Climate Change and Health, University of Bristol","url":{{ '/' | absolute_url | jsonify }},"description":{{ site.description | jsonify }},"parentOrganization":{{ uob }},"email":{{ site.email | jsonify }},"knowsAbout":["climate change","extreme weather","human health","heatwave mortality","climate attribution","epidemiology","climate impacts"],"member":[{{ people }}]}
+</script>
+{%- elsif page.layout == "member" -%}
+{%- assign same = "" -%}
+{%- if page.links.profile -%}{%- capture same -%}{{ page.links.profile | jsonify }}{%- endcapture -%}{%- endif -%}
+{%- if page.orcid -%}{%- assign o = "https://orcid.org/" | append: page.orcid -%}{%- if same == "" -%}{%- capture same -%}{{ o | jsonify }}{%- endcapture -%}{%- else -%}{%- capture same -%}{{ same }},{{ o | jsonify }}{%- endcapture -%}{%- endif -%}{%- endif -%}
+{%- if page.links.scholar -%}{%- if same == "" -%}{%- capture same -%}{{ page.links.scholar | jsonify }}{%- endcapture -%}{%- else -%}{%- capture same -%}{{ same }},{{ page.links.scholar | jsonify }}{%- endcapture -%}{%- endif -%}{%- endif -%}
+{%- if page.links.github -%}{%- if same == "" -%}{%- capture same -%}{{ page.links.github | jsonify }}{%- endcapture -%}{%- else -%}{%- capture same -%}{{ same }},{{ page.links.github | jsonify }}{%- endcapture -%}{%- endif -%}{%- endif -%}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":{{ page.name | jsonify }},"jobTitle":{{ page.title | jsonify }},"url":{{ include.canonical | jsonify }},"image":{{ include.seo_image | jsonify }},"description":{{ include.seo_desc | jsonify }},"affiliation":{{ uob }},"worksFor":{"@type":"ResearchOrganization","name":"Climate Health research group","url":{{ '/' | absolute_url | jsonify }},"parentOrganization":{{ uob }}},"sameAs":[{{ same }}]}
+</script>
+{%- elsif page.layout == "post" -%}
+{%- assign au = nil -%}
+{%- for m in site.members -%}{%- if m.slug == page.author -%}{%- assign au = m -%}{%- endif -%}{%- endfor -%}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ page.title | jsonify }},"description":{{ include.seo_desc | jsonify }},"datePublished":{{ page.date | date_to_xmlschema | jsonify }},"image":{{ include.seo_image | jsonify }},"mainEntityOfPage":{{ include.canonical | jsonify }},"author":{% if au %}{"@type":"Person","name":{{ au.name | jsonify }},"url":{{ au.url | absolute_url | jsonify }}}{% else %}{"@type":"ResearchOrganization","name":"Climate Health research group"}{% endif %},"publisher":{{ uob }}{% if page.paper %},"citation":{{ page.paper | prepend: "https://doi.org/" | jsonify }}{% endif %}}
+</script>
+{%- elsif page.url == "/research/" -%}
+{%- assign arts = "" -%}
+{%- for c in site.data.citations -%}
+  {%- assign names = "" -%}
+  {%- for a in c.authors -%}{%- capture n -%}{"@type":"Person","name":{{ a | jsonify }}}{%- endcapture -%}{%- if forloop.first -%}{%- assign names = n -%}{%- else -%}{%- capture names -%}{{ names }},{{ n }}{%- endcapture -%}{%- endif -%}{%- endfor -%}
+  {%- if c.link -%}{%- assign u = c.link -%}{%- elsif c.doi -%}{%- assign u = "https://doi.org/" | append: c.doi -%}{%- else -%}{%- assign u = "" -%}{%- endif -%}
+  {%- capture one -%}{"@type":"ScholarlyArticle","name":{{ c.title | jsonify }}{% if c.year %},"datePublished":{{ c.year | append: "" | jsonify }}{% endif %}{% if u != "" %},"url":{{ u | jsonify }},"sameAs":{{ u | jsonify }}{% endif %}{% if c.journal %},"isPartOf":{"@type":"Periodical","name":{{ c.journal | jsonify }}}{% endif %}{% if names != "" %},"author":[{{ names }}]{% endif %}}{%- endcapture -%}
+  {%- if forloop.first -%}{%- assign arts = one -%}{%- else -%}{%- capture arts -%}{{ arts }},{{ one }}{%- endcapture -%}{%- endif -%}
+{%- endfor -%}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{{ arts }}]}
+</script>
+{%- endif -%}

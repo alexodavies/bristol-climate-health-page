@@ -6,8 +6,9 @@
   {%- assign slot = idx | modulo: per_col -%}
   {%- if slot == 0 -%}<div class="hc-col">{%- endif -%}
   {%- include member-photo.html m=m -%}
+  {%- include member-stage.html m=m -%}
   {%- assign v = m.order | default: 0 | modulo: 2 -%}
-  <a class="hc-hex p{{ v }}" role="listitem" href="{{ m.url | relative_url }}" title="{{ m.name }} · {{ m.title }}">
+  <a class="hc-hex p{{ v }} s-{{ stage }}" role="listitem" href="{{ m.url | relative_url }}" title="{{ m.name }} · {{ m.title }}">
     {%- if photo != "" -%}<img src="{{ photo | relative_url }}" alt="" loading="lazy">{%- else -%}<span class="hc-initials" aria-hidden="true">{{ m.initials }}</span>{%- endif -%}
     <span class="hc-name">{{ m.name }}</span>
   </a>

@@ -2,6 +2,7 @@
 permalink: /research/
 title: Research
 eyebrow: 01 / Research
+description: Research by the Climate Health group at the University of Bristol on heat, cold and health, climate change attribution, and forecasting for health resilience, with an up-to-date list of publications.
 lede: Heat, cold and morbidity; attribution and risk; and forecasting for resilience. Publications below update automatically from the group's ORCID records.
 ---
 <div class="cards light">
@@ -11,6 +12,7 @@ lede: Heat, cold and morbidity; attribution and risk; and forecasting for resili
 </div>
 
 <h2 class="sub">Publications</h2>
+{% include ring-key.html %}
 {% include pub-filter.html %}
 {% assign sorted = site.data.citations | sort: "year" | reverse %}
 {% assign years = sorted | map: "year" | uniq %}

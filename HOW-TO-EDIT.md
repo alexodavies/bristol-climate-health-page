@@ -73,6 +73,7 @@ Write your bio here as normal text. Leave a blank line between paragraphs.
 | `role` | Your short role, for example Research Staff or PhD Student |
 | `title` | Your full job title, shown under your name on the Team page |
 | `group` | Which section of the Team page you appear in: `leads`, `postdocs` or `phds` |
+| `stage` | Optional. The colour of the ring round your photo: `phd`, `postdoc` or `later` (later career). If you leave it out, it follows your `group` |
 | `order` | A number, only used for ordering on the home page. Leave it as it is |
 | `orcid` | Your ORCID iD, which fills in your publications (see section 3) |
 | `links` | Your profile links (`profile`, `github`, `scholar` and `email`). Leave a link blank if you don't have one, or delete the line. Write any email address as `first dot last at bristol.ac.uk` (see below) |

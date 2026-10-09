@@ -4,6 +4,7 @@ initials: CS
 role: Research Staff
 title: Research Fellow
 group: postdocs
+stage: later   # ring colour: phd, postdoc or later (defaults from group)
 order: 4
 image:
 orcid: 0000-0002-5797-1241

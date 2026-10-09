@@ -1,0 +1,9 @@
+---
+layout: null
+sitemap: false
+---
+# Everything is public and may be indexed, including by AI search crawlers.
+User-agent: *
+Allow: /
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}

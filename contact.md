@@ -2,6 +2,7 @@
 permalink: /contact/
 title: Contact
 eyebrow: Join the community
+description: Contact the Climate Health group at the University of Bristol about research collaborations, partnerships, opportunities and events.
 lede: We welcome collaborators working across climate science, epidemiology, health data, public health, weather services and health-system resilience.
 ---
 <p class="prose">Get in touch about research, partnerships, opportunities and events.</p>

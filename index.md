@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+description: Climate Health is a University of Bristol research group studying how climate change and extreme weather affect human health, from heatwave mortality to long-term health burdens.
 ---
 <section class="hero">
   <div class="hero-photo" role="img" aria-label="Landscape and weather"></div>
@@ -30,6 +31,7 @@ title: Home
     {%- for m in sorted_members -%}{%- assign rest = rest | push: m -%}{%- endfor -%}
   {%- endunless -%}{%- endfor -%}
   {%- for m in all -%}{%- unless ids contains m.group -%}{%- assign rest = rest | push: m -%}{%- endunless -%}{%- endfor %}
+  {% include ring-key.html %}
   <div class="people-split">
     <div class="people-col">
       <h3 class="people-sub">Team leads</h3>
