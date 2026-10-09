@@ -152,7 +152,7 @@
   n_authors: 5
   positions:
     0000-0002-0117-3486: 4
-- title: 'Topology only pre-training: towards generalised multi-domain graph models'
+- title: Topology only pre-training
   authors:
   - Alex O. Davies
   - Riku Green
@@ -160,10 +160,10 @@
   - Nirav Ajmeri
   journal: Data Mining and Knowledge Discovery
   year: 2026
-  doi: 10.1007/s10618-026-01210-1
+  doi: 10.48550/arxiv.2311.03976
   orcids:
   - 0000-0002-5174-5657
-  link: https://doi.org/10.1007/s10618-026-01210-1
+  link: https://doi.org/10.48550/arxiv.2311.03976
   n_authors: 4
   positions:
     0000-0002-5174-5657: 1
@@ -596,9 +596,10 @@
   authors: []
   journal: Arxiv
   year: 2025
-  doi: null
+  doi: 10.48550/arxiv.2501.19137
   orcids:
   - 0000-0002-5174-5657
+  link: https://doi.org/10.48550/arxiv.2501.19137
 - title: Towards Addressing Frontiers in Graph Generation
   authors:
   - Alex O. Davies
@@ -1613,9 +1614,10 @@
   - Telmo M. Silva Filho
   journal: ArXiv
   year: 2023
-  doi: null
+  doi: 10.48550/arxiv.2306.11412
   orcids:
   - 0000-0002-5174-5657
+  link: https://doi.org/10.48550/arxiv.2306.11412
   n_authors: 3
   positions:
     0000-0002-5174-5657: 1
