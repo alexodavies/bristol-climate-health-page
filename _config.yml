@@ -26,4 +26,4 @@ defaults:
 
 timezone: Europe/London
 permalink: /blog/:year/:month/:day/:title.html
-exclude: [assets/video/hero.mp4, Gemfile, Gemfile.lock, scripts, README.md, vendor]
+exclude: [assets/video/hero.mp4, Gemfile, Gemfile.lock, scripts, README.md, HOW-TO-EDIT.md, vendor]

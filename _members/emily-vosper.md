@@ -11,6 +11,9 @@ links:
   profile: 
   github:
   scholar:
+  # Email (optional): spam crawlers harvest plain addresses, so write it like
+  # "first dot last at bristol.ac.uk" and the site turns it into a working link.
+  email:
 summary: Climate and AI 
 ---
 My interest lies in how we can apply AI in a meaningful way to help navigate the climate crisis. My work involves applying interpretable machine learning techniques to develop models that aid in climate risk estimation.

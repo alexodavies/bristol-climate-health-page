@@ -2,6 +2,8 @@
 
 Jekyll site (Greene Lab template structure, custom styling).
 
+**Team members: see [HOW-TO-EDIT.md](HOW-TO-EDIT.md)** for step-by-step instructions (no coding needed).
+
 - Add a person: create `_members/<name>.md` (copy an existing one); set `orcid:` to enable auto-publications.
 - Publications: `python3 scripts/fetch_citations.py` (also runs weekly via GitHub Actions) writes `_data/citations.yaml`.
 - Run locally: `bundle install && bundle exec jekyll serve --baseurl ""`.

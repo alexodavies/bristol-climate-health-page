@@ -11,6 +11,9 @@ links:
   profile: https://www.bristol.ac.uk/people/person/Daniel-Skinner-eb057bf1-af14-4b9d-96a2-7dd83ba11d28/
   github:
   scholar:
+  # Email (optional): spam crawlers harvest plain addresses, so write it like
+  # "first dot last at bristol.ac.uk" and the site turns it into a working link.
+  email:
 summary: Senior Research Associate (BREATHE) 
 ---
 I am a climate modeller with wide-ranging interests across weather and climate science. In particular, my more recent work has focussed on the use of intermediate-complexity climate models to run fast and flexible simulations with a focus on gaining a mechanistic understanding of various processes within the climate system. In my current project, BREATHE, I will be running counter-factual historical climate simulations on the HadCM3 model to assess the impacts of climate change on health around the globe.

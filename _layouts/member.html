@@ -13,6 +13,7 @@ layout: default
       {% if page.links.profile %}<li><a href="{{ page.links.profile }}">Bristol profile ↗</a></li>{% endif %}
       {% if page.orcid %}<li><a href="https://orcid.org/{{ page.orcid }}">ORCID ↗</a></li>{% endif %}
       {% if page.links.scholar %}<li><a href="{{ page.links.scholar }}">Google Scholar ↗</a></li>{% endif %}
+      {% if page.links.email %}{% if page.links.email contains "@" %}<li><a href="mailto:{{ page.links.email }}">Email ↗</a></li>{% else %}<li><span class="email-obf" data-email="{{ page.links.email | escape }}">{{ page.links.email | escape }}</span></li>{% endif %}{% endif %}
       {% if page.links.github %}<li><a href="{{ page.links.github }}">GitHub ↗</a></li>{% endif %}
     </ul>
   </aside>

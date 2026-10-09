@@ -11,6 +11,9 @@ links:
   profile: 
   github:
   scholar:
+  # Email (optional): spam crawlers harvest plain addresses, so write it like
+  # "first dot last at bristol.ac.uk" and the site turns it into a working link.
+  email:
 summary:  Biological Sciences 
 ---
 I am currently pursuing my PhD, focusing on the impact of maternal heat exposure on preterm birth rates. My research utilises both human data and Diploptera punctata as a model organism. Having obtained a background in Biochemistry (BSc) and Medical Biosciences (MSc), my research interest developed into investigating the effects of the maternal environment on progeny and understanding the mechanisms at play.

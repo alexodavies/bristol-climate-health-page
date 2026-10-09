@@ -11,6 +11,9 @@ links:
   profile: https://www.bristol.ac.uk/people/person/Dann-Mitchell-51346d57-cdcb-499b-b1ee-671d243f4fb1/
   github:
   scholar:
+  # Email (optional): spam crawlers harvest plain addresses, so write it like
+  # "first dot last at bristol.ac.uk" and the site turns it into a working link.
+  email:
 summary: Met Office Chair in Climate Hazards 
 ---
 In 2016 I joined the University of Bristol faculty and established the Bristol Climate Dynamics group. Before joining Bristol I undertook 4 years of postdoctoral research in the University of Oxford’s Department of Physics (AOPP), having already completed a PhD in the University of Reading’s Meteorology department.

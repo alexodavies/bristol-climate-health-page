@@ -11,6 +11,9 @@ links:
   profile:
   github:
   scholar:
+  # Email (optional): spam crawlers harvest plain addresses, so write it like
+  # "first dot last at bristol.ac.uk" and the site turns it into a working link.
+  email:
 summary: Epidemiology and Medical Statistics 
 ---
 I am a Research Fellow at the MRC Integrative Epidemiology Unit. My research interest is in the relationship of climate change on human health. To bridge the gap between the two research fields, I started collaborating with colleagues in Bristol Climate Dynamics Group in 2023. Within the group, I have been investigating the impacts of extreme temperatures on human mortality and hospitalisation, and predicting future heat-related mortality using heatwave attribution data.

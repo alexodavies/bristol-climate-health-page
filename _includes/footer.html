@@ -11,5 +11,6 @@
     {% if site.social.twitter != "" %}<a href="{{ site.social.twitter }}">Twitter</a>{% endif %}
     {% if site.social.youtube != "" %}<a href="{{ site.social.youtube }}">YouTube</a>{% endif %}
   </div>
-  <small>© {{ 'now' | date: '%Y' }} University of Bristol · Hero video: <a href="https://science.nasa.gov/earth/europes-scorching-summer/">NASA Earth Observatory, “Europe’s Scorching Summer”</a> · Site structure after the <a href="https://github.com/greenelab/lab-website-template">Lab Website Template</a></small>
+  <p class="site-credit">Website by {% include byline.html slug="alex-davies" %}<span class="credit-sep">·</span><span>Site structure after the <a href="https://github.com/greenelab/lab-website-template">Lab Website Template</a> by the <a href="https://greenelab.com/">Greene Lab</a></span></p>
+  <small>© {{ 'now' | date: '%Y' }} University of Bristol · Hero video: <a href="https://science.nasa.gov/earth/europes-scorching-summer/">NASA Earth Observatory, “Europe’s Scorching Summer”</a></small>
 </footer>

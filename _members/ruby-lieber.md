@@ -11,6 +11,9 @@ links:
   profile: https://www.climatebristol.org/people/ruby-lieber/
   github:
   scholar:
+  # Email (optional): spam crawlers harvest plain addresses, so write it like
+  # "first dot last at bristol.ac.uk" and the site turns it into a working link.
+  email:
 summary:  Senior Research Associate (BREATHE) 
 ---
 I am a postdoctoral research associate with expertise in climate variability, climate change and extreme weather. I am interested in exploring the impacts of extreme weather and climate on people and society both historically and in the future using global climate model simulations. My current work focuses on understanding the health impacts of climate change and climate extremes.

@@ -57,4 +57,14 @@
       });
     });
   }
+
+  // "first dot last at bristol.ac.uk" -> a working mailto link (built in the browser so crawlers don't see an address)
+  document.querySelectorAll('.email-obf').forEach(function (el) {
+    var addr = (el.dataset.email || '').trim().replace(/\s+dot\s+/gi, '.').replace(/\s+at\s+/i, '@');
+    if (addr.indexOf('@') < 1) return;
+    var a = document.createElement('a');
+    a.href = 'mailto:' + addr;
+    a.textContent = 'Email \u2197';
+    el.replaceWith(a);
+  });
 })();

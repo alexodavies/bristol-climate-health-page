@@ -88,7 +88,12 @@ a.card:hover{transform:translateY(-8px)}
 footer{background:var(--deep);color:var(--cream);padding:5vw 4vw;display:grid;grid-template-columns:1fr 1fr 2fr 1fr;gap:2rem;align-items:start}
 footer p{font-size:13px;line-height:1.5;margin:0}
 footer div:last-of-type{display:flex;flex-direction:column;gap:.5rem;font-size:13px}
-footer small{grid-column:1/-1;margin-top:5rem;opacity:.5}
+.site-credit{grid-column:1/-1;display:flex;align-items:center;gap:.9rem;margin-top:3rem !important;font-size:14px !important}
+.site-credit{flex-wrap:wrap}
+.site-credit .byline{font-size:15px;gap:.7rem}
+.site-credit a:not(.avatar){text-decoration:underline;text-underline-offset:3px}
+.credit-sep{opacity:.5}
+footer small{grid-column:1/-1;margin-top:1.5rem;opacity:.5}
 footer small a{text-decoration:underline}
 
 /* inner pages */
@@ -108,7 +113,7 @@ footer small a{text-decoration:underline}
 .sub{font-family:var(--serif);font-weight:500;font-size:clamp(36px,4vw,60px);letter-spacing:-.04em;margin:3rem 0 1rem}
 .pub-filter{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:0 0 1.5rem;font-size:14px}
 .pub-filter select{font:inherit;padding:8px 12px;border:1px solid var(--ink);border-radius:100px;background:var(--cream);color:var(--ink)}
-.avatar{display:inline-grid;place-items:center;width:44px;height:38px;overflow:hidden;font-size:12px;font-weight:600;color:var(--cream);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.avatar{display:inline-grid;place-items:center;width:44px;height:38px;overflow:hidden;font-size:12px;font-weight:600;color:var(--cream);-webkit-clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
 .avatar img{width:100%;height:100%;object-fit:cover}
 .hexes{--w:84px;--h:calc(var(--w)*.866);--cap:16px;display:flex;flex-wrap:wrap;align-items:flex-start}
 .cite-people{flex-wrap:nowrap}
@@ -163,7 +168,7 @@ a.cite-title:hover{color:var(--rust)}
 .cite-meta{font-size:13px;opacity:.75;line-height:1.5}
 .citation.has-people{grid-template-columns:230px 1fr;gap:1.8rem;align-items:center;padding:1.3rem 0}
 .member{display:grid;grid-template-columns:minmax(220px,1fr) 3fr;gap:4vw}
-.member aside .portrait{max-width:340px;aspect-ratio:1/.866;border-radius:0;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.member aside .portrait{max-width:340px;aspect-ratio:1/.866;border-radius:0;-webkit-clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
 .member aside .portrait span{font-size:80px}
 .member-links{list-style:none;padding:0;margin:1.5rem 0;display:flex;flex-direction:column;gap:.6rem;font-size:14px}
 .member-links a{border-bottom:1px solid;padding-bottom:2px}
