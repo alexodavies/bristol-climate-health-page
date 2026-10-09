@@ -1,8 +1,0 @@
-{%- assign m = include.m -%}
-<article>
-  <a href="{{ m.url | relative_url }}" class="portrait-link">{% include portrait.html m=m %}</a>
-  <h3>{{ m.name }}</h3>
-  <p>{{ m.role }} · {{ m.title }}</p>
-  <p class="bio">{{ m.summary }}</p>
-  <a class="profile-link" href="{{ m.url | relative_url }}">Profile →</a>
-</article>
