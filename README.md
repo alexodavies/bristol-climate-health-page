@@ -1,5 +1,7 @@
 # Climate Health — University of Bristol
 
+[Go to live page](https://alexodavies.github.io/bristol-climate-health-page/)
+
 Jekyll site (Greene Lab template structure, custom styling).
 
 **Team members: see [HOW-TO-EDIT.md](HOW-TO-EDIT.md)** for step-by-step instructions (no coding needed).
