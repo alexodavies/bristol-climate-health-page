@@ -11,13 +11,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--acid);outline-offse
 img{max-width:100%}
 
 /* nav */
-.nav{height:88px;position:absolute;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;padding:0 3.5vw;color:var(--cream);background:#17352bcc;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid #f2efe433}
+.nav{height:104px;position:absolute;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;padding:0 3.5vw;color:var(--cream);background:#17352bcc;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid #f2efe433}
 .nav.stuck{position:fixed;background:#17352bf2}
 .nav,.nav a,.nav .menu{color:#fff}
 .uob{display:flex;align-items:center;padding-left:1.4rem;margin-left:1.8rem;border-left:1px solid #ffffff55}
-.uob img{height:38px;width:auto;display:block}
-.brand{font-weight:600;line-height:.82;letter-spacing:-.05em;font-size:20px}
-.nav nav{margin-left:auto;display:flex;gap:2.2rem;font-size:14px}
+.uob img{height:50px;width:auto;display:block}
+.brand{font-weight:600;line-height:.82;letter-spacing:-.05em;font-size:24px}
+.nav nav{margin-left:auto;display:flex;gap:2.4rem;font-size:17px}
 .nav nav a:hover{opacity:.6}
 .menu{display:none}
 
@@ -130,13 +130,13 @@ a.cite-title:hover{text-decoration:underline}
 @media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}a.card:hover{transform:none}}
 
 @media(max-width:800px){
-.nav{height:70px}
+.nav{height:84px}
 .uob{padding-left:1rem;margin-left:1rem}
-.uob img{height:28px}
+.uob img{height:36px}
 .nav nav{display:none}
 .nav.open{background:#17352bf2}
-.nav.open nav{display:flex;flex-direction:column;gap:1.2rem;position:absolute;top:70px;left:0;right:0;background:#17352bf2;padding:1.5rem 6vw 2rem;font-size:18px}
-.menu{display:block;margin-left:auto;background:none;border:0;color:inherit;font:inherit}
+.nav.open nav{display:flex;flex-direction:column;gap:1.2rem;position:absolute;top:84px;left:0;right:0;background:#17352bf2;padding:1.5rem 6vw 2rem;font-size:18px}
+.menu{display:block;margin-left:auto;background:none;border:0;color:inherit;font:inherit;font-size:17px}
 .hero{padding:110px 6vw 8vh}
 .hero-copy{width:100%}
 .hero h1{font-size:11vw}
