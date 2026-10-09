@@ -17,7 +17,7 @@ collections:
     permalink: /members/:name.html
 
 defaults:
-  - scope: { path: "" }
+  - scope: { path: "", type: "pages" }
     values: { layout: "page" }
   - scope: { path: "", type: "members" }
     values: { layout: "member" }
