@@ -1,17 +1,16 @@
 ---
 name: Ritah Pavin Nakanjako
 initials: RN
-role: PhD Student
+role: PhD
 title: Heatwave adaptation & mitigation
-group: phds
 order: 6
 image:
-orcid:
+orcid: 0009-0000-4698-5368
 links:
   profile: https://www.climatebristol.org/people/ritah-pavin-nakanjako/
   github:
   scholar:
-summary: PhD 
+summary: Ritah's PhD assesses and seeks to understand heatwave adaptation and mitigation strategies that reduce mortality and morbidity in low-income communities in Africa.
 ---
 I am a PhD student focusing on the assessing and understanding heatwave adaptation and mitigation strategies to reduce mortality and morbidity in low-income communities in Africa; case study of Cape town (South Africa) and Accra (Ghana). I am keen on analysing future heatwave characteristics, assessing the impact of low-cost adaptation interventions in reducing indoor temperatures in community housing and establishing temperature thresholds for the development of health heatwave warning systems in both countries.
 

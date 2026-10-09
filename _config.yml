@@ -2,9 +2,9 @@ title: Climate Health
 tagline: University of Bristol
 description: Climate and Health research group at the University of Bristol, led by Professor Dann Mitchell and Dr Eunice Lo.
 email: climatechange-health@bristol.ac.uk
-# Set baseurl to "/<repo-name>" when deploying as a GitHub Pages project site
-url: ""
-baseurl: ""
+# GitHub Pages project site. For local preview use:  bundle exec jekyll serve --baseurl ""
+url: "https://alexodavies.github.io"
+baseurl: "/bristol-climate-health-page"
 
 social:
   github: ""
