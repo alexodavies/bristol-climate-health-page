@@ -1,0 +1,13 @@
+{%- comment -%} Input: include.list (members). Output: sets `sorted_members`, ordered by surname (last word of name), then first name. {%- endcomment -%}
+{%- assign keys = "" | split: "" -%}
+{%- for m in include.list -%}
+  {%- assign parts = m.name | split: " " -%}
+  {%- assign key = parts.last | append: " " | append: m.name | downcase | append: "|" | append: m.slug -%}
+  {%- assign keys = keys | push: key -%}
+{%- endfor -%}
+{%- assign keys = keys | sort -%}
+{%- assign sorted_members = "" | split: "" -%}
+{%- for k in keys -%}
+  {%- assign slug = k | split: "|" | last -%}
+  {%- for m in include.list -%}{%- if m.slug == slug -%}{%- assign sorted_members = sorted_members | push: m -%}{%- endif -%}{%- endfor -%}
+{%- endfor -%}

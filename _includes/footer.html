@@ -1,0 +1,15 @@
+<footer>
+  <div class="brand">CLIMATE<br>HEALTH</div>
+  <p>Climate Change and Health<br>University of Bristol</p>
+  <p>Led by Professor Dann Mitchell and Dr Eunice Lo at the University of Bristol. Research at the intersection of climate science, extreme weather, epidemiology and health.</p>
+  <div>
+    <a href="{{ '/research/' | relative_url }}">Research</a>
+    <a href="{{ '/team/' | relative_url }}">Team</a>
+    <a href="https://www.climatebristol.org/">Climate Bristol</a>
+    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    {% if site.social.github != "" %}<a href="{{ site.social.github }}">GitHub</a>{% endif %}
+    {% if site.social.twitter != "" %}<a href="{{ site.social.twitter }}">Twitter</a>{% endif %}
+    {% if site.social.youtube != "" %}<a href="{{ site.social.youtube }}">YouTube</a>{% endif %}
+  </div>
+  <small>© {{ 'now' | date: '%Y' }} University of Bristol · Hero video: <a href="https://science.nasa.gov/earth/europes-scorching-summer/">NASA Earth Observatory, “Europe’s Scorching Summer”</a> · Site structure after the <a href="https://github.com/greenelab/lab-website-template">Lab Website Template</a></small>
+</footer>

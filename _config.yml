@@ -1,0 +1,28 @@
+title: Climate Health
+tagline: University of Bristol
+description: Climate and Health research group at the University of Bristol, led by Professor Dann Mitchell and Dr Eunice Lo.
+email: climatechange-health@bristol.ac.uk
+# Set baseurl to "/<repo-name>" when deploying as a GitHub Pages project site
+url: ""
+baseurl: ""
+
+social:
+  github: ""
+  twitter: ""
+  youtube: ""
+
+collections:
+  members:
+    output: true
+    permalink: /members/:name.html
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: "page" }
+  - scope: { path: "", type: "members" }
+    values: { layout: "member" }
+  - scope: { path: "", type: "posts" }
+    values: { layout: "post" }
+
+permalink: /blog/:year/:month/:day/:title.html
+exclude: [assets/video/hero.mp4, Gemfile, Gemfile.lock, scripts, README.md, climate-health-github-single-file-preview.html, vendor]

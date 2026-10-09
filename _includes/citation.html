@@ -1,0 +1,18 @@
+{%- assign c = include.c -%}
+{%- if c.link -%}{%- assign href = c.link -%}{%- elsif c.doi -%}{%- assign href = 'https://doi.org/' | append: c.doi -%}{%- else -%}{%- assign href = '' -%}{%- endif -%}
+{%- comment -%} Author position: for a given member (include.orcid) or, group-wide, the best position of any member. data-last=1 if a member is last author. {%- endcomment -%}
+{%- assign pos = 0 -%}{%- assign last = 0 -%}
+{%- if include.orcid -%}
+  {%- assign pos = c.positions[include.orcid] | default: 0 -%}
+  {%- if pos > 0 and pos == c.n_authors -%}{%- assign last = 1 -%}{%- endif -%}
+{%- else -%}
+  {%- for kv in c.positions -%}
+    {%- assign v = kv[1] -%}
+    {%- if pos == 0 or v < pos -%}{%- assign pos = v -%}{%- endif -%}
+    {%- if v == c.n_authors -%}{%- assign last = 1 -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+<li class="citation" data-pos="{{ pos }}" data-last="{{ last }}">
+  {% if href != '' %}<a class="cite-title" href="{{ href }}">{{ c.title | escape }}</a>{% else %}<span class="cite-title">{{ c.title | escape }}</span>{% endif %}
+  <span class="cite-meta">{% if c.authors.size > 6 %}{{ c.authors | slice: 0, 5 | join: ", " }} et al.{% else %}{{ c.authors | join: ", " }}{% endif %}{% if c.journal %} · <i>{{ c.journal | escape }}</i>{% endif %}{% if c.year %} · {{ c.year }}{% endif %}</span>
+</li>

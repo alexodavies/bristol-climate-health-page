@@ -1,0 +1,13 @@
+{%- assign m = include.m -%}
+{%- assign v = m.order | default: 0 | modulo: 2 -%}
+{%- comment -%} Photo: explicit `image:` (filename in assets/images/people/, or a full path), else auto-detect assets/images/people/<member-file-name>.(jpg|jpeg|png|webp) {%- endcomment -%}
+{%- assign photo = "" -%}
+{%- if m.image -%}
+  {%- if m.image contains "/" -%}{%- assign photo = m.image -%}{%- else -%}{%- assign photo = "/assets/images/people/" | append: m.image -%}{%- endif -%}
+{%- else -%}
+  {%- assign slug = m.slug | default: m.name | slugify -%}
+  {%- for f in site.static_files -%}
+    {%- if f.path contains "/assets/images/people/" and f.basename == slug and photo == "" -%}{%- assign photo = f.path -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+<div class="portrait p{{ v }}">{% if photo != "" %}<img src="{{ photo | relative_url }}" alt="{{ m.name }}" loading="lazy">{% else %}<span aria-hidden="true">{{ m.initials }}</span>{% endif %}</div>

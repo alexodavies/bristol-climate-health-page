@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<section class="page-hero member-hero">
+  <p class="eyebrow">Team · {{ page.role }}</p>
+  <h1>{{ page.name }}</h1>
+  <p class="dek">{{ page.title }}</p>
+</section>
+<section class="page-body member reveal">
+  <aside>
+    {% include portrait.html m=page %}
+    <ul class="member-links">
+      {% if page.links.profile %}<li><a href="{{ page.links.profile }}">Bristol profile ↗</a></li>{% endif %}
+      {% if page.orcid %}<li><a href="https://orcid.org/{{ page.orcid }}">ORCID ↗</a></li>{% endif %}
+      {% if page.links.scholar %}<li><a href="{{ page.links.scholar }}">Google Scholar ↗</a></li>{% endif %}
+      {% if page.links.github %}<li><a href="{{ page.links.github }}">GitHub ↗</a></li>{% endif %}
+    </ul>
+  </aside>
+  <div class="member-main">
+    <div class="prose">{{ content }}</div>
+    <h2 class="sub">Publications</h2>
+    {% if papers.size > 0 %}{% include pub-filter.html %}{% endif %}
+    {%- if page.orcid -%}
+      {%- assign papers = site.data.citations | where_exp: "c", "c.orcids contains page.orcid" -%}
+    {%- else -%}{%- assign papers = "" | split: "" -%}{%- endif -%}
+    {% if papers.size > 0 %}
+    <ul class="citations">{% for c in papers %}{% include citation.html c=c orcid=page.orcid %}{% endfor %}</ul>
+    {% else %}
+    <p>Publications will appear here automatically once an ORCID iD is added to this profile. See the <a href="{{ '/research/' | relative_url }}">Research page</a> for group publications.</p>
+    {% endif %}
+    <a class="text-link" href="{{ '/team/' | relative_url }}">← Back to team</a>
+  </div>
+</section>

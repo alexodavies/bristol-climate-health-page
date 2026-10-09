@@ -1,0 +1,15 @@
+- cls: heat
+  image: /assets/images/heat.jpg
+  kicker: Extreme weather × health
+  title: Heat, cold & morbidity
+  text: Quantifying how heatwaves, cold weather, humidity and other hazards affect illness, mortality and wellbeing — now and under future climate change.
+- cls: water
+  image: /assets/images/water.jpg
+  kicker: Attribution × risk
+  title: What changed — and why?
+  text: Using observations, large climate-model ensembles and counterfactual worlds to attribute changing hazards and health impacts to climate change.
+- cls: systems
+  image: /assets/images/systems.jpg
+  kicker: Forecasting × resilience
+  title: From weather to health decisions
+  text: Connecting weather forecasts with health-impact models to anticipate demand, test plausible extremes and support preparedness across public and health services.

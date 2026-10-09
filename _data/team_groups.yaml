@@ -1,0 +1,7 @@
+# Team page sections, in display order. Set `group:` in a member's front matter to one of these ids.
+- id: leads
+  label: Group leads
+- id: postdocs
+  label: Research staff
+- id: phds
+  label: PhD students
