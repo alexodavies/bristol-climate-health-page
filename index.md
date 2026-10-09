@@ -20,7 +20,25 @@ title: Home
 
 <section id="people" class="people">
   {% include section-head.html eyebrow="02 / People" title="Led across climate science<br><em>&amp; human health.</em>" %}
-  {% assign members = site.members | where: "group", "leads" | sort: "order" %}
-  {% include hex-cluster.html list=members cls="big flat" %}
+  {% assign all = site.members | sort: "order" %}
+  {% assign leads = all | where: "group", "leads" %}
+  {% assign ids = site.data.team_groups | map: "id" %}
+  {%- assign rest = "" | split: "" -%}
+  {%- for g in site.data.team_groups -%}{%- unless g.id == "leads" -%}
+    {%- assign grp = all | where: "group", g.id -%}
+    {%- include sort-by-surname.html list=grp -%}
+    {%- for m in sorted_members -%}{%- assign rest = rest | push: m -%}{%- endfor -%}
+  {%- endunless -%}{%- endfor -%}
+  {%- for m in all -%}{%- unless ids contains m.group -%}{%- assign rest = rest | push: m -%}{%- endunless -%}{%- endfor %}
+  <div class="people-split">
+    <div class="people-col">
+      <h3 class="people-sub">Team leads</h3>
+      {% include hex-cluster.html list=leads cls="big flat leads" %}
+    </div>
+    <div class="people-col">
+      <h3 class="people-sub">Researchers</h3>
+      {% include honeycomb.html list=rest %}
+    </div>
+  </div>
   <a class="round-link inverse" href="{{ '/team/' | relative_url }}">Meet the team <span>↗</span></a>
 </section>
