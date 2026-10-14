@@ -1,0 +1,8 @@
+{%- comment -%} Usage: {% include youtube.html url="https://www.youtube.com/watch?v=ID" title="What the video is" %}  (or id="ID"; start="90" to begin at 90 seconds). Uses youtube-nocookie.com so YouTube sets no tracking cookies until the video is played. {%- endcomment -%}
+{%- assign vid = include.id | default: include.url -%}
+{%- if vid contains "youtu.be/" -%}{%- assign vid = vid | split: "youtu.be/" | last -%}
+{%- elsif vid contains "v=" -%}{%- assign vid = vid | split: "v=" | last -%}
+{%- elsif vid contains "/embed/" -%}{%- assign vid = vid | split: "/embed/" | last -%}
+{%- elsif vid contains "/shorts/" -%}{%- assign vid = vid | split: "/shorts/" | last -%}{%- endif -%}
+{%- assign vid = vid | split: "&" | first | split: "?" | first | split: "/" | first -%}
+<iframe src="https://www.youtube-nocookie.com/embed/{{ vid }}{% if include.start %}?start={{ include.start }}{% endif %}" title="{{ include.title | default: 'YouTube video' | escape }}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

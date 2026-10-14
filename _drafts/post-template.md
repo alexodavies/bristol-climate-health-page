@@ -5,6 +5,7 @@ author: your-member-file-name      # e.g. ruby-lieber (the file name in _members
 category: blog                     # blog (default), news or media
 tag: Heat                          # optional label shown on the card
 excerpt: One or two sentences that say what you found and why it matters.
+projects: []                       # optional project file names, e.g. [breathe], to show this post on the project page
 link: https://example.com/article   # media only: where the coverage lives
 paper: 10.xxxx/xxxxx               # optional DOI of the paper this summarises
 image: /assets/images/heat.jpg     # optional card image

@@ -7,14 +7,15 @@ lede: Heat, cold and morbidity; attribution and risk; and forecasting for resili
 ---
 <div class="themes">
 {% for r in site.data.research %}
-  <section class="theme" style="background-image:url('{{ r.image | relative_url }}');--tint:{{ r.tint | default: '#294739' }}">
+  <section class="theme" id="{{ r.id }}" style="background-image:url('{{ r.image | relative_url }}');--tint:{{ r.tint | default: '#294739' }}">
     <div class="theme-inner">
       <span class="theme-num">{{ forloop.index | prepend: '0' }} / {{ r.kicker }}</span>
       <h2>{{ r.title }}</h2>
       <p>{{ r.text }}</p>
-      {%- if r.projects.size > 0 %}
+      {%- assign related = site.projects | where_exp: "p", "p.themes contains r.id" %}
+      {%- if related.size > 0 %}
       <p class="theme-projects"><small>Related projects</small>
-        {%- for t in r.projects %}{% for p in site.data.projects %}{% if p.title == t %}<a href="{{ p.link }}">{{ p.title }} ↗</a>{% endif %}{% endfor %}{% endfor %}
+        {%- for p in related %}<a href="{{ p.url | relative_url }}">{{ p.title }}</a>{% endfor %}
       </p>
       {%- endif %}
     </div>

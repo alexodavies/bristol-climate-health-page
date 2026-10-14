@@ -10,6 +10,9 @@ sitemap: false
 {%- for m in site.members %}
   <url><loc>{{ m.url | absolute_url }}</loc></url>
 {%- endfor -%}
+{%- for p in site.projects %}
+  <url><loc>{{ p.url | absolute_url }}</loc></url>
+{%- endfor -%}
 {%- for p in site.posts %}
   <url><loc>{{ p.url | absolute_url }}</loc><lastmod>{{ p.date | date_to_xmlschema }}</lastmod></url>
 {%- endfor %}

@@ -13,7 +13,7 @@ You don't need to install anything or know how to code. Everything can be done i
 **The website:** https://alexodavies.github.io/bristol-climate-health-page/
 **The files:** https://github.com/alexodavies/bristol-climate-health-page
 
-**Jump to:** [Before you start](#before-you-start) · [Update your profile](#1-update-your-profile) · [Add your photo](#2-add-your-photo) · [Get your publications showing](#3-get-your-publications-showing) · [Write a blog post](#4-write-a-blog-post) · [Format your text (Markdown)](#5-format-your-text-markdown) · [Change other text](#6-change-other-text-on-the-site) · [Add a new person](#7-add-a-new-person-or-remove-one) · [If something goes wrong](#if-something-goes-wrong)
+**Jump to:** [Before you start](#before-you-start) · [Update your profile](#1-update-your-profile) · [Add your photo](#2-add-your-photo) · [Get your publications showing](#3-get-your-publications-showing) · [Write a blog post](#4-write-a-blog-post) · [Format your text (Markdown)](#5-format-your-text-markdown) · [Change other text](#6-change-other-text-on-the-site) · [Add a new person](#7-add-a-new-person-or-remove-one) · [Edit research themes and projects](#8-edit-research-themes-and-projects) · [Worked examples](#9-worked-examples-copy-these) · [If something goes wrong](#if-something-goes-wrong)
 
 
 ---
@@ -218,6 +218,60 @@ Start each line with a dash and a space for bullets, or a number and a full stop
 
 Notice that the address starts with `/bristol-climate-health-page/`. Leave that part exactly as it is and only change the file name at the end.
 
+**Card images:** the `image:` line in a post, a project or a research theme sets its card photo. Upload the picture to `assets/images` as above and write `image: /assets/images/my-photo.jpg` (this one has no `/bristol-climate-health-page/` at the start).
+
+### Videos
+
+**Best option: a YouTube video.** Copy the video's normal web address and paste this on its own line (with blank lines around it) in a post, project page or profile bio:
+
+```
+{% include youtube.html url="https://www.youtube.com/watch?v=VIDEO_ID" title="What the video is about" %}
+```
+
+- Any ordinary YouTube address works (`youtube.com/watch?v=...`, `youtu.be/...` or a Shorts link).
+- `title` describes the video for screen readers. Please fill it in.
+- To start part-way through, add `start="90"` (seconds) before the closing `%}`.
+- It fits the page width automatically and uses YouTube's no-cookies mode, so visitors aren't tracked until they press play.
+- This works in any file in `_posts`, `_projects` or `_members`, below the second `---`. Copy the line exactly, including the curly brackets.
+
+**Example:** `_posts/2026-10-14-eunice-lo-tedxbristol.md` is a complete media post built around a YouTube video (see section 9 for more examples).
+
+**Vimeo and others:** use the site's own **Share → Embed** code instead and paste the `<iframe ...></iframe>` it gives you on its own line.
+
+**A video file of your own:** only for short, small clips (aim for under 20 MB; GitHub's web upload stops at 25 MB, and big files slow the whole site). Upload it to the **`assets/video`** folder (like a photo in section 2), then add:
+
+```
+<video controls src="/bristol-climate-health-page/assets/video/my-clip.mp4"></video>
+```
+
+Use `.mp4` files. As with pictures, keep the `/bristol-climate-health-page/` start of the address.
+
+#### Advanced: compressing a video
+
+Phone and camera videos are usually far too big. Shrinking one is a one-off job on your own computer, before you upload.
+
+**Easiest, with an app:** install the free [HandBrake](https://handbrake.fr/), open your video, choose the **Fast 720p30** preset, make sure the format is **MP4**, and click **Start Encode**. Check the file size afterwards.
+
+**Command line (ffmpeg):** install it once (Mac: `brew install ffmpeg`; Windows: `winget install ffmpeg`), then run this in the folder containing your video:
+
+```
+ffmpeg -i my-video.mov -vf "scale=-2:720" -c:v libx264 -crf 28 -preset slow -c:a aac -b:a 96k -movflags +faststart my-clip.mp4
+```
+
+| Part | What it does |
+|---|---|
+| `-i my-video.mov` | Your original file (any format) |
+| `scale=-2:720` | Resizes to 720 pixels tall, keeping the shape. 720p is plenty for a web page |
+| `-crf 28` | The quality dial. Higher is smaller and blurrier (try 26 to 32); lower is bigger and sharper |
+| `-b:a 96k` | Compresses the sound |
+| `-movflags +faststart` | Lets the video start playing before it has fully downloaded |
+| `my-clip.mp4` | The new, smaller file to upload |
+
+**Tips:**
+- Aim for under 20 MB. If it is still too big, raise `-crf` a little, trim the video to the part you need (add `-ss 00:00:05 -t 30` before `-i` to start at 5 seconds and keep 30 seconds), or just use YouTube.
+- For a silent clip (for example a looping animation), add `-an` to drop the sound entirely, which saves more space.
+- Always keep your original file. Compress a copy.
+
 ### Things that trip people up
 
 - **A symbol suddenly does something unexpected.** Characters like `*`, `_` and `#` have special meanings. To show one as it is, put a backslash in front of it, for example `\*`.
@@ -239,7 +293,7 @@ Want to see every trick? The official summary is at https://www.markdownguide.or
 |---|---|
 | The big title and intro on the home page | `index.md` |
 | The research theme cards (home and Research page) | `_data/research.yaml` |
-| The funded project cards (Projects page) | `_data/projects.yaml` |
+| A funded project (card and page) | its file in `_projects` |
 | The Research, Projects, Publications, Team, News & Media or Contact page intro | `research.md`, `projects.md`, `publications.md`, `team.md`, `news.md`, `contact.md` (the text after `lede:` at the top) |
 | The contact and press office email addresses | `_config.yml` (the `email:` and `press_email:` lines) |
 
@@ -258,6 +312,104 @@ Click the file, then the pencil, and change the words, being careful not to dele
 4. Upload their photo with the matching name (see section 2).
 
 **Remove someone:** open their file in `_members`, click the **⋯ menu → Delete file**, then commit. (They disappear from the Team page and the site, but their old photo file stays harmlessly in the images folder.)
+
+---
+
+## 8. Edit research themes and projects
+
+The **Research** page (scrolling coloured themes) and the **Projects** page (funded projects only) are filled from `_data/research.yaml` and the files in `_projects`, and the two are linked automatically: every theme lists its projects, and every project shows its themes. Use the basic edit from "Before you start" (open the file, pencil icon, commit).
+
+### Research themes: `_data/research.yaml`
+
+Each theme is one block. Copy an existing block to add a theme, and delete a block to remove one.
+
+```
+- id: heat
+  cls: heat
+  tint: '#c4551f'
+  image: /assets/images/heat.jpg
+  kicker: Extreme weather × health
+  title: Heat, cold & morbidity
+  text: One or two sentences on this theme.
+```
+
+| Line | What it does |
+|---|---|
+| `id` | A short unique name with no spaces, such as `heat`. Projects refer to the theme by this, so don't change it without also changing the projects that use it |
+| `cls` | Set it to the same as `id` |
+| `tint` | The theme's colour as a hex code, such as `'#1f6fa8'`. Keep the quotes. It tints the photo and the text stays white, so avoid very pale colours |
+| `image` | The background photo, from `assets/images` (upload new ones the same way as in section 2) |
+| `kicker` | The small label above the title |
+| `title` | The big heading |
+| `text` | The description |
+
+The order in the file is the order on the page. The home page shows only the first three themes.
+
+### Projects: one file each in `_projects`
+
+Only **explicitly funded projects** (for example BREATHE) belong here. Broader directions belong in Research. Each project has its own file and its own page on the site, like a profile or a post. To add one, open any file in `_projects`, copy it, and create a new file such as `_projects/my-project.md`.
+
+```
+---
+title: BREATHE
+tag: Funded project
+themes: [heat, air]
+image: /assets/images/heat.jpg
+summary: One sentence on the project, shown on its card and the top of its page.
+link: https://example.com/breathe
+link_text: Project website →
+funder: NERC
+start: 2024-04
+end:
+team: [ruby-lieber, eunice-lo]
+---
+Write the project description here, in Markdown (see section 5): aims,
+methods, partners, outputs.
+```
+
+| Line | What it does |
+|---|---|
+| `title`, `tag`, `summary` | The heading, the small label and the one-sentence description |
+| `themes` | The ids of the research themes it belongs to, in square brackets, such as `[heat, air]` |
+| `image` | The card photo |
+| `link`, `link_text` | Optional. An external project website, shown as a button on the project page. Delete both lines if there isn't one |
+| `funder`, `start`, `end` | Optional. Shown under the title. Leave `end` blank for an ongoing project |
+| `team` | Optional. Member file names (as in section 4's `author`), listed on the project page |
+
+Everything below the second `---` is the project's page text.
+
+**Linking things to a project:**
+- **Themes:** write them in the project's `themes:` line. The theme then shows that project, and the project shows its themes. You don't edit the Research file. A theme with no projects shows no project links. If a link is missing, check the ids are spelled exactly as in `_data/research.yaml`.
+- **News, media and blog posts:** add `projects: [breathe]` to the post's top part, using the project's file name without `.md`. The post then appears on that project's page.
+
+These files use the same rules as profiles: keep the dashes, the two-space indentation and the colons. Put text in quotes if it contains a colon followed by a space.
+
+---
+
+## 9. Worked examples (copy these)
+
+The quickest way to do something new is to open a similar existing file, copy it, and change the details. Open any of these on GitHub (they're in the repository's file list) to see exactly how it's done.
+
+| I want to… | Look at this file | What it shows |
+|---|---|---|
+| Post a **talk or video** (YouTube) as a media item | `_posts/2026-10-14-eunice-lo-tedxbristol.md` | `category: media`, `author`, a card `image`, the `link` to the video, and the YouTube tag with description text below it. It automatically appears on News & Media and on the author's profile |
+| Write a normal **blog post** | `_posts/2026-03-01-unseen-heatwave-mortality.md` | A short post with `author`, `tag`, `excerpt` and the `paper` DOI |
+| Post a **news item** | copy either post above and set `category: news` | News posts have no extra fields |
+| Add a **funded project** with its own page | `_projects/breathe.md` or `_projects/unseen.md` | `themes`, `funder`, `team`, card `image` and page text |
+| Put an **uploaded video file** on a page | `_projects/unseen.md` (bottom) and `assets/video/hero-small.mp4` | The `<video>` tag and where the file lives. This one is a test clip, so replace it with your own |
+| Show a post on a **project's page** | add `projects: [unseen]` to the top of a post | The project file name without `.md` |
+| Add a **profile photo** | `assets/images/people/` (for example `eunice-lo.jpg` for `_members/eunice-lo.md`) | The photo's file name matches the profile file name |
+| Add a **card or theme image** | `assets/images/` (`heat.jpg`, `water.jpg`, `systems.jpg`) | Refer to it as `image: /assets/images/heat.jpg` |
+| Add a **research theme** | `_data/research.yaml` | One block per theme, with its colour and `id` |
+| Add an **affiliate** | `_members/affiliate-placeholder-external.md` (links to their own site) or `_members/affiliate-placeholder-in-site.md` (has a page here) | `group: affiliates` and optional `external:` link |
+
+**Where uploaded files go**
+
+| File type | Folder |
+|---|---|
+| People photos | `assets/images/people/` |
+| Other images (cards, themes, pictures in text) | `assets/images/` |
+| Videos you upload yourself (short, small ones only) | `assets/video/` |
 
 ---
 

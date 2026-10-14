@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<section class="page-hero">
+  <p class="eyebrow">Project{% if page.tag %} · {{ page.tag }}{% endif %}</p>
+  <h1>{{ page.title }}</h1>
+  {% if page.summary %}<p class="dek">{{ page.summary }}</p>{% endif %}
+  {%- capture tl -%}{% include tenure-label.html m=page %}{%- endcapture -%}
+  {% if tl != "" or page.funder %}<p class="tenure">{% if page.funder %}Funded by {{ page.funder }}{% if tl != "" %} · {% endif %}{% endif %}{{ tl }}</p>{% endif %}
+</section>
+<section class="page-body prose reveal">
+{{ content }}
+{% if page.link %}<p><a class="round-link inverse-pill" href="{{ page.link }}">{{ page.link_text | default: "Project website →" }} <span>↗</span></a></p>{% endif %}
+
+{%- if page.themes.size > 0 %}
+<p class="proj-themes"><small>Research themes</small>
+  {%- for t in page.themes %}{% for r in site.data.research %}{% if r.id == t %}<a href="{{ '/research/#' | append: r.id | relative_url }}">{{ r.title }}</a>{% endif %}{% endfor %}{% endfor %}
+</p>
+{%- endif %}
+
+{%- if page.team.size > 0 %}
+<h2 class="sub">Team</h2>
+<ul class="post-list">
+  {%- for s in page.team %}{% for m in site.members %}{% if m.slug == s %}<li>{% include byline.html slug=s %} <small>{{ m.title }}</small></li>{% endif %}{% endfor %}{% endfor %}
+</ul>
+{%- endif %}
+
+{%- assign my_posts = site.posts | where_exp: "p", "p.projects contains page.slug" -%}
+{% if my_posts.size > 0 %}
+<h2 class="sub">News, media &amp; posts</h2>
+<ul class="post-list">
+  {% for p in my_posts %}<li><a href="{{ p.url | relative_url }}"><b>{{ p.title }}</b></a> <small>{{ p.category | default: "blog" | capitalize }} · {{ p.date | date: "%-d %b %Y" }}</small>{% if p.excerpt %}<br><span>{{ p.excerpt | strip_html | strip }}</span>{% endif %}</li>{% endfor %}
+</ul>
+{% endif %}
+<p><a class="text-link" href="{{ '/projects/' | relative_url }}">← All projects</a></p>
+</section>
