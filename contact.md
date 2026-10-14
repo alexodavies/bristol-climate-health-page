@@ -7,4 +7,7 @@ lede: We welcome collaborators working across climate science, epidemiology, hea
 ---
 <p class="prose">Get in touch about research, partnerships, opportunities and events.</p>
 <p><a class="round-link inverse-pill" href="mailto:{{ site.email }}">{{ site.email }} <span>↗</span></a></p>
+<h2 class="sub">Media enquiries</h2>
+<p class="prose">Journalists and media: please contact the University of Bristol press office.</p>
+<p><a class="round-link inverse-pill" href="mailto:{{ site.press_email }}">{{ site.press_email }} <span>↗</span></a></p>
 <p class="prose">Climate Change and Health<br>University of Bristol</p>

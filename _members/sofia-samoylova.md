@@ -4,6 +4,9 @@ initials: SS
 role: PhD
 title: Bristol Climate Dynamics
 group: phds
+# Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
+start:
+end:
 order: 11
 image:
 orcid: 0009-0007-1271-6451

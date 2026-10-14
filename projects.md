@@ -2,8 +2,8 @@
 permalink: /projects/
 title: Projects
 eyebrow: Projects
-description: Climate Health projects at the University of Bristol, including UNSEEN heatwave mortality, beyond heat mortality, and the National Climate Impacts and Risks meetings.
-lede: Selected projects connecting climate evidence to health decisions.
+description: Funded projects of the Climate Health group at the University of Bristol, including BREATHE, UNSEEN heatwave mortality and the National Climate Impacts and Risks meetings.
+lede: Our funded projects, each with its own award and team. For wider themes see Research.
 ---
 <div class="news-grid">
 {% for p in site.data.projects %}

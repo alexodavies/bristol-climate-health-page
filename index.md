@@ -13,8 +13,8 @@ description: Climate Health is a University of Bristol research group studying h
 <section id="research" class="section dark">
   {% include section-head.html eyebrow="01 / Research" title="Where climate<br>meets <em>health.</em>" %}
   <div class="cards">
-  {% for r in site.data.research %}
-    <a class="card {{ r.cls }}" style="background-image:url('{{ r.image | relative_url }}')" href="{{ '/research/' | relative_url }}"><span>{{ r.kicker }}</span><h3>{{ r.title }}</h3><p>{{ r.text | truncatewords: 14 }}</p><b>Explore research →</b></a>
+  {% for r in site.data.research limit:3 %}
+    <a class="card {{ r.cls }}" style="background-image:url('{{ r.image | relative_url }}');{% if r.tint %}--tint:{{ r.tint }}{% endif %}" href="{{ '/research/' | relative_url }}"><span>{{ r.kicker }}</span><h3>{{ r.title }}</h3><p>{{ r.text | truncatewords: 14 }}</p><b>Explore research →</b></a>
   {% endfor %}
   </div>
 </section>
@@ -25,12 +25,12 @@ description: Climate Health is a University of Bristol research group studying h
   {% assign leads = all | where: "group", "leads" %}
   {% assign ids = site.data.team_groups | map: "id" %}
   {%- assign rest = "" | split: "" -%}
-  {%- for g in site.data.team_groups -%}{%- unless g.id == "leads" -%}
+  {%- for g in site.data.team_groups -%}{%- unless g.id == "leads" or g.id == "affiliates" -%}
     {%- assign grp = all | where: "group", g.id -%}
     {%- include sort-by-surname.html list=grp -%}
     {%- for m in sorted_members -%}{%- assign rest = rest | push: m -%}{%- endfor -%}
   {%- endunless -%}{%- endfor -%}
-  {%- for m in all -%}{%- unless ids contains m.group -%}{%- assign rest = rest | push: m -%}{%- endunless -%}{%- endfor %}
+  {%- for m in all -%}{%- unless ids contains m.group or m.group == "affiliates" -%}{%- assign rest = rest | push: m -%}{%- endunless -%}{%- endfor %}
   {% include ring-key.html %}
   <div class="people-split">
     <div class="people-col">

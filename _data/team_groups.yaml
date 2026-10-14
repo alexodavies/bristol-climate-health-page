@@ -5,3 +5,5 @@
   label: Research staff
 - id: phds
   label: PhD students
+- id: affiliates
+  label: Affiliate members

@@ -3,8 +3,11 @@ name: Chin Yang Shapland
 initials: CS
 role: Research Staff
 title: Research Fellow
-group: postdocs
+group: affiliates
 stage: later   # ring colour: phd, postdoc or later (defaults from group)
+# Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
+start:
+end:
 order: 4
 image:
 orcid: 0000-0002-5797-1241

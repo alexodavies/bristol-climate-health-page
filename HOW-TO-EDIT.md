@@ -72,8 +72,9 @@ Write your bio here as normal text. Leave a blank line between paragraphs.
 | `initials` | Shown if you don't have a photo yet |
 | `role` | Your short role, for example Research Staff or PhD Student |
 | `title` | Your full job title, shown under your name on the Team page |
-| `group` | Which section of the Team page you appear in: `leads`, `postdocs` or `phds` |
+| `group` | Which section of the Team page you appear in: `leads`, `postdocs`, `phds` or `affiliates` |
 | `stage` | Optional. The colour of the ring round your photo: `phd`, `postdoc` or `later` (later career). If you leave it out, it follows your `group` |
+| `start`, `end` | When you joined (and left) the group, as `2021-09`. Leave `end` blank while you are here. Your papers show on the main Publications page only for years inside this range |
 | `order` | A number, only used for ordering on the home page. Leave it as it is |
 | `orcid` | Your ORCID iD, which fills in your publications (see section 3) |
 | `links` | Your profile links (`profile`, `github`, `scholar` and `email`). Leave a link blank if you don't have one, or delete the line. Write any email address as `first dot last at bristol.ac.uk` (see below) |
@@ -140,6 +141,7 @@ Posts are short and informal. Think "what I found, in a few paragraphs".
 ---
 title: A short, plain-English title
 author: ruby-lieber
+category: blog
 tag: Heat
 excerpt: One or two sentences on what you found and why it matters.
 paper: 10.xxxx/xxxxx
@@ -154,6 +156,7 @@ asked, what you did, what you found, and what surprised you.
 |---|---|
 | `title` | The headline |
 | `author` | **The name of your profile file without `.md`**, for example `ruby-lieber`. This puts your photo on the post and makes it appear on your profile page |
+| `category` | `blog` (default), `news` or `media`. All three appear on the News & Media page, where visitors can filter by category. For `media`, add a `link:` line pointing at the coverage |
 | `tag` | Optional. A one-word label such as Heat |
 | `excerpt` | The one or two sentences shown in the blog list |
 | `paper` | Optional. The DOI of the paper this post is about, which adds a "Read the paper" link. Delete the line if you don't have one |
@@ -235,10 +238,10 @@ Want to see every trick? The official summary is at https://www.markdownguide.or
 | To change… | Open this file |
 |---|---|
 | The big title and intro on the home page | `index.md` |
-| The three research cards (home and Research page) | `_data/research.yaml` |
-| The project cards | `_data/projects.yaml` |
-| The Research, Projects, Team, Blog or Contact page intro | `research.md`, `projects.md`, `team.md`, `blog.md`, `contact.md` (the text after `lede:` at the top) |
-| The contact email address | `_config.yml` (the `email:` line) |
+| The research theme cards (home and Research page) | `_data/research.yaml` |
+| The funded project cards (Projects page) | `_data/projects.yaml` |
+| The Research, Projects, Publications, Team, News & Media or Contact page intro | `research.md`, `projects.md`, `publications.md`, `team.md`, `news.md`, `contact.md` (the text after `lede:` at the top) |
+| The contact and press office email addresses | `_config.yml` (the `email:` and `press_email:` lines) |
 
 Click the file, then the pencil, and change the words, being careful not to delete the punctuation around them (quotes, dashes or colons).
 
@@ -251,7 +254,7 @@ Click the file, then the pencil, and change the words, being careful not to dele
 **Add someone:**
 1. Open `_members`, then open any existing person's file.
 2. Click the **copy icon** at the top right of the file contents (or select all the text and copy it).
-3. Go back to `_members`, click **Add file → Create new file**, name it after the person like `first-last.md`, paste in the text and change the details. Set `group:` to `leads`, `postdocs` or `phds`.
+3. Go back to `_members`, click **Add file → Create new file**, name it after the person like `first-last.md`, paste in the text and change the details. Set `group:` to `leads`, `postdocs`, `phds` or `affiliates`. For an **affiliate** (not a core member), also add `external: https://their-own-page` and their photo and name will link there instead of to a page here.
 4. Upload their photo with the matching name (see section 2).
 
 **Remove someone:** open their file in `_members`, click the **⋯ menu → Delete file**, then commit. (They disappear from the Team page and the site, but their old photo file stays harmlessly in the images folder.)

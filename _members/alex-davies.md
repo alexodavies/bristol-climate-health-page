@@ -4,6 +4,9 @@ initials: AD
 role: Research Staff
 title: Senior Research Associate
 group: postdocs
+# Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
+start: 2026-04
+end:
 order: 12
 image:
 orcid: 0000-0002-5174-5657

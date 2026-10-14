@@ -4,6 +4,9 @@ initials: RN
 role: PhD
 group: phds
 title: Heatwave adaptation & mitigation
+# Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
+start:
+end:
 order: 6
 image:
 orcid: 0009-0000-4698-5368

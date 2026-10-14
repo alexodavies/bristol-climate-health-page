@@ -24,7 +24,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BlogPosting","headline":{{ page.title | jsonify }},"description":{{ include.seo_desc | jsonify }},"datePublished":{{ page.date | date_to_xmlschema | jsonify }},"image":{{ include.seo_image | jsonify }},"mainEntityOfPage":{{ include.canonical | jsonify }},"author":{% if au %}{"@type":"Person","name":{{ au.name | jsonify }},"url":{{ au.url | absolute_url | jsonify }}}{% else %}{"@type":"ResearchOrganization","name":"Climate Health research group"}{% endif %},"publisher":{{ uob }}{% if page.paper %},"citation":{{ page.paper | prepend: "https://doi.org/" | jsonify }}{% endif %}}
 </script>
-{%- elsif page.url == "/research/" -%}
+{%- elsif page.url == "/publications/" -%}
 {%- assign arts = "" -%}
 {%- for c in site.data.citations -%}
   {%- assign names = "" -%}

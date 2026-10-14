@@ -4,6 +4,9 @@ initials: EV
 role: Research Staff
 title: Senior Research Associate
 group: postdocs
+# Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
+start:
+end:
 order: 9
 image:
 orcid: 0000-0003-2766-9823

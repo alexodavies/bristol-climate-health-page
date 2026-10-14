@@ -1,15 +1,47 @@
+# `projects:` = project titles exactly as written in projects.yaml; shown as links under the theme.
 - cls: heat
+  projects:
+    - UNSEEN heatwave mortality
+    - BREATHE
+  tint: '#c4551f'
   image: /assets/images/heat.jpg
   kicker: Extreme weather × health
   title: Heat, cold & morbidity
   text: Quantifying how heatwaves, cold weather, humidity and other hazards affect illness, mortality and wellbeing — now and under future climate change.
 - cls: water
+  projects:
+    - Beyond heat mortality
+  tint: '#1f6fa8'
   image: /assets/images/water.jpg
   kicker: Attribution × risk
   title: What changed — and why?
   text: Using observations, large climate-model ensembles and counterfactual worlds to attribute changing hazards and health impacts to climate change.
 - cls: systems
+  projects:
+    - Climate impacts & risks
+  tint: '#2f7d5b'
   image: /assets/images/systems.jpg
   kicker: Forecasting × resilience
   title: From weather to health decisions
   text: Connecting weather forecasts with health-impact models to anticipate demand, test plausible extremes and support preparedness across public and health services.
+# Placeholder themes below: edit the wording, tint (any colour) and image, or delete.
+- cls: cold
+  tint: '#4a5fc1'
+  image: /assets/images/water.jpg
+  kicker: Placeholder × seasonal health
+  title: Cold, seasons & winter health
+  text: Placeholder. How cold spells, damp, seasonal swings and a warming winter shape illness and mortality, and who is most exposed.
+- cls: air
+  projects:
+    - BREATHE
+  tint: '#8a5a9e'
+  image: /assets/images/systems.jpg
+  kicker: Placeholder × environment
+  title: Air, smoke & compound hazards
+  text: Placeholder. Wildfire smoke, air pollution, pollen and overlapping hazards that combine with heat to raise health risk.
+- cls: ai
+  tint: '#c79a1c'
+  image: /assets/images/heat.jpg
+  kicker: Placeholder × methods
+  title: AI & data for climate health
+  text: Placeholder. Machine learning, graph models and linked health data to find who is at risk, where and when.

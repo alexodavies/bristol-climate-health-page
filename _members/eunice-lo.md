@@ -4,6 +4,9 @@ initials: EL
 role: Group Lead
 title: Senior Research Fellow
 group: leads
+# Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
+start:
+end:
 order: 2
 image:
 orcid: 0000-0002-7389-7272

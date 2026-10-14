@@ -4,6 +4,9 @@ initials: WF
 role: PhD Student
 title: PhD
 group: phds
+# Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
+start:
+end:
 order: 10
 image:
 orcid:

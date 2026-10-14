@@ -1,0 +1,7 @@
+{%- comment -%} Input: include.m. Prints e.g. "Sep 2021 – present" or "Sep 2021 – Jun 2024"; nothing if no start/end given. Dates are YYYY-MM or YYYY-MM-DD. {%- endcomment -%}
+{%- assign m = include.m -%}
+{%- if m.start or m.end -%}
+{%- if m.start -%}{%- assign s = m.start | append: "" -%}{%- if s.size == 7 -%}{%- assign s = s | append: "-01" -%}{%- endif -%}{%- if s.size == 4 -%}{%- assign sl = s -%}{%- else -%}{%- assign sl = s | date: "%b %Y" -%}{%- endif -%}{%- endif -%}
+{%- if m.end -%}{%- assign e = m.end | append: "" -%}{%- if e.size == 7 -%}{%- assign e = e | append: "-01" -%}{%- endif -%}{%- if e.size == 4 -%}{%- assign el = e -%}{%- else -%}{%- assign el = e | date: "%b %Y" -%}{%- endif -%}{%- endif -%}
+{%- if m.start and m.end -%}{{ sl }} – {{ el }}{%- elsif m.start -%}{{ sl }} – present{%- else -%}Until {{ el }}{%- endif -%}
+{%- endif -%}

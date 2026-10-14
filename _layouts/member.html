@@ -2,9 +2,11 @@
 layout: default
 ---
 <section class="page-hero member-hero">
-  <p class="eyebrow">Team · {{ page.role }}</p>
+  <p class="eyebrow">{% if page.group == "affiliates" %}Affiliate{% else %}Team · {{ page.role }}{% endif %}</p>
   <h1>{{ page.name }}</h1>
   <p class="dek">{{ page.title }}</p>
+  {%- capture tl -%}{% include tenure-label.html m=page %}{%- endcapture -%}
+  {% if tl != "" %}<p class="tenure">{{ tl }}</p>{% endif %}
 </section>
 <section class="page-body member reveal">
   <aside>
@@ -28,14 +30,14 @@ layout: default
     <p class="feed-link"><a href="{{ '/members/' | append: page.slug | append: '/feed.xml' | relative_url }}">Subscribe to {{ page.name }}’s posts (Atom feed) ↗</a></p>
     {% endif %}
     <h2 class="sub">Publications</h2>
-    {% if papers.size > 0 %}{% include pub-filter.html %}{% endif %}
     {%- if page.orcid -%}
       {%- assign papers = site.data.citations | where_exp: "c", "c.orcids contains page.orcid" -%}
     {%- else -%}{%- assign papers = "" | split: "" -%}{%- endif -%}
+    {% if papers.size > 0 %}{% include pub-filter.html %}{% endif %}
     {% if papers.size > 0 %}
     <ul class="citations">{% for c in papers %}{% include citation.html c=c orcid=page.orcid %}{% endfor %}</ul>
     {% else %}
-    <p>Publications will appear here automatically once an ORCID iD is added to this profile. See the <a href="{{ '/research/' | relative_url }}">Research page</a> for group publications.</p>
+    <p>Publications will appear here automatically once an ORCID iD is added to this profile. See the <a href="{{ '/publications/' | relative_url }}">Publications page</a> for group publications.</p>
     {% endif %}
     <a class="text-link" href="{{ '/team/' | relative_url }}">← Back to team</a>
   </div>

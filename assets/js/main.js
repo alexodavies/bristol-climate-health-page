@@ -50,12 +50,17 @@
   }
 
   var postSel = document.getElementById('post-filter');
-  if (postSel) {
-    postSel.addEventListener('change', function () {
+  var catSel = document.getElementById('cat-filter');
+  if (postSel || catSel) {
+    var applyPosts = function () {
       document.querySelectorAll('#post-grid .post-row').forEach(function (a) {
-        a.hidden = postSel.value !== '' && a.dataset.author !== postSel.value;
+        var byAuthor = !postSel || postSel.value === '' || a.dataset.author === postSel.value;
+        var byCat = !catSel || catSel.value === '' || a.dataset.category === catSel.value;
+        a.hidden = !(byAuthor && byCat);
       });
-    });
+    };
+    if (postSel) postSel.addEventListener('change', applyPosts);
+    if (catSel) catSel.addEventListener('change', applyPosts);
   }
 
   // "first dot last at bristol.ac.uk" -> a working mailto link (built in the browser so crawlers don't see an address)

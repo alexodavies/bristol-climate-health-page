@@ -1,0 +1,9 @@
+{%- comment -%} Input: include.c (a citation). Sets `okorc` (array of ORCIDs of members who were in the group in the paper's year) and `in_tenure` (true if any). A member with no `start:` counts from the beginning; no `end:` means still in the group. Years only. {%- endcomment -%}
+{%- assign okorc = "" | split: "" -%}
+{%- for o in include.c.orcids -%}{%- for m in site.members -%}{%- if m.orcid == o -%}
+  {%- assign ok = true -%}
+  {%- if m.start -%}{%- assign sy = m.start | append: "" | slice: 0, 4 | plus: 0 -%}{%- if include.c.year < sy -%}{%- assign ok = false -%}{%- endif -%}{%- endif -%}
+  {%- if m.end -%}{%- assign ey = m.end | append: "" | slice: 0, 4 | plus: 0 -%}{%- if include.c.year > ey -%}{%- assign ok = false -%}{%- endif -%}{%- endif -%}
+  {%- if ok -%}{%- assign okorc = okorc | push: o -%}{%- endif -%}
+{%- endif -%}{%- endfor -%}{%- endfor -%}
+{%- if okorc.size > 0 -%}{%- assign in_tenure = true -%}{%- else -%}{%- assign in_tenure = false -%}{%- endif -%}
