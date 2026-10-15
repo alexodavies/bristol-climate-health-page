@@ -8,7 +8,7 @@ title: Heatwave adaptation & mitigation
 start: 2023-09
 end:
 order: 6
-image:
+image: assets/images/people/RitahPavinNakanjako.jpg
 orcid: 0009-0000-4698-5368
 links:
   profile: https://www.climatebristol.org/people/ritah-pavin-nakanjako/
