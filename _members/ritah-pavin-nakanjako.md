@@ -3,7 +3,7 @@ name: Ritah Pavin Nakanjako
 initials: RN
 role: PhD
 group: phds
-title: Heatwave adaptation & mitigation
+title: Heat Adaptation & Mitigation
 # Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
 start: 2023-09
 end:
