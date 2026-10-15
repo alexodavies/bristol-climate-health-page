@@ -374,7 +374,7 @@ methods, partners, outputs.
 | `image` | The card photo |
 | `link`, `link_text` | Optional. An external project website, shown as a button on the project page. Delete both lines if there isn't one |
 | `funder`, `start`, `end` | Optional. Shown under the title. Leave `end` blank for an ongoing project |
-| `team` | Optional. Member file names (as in section 4's `author`), listed on the project page |
+| `team` | Optional. Member file names (as in section 4's `author`), such as `[ruby-lieber, eunice-lo]`. The people appear on the project page and its card, and the project appears on each person's profile |
 
 Everything below the second `---` is the project's page text.
 

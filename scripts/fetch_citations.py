@@ -86,7 +86,7 @@ def author_position(raw_authors, orcid, member):
     return None
 
 
-def orcid_dois_and_titles(orcid, types):
+def orcid_dois_and_titles(orcid, types, exclude=()):
     data = get(f"https://pub.orcid.org/v3.0/{orcid}/works")
     for group in data.get("group", []):
         summary = group["work-summary"][0]
@@ -97,6 +97,8 @@ def orcid_dois_and_titles(orcid, types):
             if ext["external-id-type"] == "doi":
                 doi = ext["external-id-value"].lower().removeprefix("https://doi.org/")
                 break
+        if doi and any(x in doi for x in exclude):
+            continue
         put_code = summary.get("put-code")
         title = ((summary.get("title") or {}).get("title") or {}).get("value", "")
         year = ((summary.get("publication-date") or {}).get("year") or {}).get("value")
@@ -162,13 +164,14 @@ def main():
     orcids = collect_orcids()
     sources = yaml.safe_load((ROOT / "_data" / "sources.yaml").read_text()) or {}
     types = [t.lower() for t in sources.get("types") or []]
+    exclude = [x.lower() for x in sources.get("exclude_doi_contains") or []]
     if not orcids:
         print("No ORCID iDs set; leaving citations.yaml unchanged.")
         return
     works = {}
     for orcid in orcids:
         try:
-            found = list(orcid_dois_and_titles(orcid, types))
+            found = list(orcid_dois_and_titles(orcid, types, exclude))
         except Exception as e:
             print(f"! {orcid}: {e}", file=sys.stderr)
             continue

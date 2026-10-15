@@ -90,6 +90,20 @@
   n_authors: 10
   positions:
     0000-0002-0086-5958: 2
+- title: Enhancing preparedness for the impending super El Niño
+  authors:
+  - Ruby Lieber
+  - Dann Mitchell
+  - Andy Haines
+  journal: The Lancet
+  year: 2026
+  doi: 10.1016/s0140-6736(26)01826-x
+  orcids:
+  - 0000-0002-0117-3486
+  link: https://doi.org/10.1016/s0140-6736(26)01826-x
+  n_authors: 3
+  positions:
+    0000-0002-0117-3486: 2
 - title: Increasing urban flash flood risk attributable to both climate and development
   authors:
   - Daniel F. Cotterill
@@ -172,6 +186,27 @@
   n_authors: 5
   positions:
     0000-0002-0117-3486: 4
+- title: We need a global assessment of avoidable climate-change risks
+  authors:
+  - Peter A. Stott
+  - Y. T. Eunice Lo
+  - John H. Marsham
+  - David Obura
+  - Tom H. Oliver
+  - Matthew D. Palmer
+  - Nicola Ranger
+  - Simon Sharpe
+  - Rowan Sutton
+  journal: Nature
+  year: 2026
+  doi: 10.1038/d41586-026-00544-6
+  orcids:
+  - 0000-0002-0117-3486
+  - 0000-0002-7389-7272
+  link: https://doi.org/10.1038/d41586-026-00544-6
+  n_authors: 9
+  positions:
+    0000-0002-7389-7272: 2
 - title: Topology only pre-training
   authors:
   - Alex O. Davies
@@ -185,6 +220,36 @@
   - 0000-0002-5174-5657
   link: https://doi.org/10.48550/arxiv.2311.03976
   n_authors: 4
+  positions:
+    0000-0002-5174-5657: 1
+- title: Demographically-Informed Heat-Mortality Risk Curves via Risk Graph Neural
+    Networks
+  authors:
+  - A.O. Davies
+  - E. Lo
+  - R. Zhu
+  journal: Arxiv
+  year: 2026
+  doi: 10.48550/arxiv.2607.21131
+  orcids:
+  - 0000-0002-5174-5657
+  link: https://doi.org/10.48550/arxiv.2607.21131
+  n_authors: 3
+  positions:
+    0000-0002-5174-5657: 1
+- title: Mind the Gap? A Distributional Comparison of Real and Synthetic Priors for
+    Tabular Foundation Models
+  authors:
+  - A.O. Davies
+  - T.D.M.E.S. Filho
+  - N. Ajmeri
+  journal: Arxiv
+  year: 2026
+  doi: 10.48550/arxiv.2605.06343
+  orcids:
+  - 0000-0002-5174-5657
+  link: https://doi.org/10.48550/arxiv.2605.06343
+  n_authors: 3
   positions:
     0000-0002-5174-5657: 1
 - title: A flexible Monte Carlo quantitative bias analysis for unmeasured confounding
@@ -310,6 +375,22 @@
   - 0000-0002-7389-7272
   link: https://doi.org/10.1016/j.ijmedinf.2026.106585
   n_authors: 6
+  positions:
+    0000-0002-7389-7272: 3
+- title: 'Heat exposure and adverse pregnancy outcomes: evidence from humans and other
+    viviparous species'
+  authors:
+  - Sofia Samoylova
+  - Katherine A. Birchenall
+  - Y. T. Eunice Lo
+  - Sinead English
+  journal: null
+  year: 2026
+  doi: 10.64898/2026.09.17.749897
+  orcids:
+  - 0000-0002-7389-7272
+  link: https://doi.org/10.64898/2026.09.17.749897
+  n_authors: 4
   positions:
     0000-0002-7389-7272: 3
 - title: 'Effectiveness and feasibility of residential passive heat adaptation interventions
@@ -580,6 +661,18 @@
   positions:
     0000-0002-0117-3486: 7
     0000-0002-7389-7272: 2
+- title: Why we still don’t know the mounting health risks of climate change
+  authors:
+  - Dann Mitchell
+  journal: Nature
+  year: 2025
+  doi: 10.1038/d41586-025-00149-5
+  orcids:
+  - 0000-0002-0117-3486
+  link: https://doi.org/10.1038/d41586-025-00149-5
+  n_authors: 1
+  positions:
+    0000-0002-0117-3486: 1
 - title: Detecting Rising Wildfire Risks for South East England
   authors:
   - Vikki Thompson
@@ -1357,20 +1450,6 @@
   n_authors: 11
   positions:
     0000-0002-7389-7272: 5
-- title: Compound mortality impacts from extreme temperatures and pandemics
-  authors:
-  - Y. T. Eunice Lo
-  - Dann Mitchell
-  - Antonio Gasparrini
-  journal: Nature Communications
-  year: 2024
-  doi: 10.21203/rs.3.rs-3866346/v1
-  orcids:
-  - 0000-0002-7389-7272
-  link: https://doi.org/10.21203/rs.3.rs-3866346/v1
-  n_authors: 3
-  positions:
-    0000-0002-7389-7272: 1
 - title: 'Managing climate change challenges to water security: Community water governance
     in Ethiopia and Nepal'
   authors:
@@ -1692,20 +1771,25 @@
   n_authors: 4
   positions:
     0000-0002-7389-7272: 1
-- title: Decadal variability of the extratropical response to the Madden-Julian Oscillation
+- title: Current and Future Rainfall-Driven Flood Risk From Hurricanes in Puerto Rico
+    Under 1.5 °C and 2 °C Climate Change
   authors:
-  - Daniel Skinner
-  - Adrian Matthews
-  - David Stevens
-  journal: Geophysical Research Letters
-  year: 2022
-  doi: 10.5194/egusphere-egu22-1796
+  - Leanne Archer
+  - Jeffrey Neal
+  - Paul Bates
+  - Emily Vosper
+  - Dereka Carroll
+  - Jeison Sosa
+  - Daniel Mitchell
+  journal: null
+  year: 2023
+  doi: 10.5194/egusphere-2023-1574
   orcids:
-  - 0000-0002-0086-5958
-  link: https://doi.org/10.5194/egusphere-egu22-1796
-  n_authors: 3
+  - 0000-0003-2766-9823
+  link: https://doi.org/10.5194/egusphere-2023-1574
+  n_authors: 7
   positions:
-    0000-0002-0086-5958: 1
+    0000-0003-2766-9823: 4
 - title: North Atlantic Oscillation response to the Madden–Julian Oscillation in a
     coupled climate model
   authors:
@@ -1721,21 +1805,6 @@
   n_authors: 3
   positions:
     0000-0002-0086-5958: 1
-- title: Cold Weather Teleconnections from Future Arctic Sea Ice Loss and Ocean Warming
-  authors:
-  - Y. T. Eunice Lo
-  - Daniel M Mitchell
-  - Peter A. G. Watson
-  - James A Screen
-  journal: Geophysical Research Letters
-  year: 2022
-  doi: 10.1002/essoar.10512271.1
-  orcids:
-  - 0000-0002-0117-3486
-  link: https://doi.org/10.1002/essoar.10512271.1
-  n_authors: 4
-  positions:
-    0000-0002-0117-3486: 2
 - title: Sustained Water Storage in Horn of Africa Drylands Dominated by Seasonal
     Rainfall Extremes
   authors:
@@ -1756,6 +1825,21 @@
   n_authors: 8
   positions:
     0000-0002-0117-3486: 8
+- title: Downplaying the catastrophic health impact of heatwaves costs lives
+  authors:
+  - Dann M Mitchell
+  - Y T Eunice Lo
+  journal: BMJ
+  year: 2022
+  doi: 10.1136/bmj.o1940
+  orcids:
+  - 0000-0002-0117-3486
+  - 0000-0002-7389-7272
+  link: https://doi.org/10.1136/bmj.o1940
+  n_authors: 2
+  positions:
+    0000-0002-0117-3486: 1
+    0000-0002-7389-7272: 2
 - title: Robust increase in population exposure to heat stress with increasing global
     warming
   authors:
@@ -2357,6 +2441,21 @@
   n_authors: 6
   positions:
     0000-0002-0117-3486: 2
+- title: 'Editorial: Climate Science Advances to Address 21st Century Weather and
+    Climate Extremes'
+  authors:
+  - Chris Funk
+  - Andrew Hoell
+  - Daniel Mitchell
+  journal: Frontiers in Climate
+  year: 2021
+  doi: 10.3389/fclim.2021.680291
+  orcids:
+  - 0000-0002-0117-3486
+  link: https://doi.org/10.3389/fclim.2021.680291
+  n_authors: 3
+  positions:
+    0000-0002-0117-3486: 3
 - title: Persistent Model Biases in the CMIP6 Representation of Stratospheric Polar
     Vortex Variability
   authors:
@@ -3275,6 +3374,21 @@
   n_authors: 6
   positions:
     0000-0002-0117-3486: 2
+- title: The day the 2003 European heatwave record was broken
+  authors:
+  - Dann Mitchell
+  - Kai Kornhuber
+  - Chris Huntingford
+  - Peter Uhe
+  journal: The Lancet Planetary Health
+  year: 2019
+  doi: 10.1016/s2542-5196(19)30106-8
+  orcids:
+  - 0000-0002-0117-3486
+  link: https://doi.org/10.1016/s2542-5196(19)30106-8
+  n_authors: 4
+  positions:
+    0000-0002-0117-3486: 1
 - title: Increasing mitigation ambition to meet the Paris Agreement’s temperature
     goal avoids substantial heat-related mortality in U.S. cities
   authors:
@@ -4121,6 +4235,20 @@
   n_authors: 7
   positions:
     0000-0002-0117-3486: 5
+- title: 'Hurricanes Harvey, Irma and Maria: how natural were these ‘natural disasters’?'
+  authors:
+  - Emily Shuckburgh
+  - Dann Mitchell
+  - Peter Stott
+  journal: Weather
+  year: 2017
+  doi: 10.1002/wea.3190
+  orcids:
+  - 0000-0002-0117-3486
+  link: https://doi.org/10.1002/wea.3190
+  n_authors: 3
+  positions:
+    0000-0002-0117-3486: 2
 - title: Australia's Unprecedented Future Temperature Extremes Under Paris Limits
     to Warming
   authors:

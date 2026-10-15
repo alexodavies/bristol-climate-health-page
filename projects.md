@@ -9,6 +9,9 @@ lede: Our funded projects, each with its own award and team. For wider themes se
 {% for p in site.projects %}
   <div class="proj" id="{{ p.slug }}">
     <a href="{{ p.url | relative_url }}"><div class="news-art" style="background-image:url('{{ p.image | relative_url }}')"></div><small>{{ p.tag }}</small><h3>{{ p.title }}</h3><p>{{ p.summary }}</p><b>View project →</b></a>
+    {%- if p.team.size > 0 %}
+    <p class="proj-team">{% for s in p.team %}{% include byline.html slug=s %}{% endfor %}</p>
+    {%- endif %}
     {%- if p.themes.size > 0 %}
     <p class="proj-themes"><small>Research themes</small>
       {%- for t in p.themes %}{% for r in site.data.research %}{% if r.id == t %}<a href="{{ '/research/#' | append: r.id | relative_url }}">{{ r.title }}</a>{% endif %}{% endfor %}{% endfor %}

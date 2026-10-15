@@ -1,6 +1,9 @@
 # ORCID iDs used by scripts/fetch_citations.py to build _data/citations.yaml.
 # Member iDs are read from _members/*.md front matter (`orcid:`); list any extra
 # group-level iDs here. Blank entries are skipped.
-# ORCID work types to include (see ORCID work-type list), e.g. journal-article, preprint, book-chapter
-types: [journal-article]
+# ORCID work types to include (see ORCID work-type list), e.g. journal-article, preprint, book-chapter.
+# ORCID files many preprints (arXiv), comment pieces and news features under `other`, so it is included.
+types: [journal-article, preprint, other]
+# Skip works whose DOI contains any of these (conference abstracts, supplements, posters).
+exclude_doi_contains: [-supplement, egusphere-egu, essoar, /v1]
 group: []

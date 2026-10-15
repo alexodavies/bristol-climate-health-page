@@ -9,6 +9,6 @@ link_text: Read more →
 funder:                # e.g. NERC, NIHR (optional)
 start:                 # YYYY-MM (optional)
 end:                   # YYYY-MM (optional, blank = ongoing)
-team: []               # member file names, e.g. [ruby-lieber, eunice-lo]
+team: [ruby-lieber, daniel-skinner]            # member file names, e.g. [ruby-lieber, eunice-lo]
 ---
 Placeholder: describe BREATHE here, including its funder, award, start and end dates, partners and aims.
