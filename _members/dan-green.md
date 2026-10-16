@@ -3,7 +3,7 @@ name: Dan Green
 initials: DG
 role: PhD
 group: phds
-title: African climate science
+title: PhD in African climate science
 # Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
 start: 2022-01
 end:
