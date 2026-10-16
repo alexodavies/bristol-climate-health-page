@@ -236,6 +236,14 @@ Notice that the address starts with `/bristol-climate-health-page/`. Leave that 
 
 **Example:** `_posts/2026-10-14-eunice-lo-tedxbristol.md` is a complete media post built around a YouTube video (see section 9 for more examples).
 
+**LinkedIn posts (including their videos):** on the post on LinkedIn click **⋯ → Copy link to post**, then paste:
+
+```
+{% include linkedin.html url="https://www.linkedin.com/posts/..." title="What the post is about" %}
+```
+
+It only works for **public** posts. If the post looks cut off, add `height="800"` before the closing `%}`. Example: `_posts/2026-10-08-el-nino-lancet-preparedness.md`.
+
 **Vimeo and others:** use the site's own **Share → Embed** code instead and paste the `<iframe ...></iframe>` it gives you on its own line.
 
 **A video file of your own:** only for short, small clips (aim for under 20 MB; GitHub's web upload stops at 25 MB, and big files slow the whole site). Upload it to the **`assets/video`** folder (like a photo in section 2), then add:
@@ -394,7 +402,8 @@ The quickest way to do something new is to open a similar existing file, copy it
 | I want to… | Look at this file | What it shows |
 |---|---|---|
 | Post a **talk or video** (YouTube) as a media item | `_posts/2026-10-14-eunice-lo-tedxbristol.md` | `category: media`, `author`, a card `image`, the `link` to the video, and the YouTube tag with description text below it. It automatically appears on News & Media and on the author's profile |
-| Write a normal **blog post** | `_posts/2026-03-01-unseen-heatwave-mortality.md` | A short post with `author`, `tag`, `excerpt` and the `paper` DOI |
+| Write a **news post** with a paper and a LinkedIn embed | `_posts/2026-10-08-el-nino-lancet-preparedness.md` | `category: news`, `author`, `paper` DOI, a `linkedin.html` embed and a numbered list |
+| Write a normal **blog post** | copy any post and delete the `category:` line | Blog is the default category |
 | Post a **news item** | copy either post above and set `category: news` | News posts have no extra fields |
 | Add a **funded project** with its own page | `_projects/breathe.md` or `_projects/delta.md` | `themes`, `funder`, `team`, card `image` and page text |
 | Put an **uploaded video file** on a page | the `<video>` example in section 5, and `assets/video/hero-small.mp4` | Videos you upload go in `assets/video/` (the home page background uses this folder). There is no live example page yet |

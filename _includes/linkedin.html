@@ -1,0 +1,13 @@
+{%- comment -%} Usage: {% include linkedin.html url="<the LinkedIn post address>" title="What the post is" %}  (height="700" if the post is cut off). Works for public posts only; paste the address from the post's ... menu -> Copy link to post. {%- endcomment -%}
+{%- assign src = include.url | default: include.id -%}
+{%- if src contains "urn:li:" -%}{%- assign urn = src | split: "urn:li:" | last | prepend: "urn:li:" -%}
+{%- else -%}
+  {%- if src contains "ugcPost-" -%}{%- assign kind = "ugcPost" -%}{%- assign num = src | split: "ugcPost-" | last -%}
+  {%- elsif src contains "activity-" -%}{%- assign kind = "activity" -%}{%- assign num = src | split: "activity-" | last -%}
+  {%- elsif src contains "share-" -%}{%- assign kind = "share" -%}{%- assign num = src | split: "share-" | last -%}
+  {%- elsif src contains "ugcPost:" -%}{%- assign kind = "ugcPost" -%}{%- assign num = src | split: "ugcPost:" | last -%}
+  {%- else -%}{%- assign kind = "activity" -%}{%- assign num = src -%}{%- endif -%}
+  {%- assign num = num | split: "-" | first | split: "?" | first | split: "/" | first -%}
+  {%- assign urn = "urn:li:" | append: kind | append: ":" | append: num -%}
+{%- endif -%}
+<iframe class="embed-linkedin" src="https://www.linkedin.com/embed/feed/update/{{ urn }}" height="{{ include.height | default: 650 }}" title="{{ include.title | default: 'LinkedIn post' | escape }}" loading="lazy" allowfullscreen></iframe>
