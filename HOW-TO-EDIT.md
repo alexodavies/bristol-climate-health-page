@@ -396,9 +396,9 @@ The quickest way to do something new is to open a similar existing file, copy it
 | Post a **talk or video** (YouTube) as a media item | `_posts/2026-10-14-eunice-lo-tedxbristol.md` | `category: media`, `author`, a card `image`, the `link` to the video, and the YouTube tag with description text below it. It automatically appears on News & Media and on the author's profile |
 | Write a normal **blog post** | `_posts/2026-03-01-unseen-heatwave-mortality.md` | A short post with `author`, `tag`, `excerpt` and the `paper` DOI |
 | Post a **news item** | copy either post above and set `category: news` | News posts have no extra fields |
-| Add a **funded project** with its own page | `_projects/breathe.md` or `_projects/unseen.md` | `themes`, `funder`, `team`, card `image` and page text |
-| Put an **uploaded video file** on a page | `_projects/unseen.md` (bottom) and `assets/video/hero-small.mp4` | The `<video>` tag and where the file lives. This one is a test clip, so replace it with your own |
-| Show a post on a **project's page** | add `projects: [unseen]` to the top of a post | The project file name without `.md` |
+| Add a **funded project** with its own page | `_projects/breathe.md` or `_projects/delta.md` | `themes`, `funder`, `team`, card `image` and page text |
+| Put an **uploaded video file** on a page | the `<video>` example in section 5, and `assets/video/hero-small.mp4` | Videos you upload go in `assets/video/` (the home page background uses this folder). There is no live example page yet |
+| Show a post on a **project's page** | add `projects: [breathe]` to the top of a post | The project file name without `.md` |
 | Add a **profile photo** | `assets/images/people/` (for example `eunice-lo.jpg` for `_members/eunice-lo.md`) | The photo's file name matches the profile file name |
 | Add a **card or theme image** | `assets/images/` (`heat.jpg`, `water.jpg`, `systems.jpg`) | Refer to it as `image: /assets/images/heat.jpg` |
 | Add a **research theme** | `_data/research.yaml` | One block per theme, with its colour and `id` |
