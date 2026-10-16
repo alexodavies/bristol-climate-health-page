@@ -5,7 +5,7 @@ role: Group Lead
 title: Senior Research Fellow
 group: leads
 # Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
-start: 2019-01
+start: 2017-11
 end:
 order: 2
 image:
