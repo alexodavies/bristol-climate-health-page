@@ -1,11 +1,12 @@
 ---
 title: UNSEEN heatwave mortality
 tag: Extreme heat
-themes: [heat]
+themes: [attribution]
 image: /assets/images/hero.jpg
 summary: Testing plausible heat-related mortality in record-breaking UK heat using large ensembles and temperature–mortality models.
 link: https://www.bristol.ac.uk/cabot/what-we-do/heatwave-mortality/      # optional external page; shown as a button on the project page
 link_text: Read more →
+status: current       # current or completed
 funder:                # e.g. NERC, NIHR (optional)
 start:                 # YYYY-MM (optional)
 end:                   # YYYY-MM (optional, blank = ongoing)

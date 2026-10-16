@@ -1,11 +1,12 @@
 ---
 title: Climate impacts & risks
 tag: Community × impact
-themes: [systems]
+themes: [forecasting]
 image: /assets/images/systems.jpg
 summary: Building a national community around climate impacts, adaptation and climate-health research through the NCI-RM meetings.
 link: https://www.climatebristol.org/projects/nci-rm/      # optional external page; shown as a button on the project page
 link_text: Explore →
+status: current       # current or completed
 funder:                # e.g. NERC, NIHR (optional)
 start:                 # YYYY-MM (optional)
 end:                   # YYYY-MM (optional, blank = ongoing)

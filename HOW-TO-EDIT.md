@@ -324,12 +324,12 @@ The **Research** page (scrolling coloured themes) and the **Projects** page (fun
 Each theme is one block. Copy an existing block to add a theme, and delete a block to remove one.
 
 ```
-- id: heat
-  cls: heat
-  tint: '#c4551f'
-  image: /assets/images/heat.jpg
-  kicker: Extreme weather × health
-  title: Heat, cold & morbidity
+- id: attribution
+  cls: attribution
+  tint: '#1f6fa8'
+  image: /assets/images/water.jpg
+  kicker: Attribution × risk
+  title: Impact Attribution
   text: One or two sentences on this theme.
 ```
 
@@ -347,13 +347,13 @@ The order in the file is the order on the page. The home page shows only the fir
 
 ### Projects: one file each in `_projects`
 
-Only **explicitly funded projects** (for example BREATHE) belong here. Broader directions belong in Research. Each project has its own file and its own page on the site, like a profile or a post. To add one, open any file in `_projects`, copy it, and create a new file such as `_projects/my-project.md`.
+Only **explicitly funded projects** (for example BREATHE), current or finished, belong here. Broader directions belong in Research. Each project has its own file and its own page on the site, like a profile or a post. To add one, open any file in `_projects`, copy it, and create a new file such as `_projects/my-project.md`.
 
 ```
 ---
 title: BREATHE
 tag: Funded project
-themes: [heat, air]
+themes: [attribution]
 image: /assets/images/heat.jpg
 summary: One sentence on the project, shown on its card and the top of its page.
 link: https://example.com/breathe
@@ -370,8 +370,9 @@ methods, partners, outputs.
 | Line | What it does |
 |---|---|
 | `title`, `tag`, `summary` | The heading, the small label and the one-sentence description |
-| `themes` | The ids of the research themes it belongs to, in square brackets, such as `[heat, air]` |
+| `themes` | The ids of the research themes it belongs to, in square brackets, such as `[attribution]` (or two, `[attribution, geoai]`) |
 | `image` | The card photo |
+| `status` | `current` or `completed`. Completed projects are listed under their own heading on the Projects page |
 | `link`, `link_text` | Optional. An external project website, shown as a button on the project page. Delete both lines if there isn't one |
 | `funder`, `start`, `end` | Optional. Shown under the title. Leave `end` blank for an ongoing project |
 | `team` | Optional. Member file names (as in section 4's `author`), such as `[ruby-lieber, eunice-lo]`. The people appear on the project page and its card, and the project appears on each person's profile |

@@ -1,44 +1,23 @@
+# The group's three research themes (these also appear on the landing page).
 # Each theme has an `id`. Projects list the theme ids they belong to (in each file in _projects); links appear on both pages automatically.
-- id: heat
-  cls: heat
-  tint: '#c4551f'
-  image: /assets/images/heat.jpg
-  kicker: Extreme weather × health
-  title: Heat, cold & morbidity
-  text: Quantifying how heatwaves, cold weather, humidity and other hazards affect illness, mortality and wellbeing — now and under future climate change.
-- id: water
-  cls: water
+- id: attribution
+  cls: attribution
   tint: '#1f6fa8'
   image: /assets/images/water.jpg
   kicker: Attribution × risk
-  title: What changed — and why?
+  title: Impact Attribution
   text: Using observations, large climate-model ensembles and counterfactual worlds to attribute changing hazards and health impacts to climate change.
-- id: systems
-  cls: systems
+- id: forecasting
+  cls: forecasting
   tint: '#2f7d5b'
   image: /assets/images/systems.jpg
   kicker: Forecasting × resilience
-  title: From weather to health decisions
+  title: Weather-Health Forecasting
   text: Connecting weather forecasts with health-impact models to anticipate demand, test plausible extremes and support preparedness across public and health services.
-# Placeholder themes below: edit the wording, tint (any colour) and image, or delete.
-- id: cold
-  cls: cold
-  tint: '#4a5fc1'
-  image: /assets/images/water.jpg
-  kicker: Placeholder × seasonal health
-  title: Cold, seasons & winter health
-  text: Placeholder. How cold spells, damp, seasonal swings and a warming winter shape illness and mortality, and who is most exposed.
-- id: air
-  cls: air
+- id: geoai
+  cls: geoai
   tint: '#8a5a9e'
-  image: /assets/images/systems.jpg
-  kicker: Placeholder × environment
-  title: Air, smoke & compound hazards
-  text: Placeholder. Wildfire smoke, air pollution, pollen and overlapping hazards that combine with heat to raise health risk.
-- id: ai
-  cls: ai
-  tint: '#c79a1c'
   image: /assets/images/heat.jpg
-  kicker: Placeholder × methods
-  title: AI & data for climate health
-  text: Placeholder. Machine learning, graph models and linked health data to find who is at risk, where and when.
+  kicker: Data × environment
+  title: GeoAI & the Environment
+  text: Placeholder. Machine learning, graph models and geospatial data to find who is at risk from environmental hazards, where and when.

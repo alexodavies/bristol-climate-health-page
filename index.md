@@ -6,7 +6,7 @@ description: Climate Health is a University of Bristol research group studying h
 <section class="hero">
   <div class="hero-photo" role="img" aria-label="Landscape and weather"></div>
   <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"><source src="{{ '/assets/video/hero-small.mp4' | relative_url }}" type="video/mp4"></video><div class="hero-shade"></div>
-  <div class="hero-copy"><p class="eyebrow">University of Bristol</p><h1>Climate changes,<br>health changes,<br>and climate <em>changes health.</em></h1><p class="dek">We study how climate change and extreme weather affect human health, and turn climate evidence into useful information for health decisions.</p><a class="round-link" href="{{ '/research/' | relative_url }}">Explore our work <span>↘</span></a></div>
+  <div class="hero-copy"><p class="eyebrow">Climate and Health Group · University of Bristol</p><h1>Climate changes,<br>health changes,<br>and climate <em>changes health.</em></h1><p class="dek">We study how climate change and extreme weather affect human health, and turn climate evidence into useful information for health decisions.</p><p class="hero-themes">{% for r in site.data.research %}{{ r.title | escape }}{% unless forloop.last %} <span>|</span> {% endunless %}{% endfor %}</p><a class="round-link" href="{{ '/research/' | relative_url }}">Explore our work <span>↘</span></a></div>
   <div class="scroll">Scroll to explore ↓</div>
 </section>
 
