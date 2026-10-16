@@ -21,8 +21,11 @@ summary:  Climate Change and Health
 ---
 I am a UKRI Future Leaders Fellow, leading a research programme to develop a new field of weather-health prediction science, with the aim of enhancing the climate resilience of the NHS and other health services.
 
-My broader research investigates changes in extreme weather events, including heatwaves, cold snaps and storms, and their human health impacts across different time scales and climate change scenarios. This includes counterfactual scenarios to quantify the influence of human-induced climate change on extreme weather and its health impacts. By integrating weather and climate observations, weather forecasts, large ensembles of climate model simulations and epidemiological modelling, my research uniquely bridges climate science and epidemiology.
+My broader research investigates changes in extreme weather events, including heatwaves, cold snaps and storms, and their human health impacts across different time scales and climate change scenarios. This includes counterfactual scenarios to quantify the influence of human-induced climate change on extreme weather and impacts. By integrating weather forecasts, climate observations, large ensembles of climate model simulations and epidemiological modelling, my research uniquely bridges climate science and epidemiology.
 
-In 2024, my scientific contributions were recognised with three national honours: the L F Richardson Award from the Royal Meteorological Society, the Emerging Leaders Prize from Medical Research UK, and the Impact Award from the Royal Meteorological Society.
+In 2024, my scientific contributions were recognised with three national honours: 
+- The L F Richardson Award from the Royal Meteorological Society
+- The Emerging Leaders Prize from Medical Research UK
+- Impact Award from the Royal Meteorological Society.
 
 I am passionate about generating novel science that also provides vital evidence to climate policymaking. I was a contributing author to the UK Climate Change Risk Assessment ([CCRA4](https://www.imperial.ac.uk/media/images/non-standard-dimensions/C3-CCRA4-IA-TR-Health-and-Wellbeing-MeGXZSkgKhcJ.pdf)) and [IPCC Sixth Assessment Report](https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-3/). I also held an honorary position at the UK Health Security Agency for two years. Before joining Bristol, I did a PhD in Atmosphere, Oceans and Climate at the University of Reading (2018).
