@@ -6,8 +6,8 @@ title: Research Fellow
 group: affiliates
 stage: later   # ring colour: phd, postdoc or later (defaults from group)
 # Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
-start:
-end:
+start: 2023-12
+end: 2025-12
 order: 4
 image:
 orcid: 0000-0002-5797-1241
