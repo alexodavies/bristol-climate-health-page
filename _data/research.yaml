@@ -4,20 +4,20 @@
   cls: attribution
   tint: '#1f6fa8'
   image: /assets/images/water.jpg
-  kicker: Attribution × risk
+  kicker: Adaptation × Risk
   title: Impact Attribution
-  text: Using observations, large climate-model ensembles and counterfactual worlds to attribute changing hazards and health impacts to climate change.
+  text: Using observations, large climate-model ensembles and counterfactual worlds to attribute changing hazards and associated impacts to climate change.
 - id: forecasting
   cls: forecasting
   tint: '#2f7d5b'
   image: /assets/images/systems.jpg
-  kicker: Forecasting × resilience
-  title: Weather-Health Forecasting
-  text: Connecting weather forecasts with health-impact models to anticipate demand, test plausible extremes and support preparedness across public and health services.
+  kicker: Forecasting × Resilience
+  title: Extreme Weather & Health
+  text: Connecting near real-time observations, weather forecasts and large ensembles with health models, to quantify impacts of past events and anticipate future demand on public and health services.
 - id: geoai
   cls: geoai
   tint: '#8a5a9e'
   image: /assets/images/heat.jpg
-  kicker: Data × environment
-  title: GeoAI & the Environment
+  kicker: Modelling × Uncertainty
+  title: GeoAI & Climate
   text: Placeholder. Machine learning, graph models and geospatial data to find who is at risk from environmental hazards, where and when.
