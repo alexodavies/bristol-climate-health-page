@@ -1,7 +1,7 @@
 ---
 permalink: /team/
 title: Team
-eyebrow: 02 / People
+eyebrow: 01 / People
 description: 
 ---
 {% include ring-key.html %}
