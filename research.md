@@ -1,7 +1,7 @@
 ---
 permalink: /research/
 title: Research
-eyebrow: 01 / Research
+eyebrow: 02 / Research
 description: Our research foci.
 ---
 <div class="themes">
