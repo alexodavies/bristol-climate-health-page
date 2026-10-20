@@ -2,8 +2,7 @@
 permalink: /team/
 title: Team
 eyebrow: 02 / People
-description: The Climate Health team at the University of Bristol, from group leads Professor Dann Mitchell and Dr Eunice Lo to postdoctoral researchers and PhD students working on climate and human health.
-lede: Led across climate science and human health.
+description: 
 ---
 {% include ring-key.html %}
 {% assign all = site.members | sort: "order" %}
