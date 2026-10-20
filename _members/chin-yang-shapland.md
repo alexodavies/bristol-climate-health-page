@@ -12,5 +12,5 @@ end:
 order: 90
 image:
 links:
-  profile: ttps://www.bristol.ac.uk/people/person/Chin%20Yang-Shapland-0138a68d-a957-4a7c-b967-03a88a56e01a/
+  profile: https://www.bristol.ac.uk/people/person/Chin%20Yang-Shapland-0138a68d-a957-4a7c-b967-03a88a56e01a/
 ---
