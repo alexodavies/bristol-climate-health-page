@@ -2,8 +2,7 @@
 permalink: /projects/
 title: Projects
 eyebrow: Projects
-description: Funded projects of the Climate Health group at the University of Bristol, including BREATHE, Futureproof, AI for Heat Mortality, CHAI and DELTA.
-lede: Our funded projects, current and completed, each with its own page. For wider themes see Research.
+description: Our current funded projects.
 ---
 {% assign current = site.projects | where_exp: "p", "p.status != 'completed'" %}
 {% assign done = site.projects | where_exp: "p", "p.status == 'completed'" %}
