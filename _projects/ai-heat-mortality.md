@@ -5,7 +5,7 @@ themes: [geoai]
 image: /assets/images/heat.jpg
 summary: Placeholder. Replace with a one-sentence summary of AI for Heat Mortality.
 link:                  # optional external page; shown as a button on the project page
-link_text: Project website →
+link_text: 
 status: current        # current or completed
 funder: University of Bristol Faculty of Science and Engineering Strategic Research Accelerator      # Funded by
 pi: [eunice-lo, Rui Zhu]                # PI(s): member file names, or plain names for people outside the group
