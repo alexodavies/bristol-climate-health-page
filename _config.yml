@@ -3,7 +3,7 @@ tagline: University of Bristol
 description: Climate and Health research group at the University of Bristol, led by Professor Dann Mitchell and Dr Eunice Lo.
 email: climatechange-health@bristol.ac.uk
 # University of Bristol press office (media enquiries)
-press_email: media-team@bristol.ac.uk
+press_email: press-office@bristol.ac.uk
 # GitHub Pages project site. For local preview use:  bundle exec jekyll serve --baseurl ""
 url: "https://alexodavies.github.io"
 baseurl: "/bristol-climate-health-page"
