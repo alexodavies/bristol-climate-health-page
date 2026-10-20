@@ -14,7 +14,7 @@ start:  2027-01              # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
 partners: [UK Met Office, Cabinet Office, NHS, UK Health Security Agency, Public Health Scotland, Public Health Wales]          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
 outputs: []           # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
-photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
+photos: [{image: /assets/images/Lo_FLF_WP123.jpg, caption: Futureproof work packages and overarching partners}]            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
 Heatwaves, cold snaps and storms are major threats to UK health, yet there is a knowledge gap in predicting their impacts on health service demand. Extreme weather can make people ill, worsen symptoms, increase injuries, disrupt service delivery, and cause preventable deaths . These pressures add strain on an NHS that is already operating above safety limits. With a remit in providing free healthcare, the NHS is not funded for critical weather-related research. Meanwhile, the UK Met Office and UK Health Security Agency (UKHSA) are world-leading in weather-health alerting. However, their focus remains on forecasting the weather and warning the public and healthcare sector about it, without forecasting the health impacts. The need for a new generation of weather-health prediction capability is clear and urgent.
 
