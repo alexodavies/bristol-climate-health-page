@@ -126,7 +126,7 @@ footer small a{text-decoration:underline}
 .page-body .people-grid article p{font-size:13px;margin:0;opacity:.75}
 .page-body .people-grid article .bio{font-size:15px;line-height:1.55;margin-top:1rem;opacity:.9}
 .page-body .news-art+small,.page-body .news-grid a{display:block}
-.prose{font-size:18px;line-height:1.6;max-width:720px}
+.prose{font-size:18px;line-height:1.6;max-width:min(1100px,100%)}
 .sub{font-family:var(--serif);font-weight:500;font-size:clamp(36px,4vw,60px);letter-spacing:-.04em;margin:3rem 0 1rem}
 .pub-filter{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:0 0 1.5rem;font-size:14px}
 .pub-filter select{font:inherit;padding:8px 12px;border:1px solid var(--ink);border-radius:100px;background:var(--cream);color:var(--ink)}
@@ -155,7 +155,7 @@ footer small a{text-decoration:underline}
 .byline{display:inline-flex;align-items:center;gap:.7rem;font-size:16px}
 .byline .avatar{margin:0;width:48px;height:42px}
 .byline-text{display:block;font-size:13px;opacity:.75;margin-bottom:.4rem}
-.post-list{list-style:none;padding:0;margin:0 0 1rem;max-width:720px}
+.post-list{list-style:none;padding:0;margin:0 0 1rem;max-width:100%}
 .post-list li{padding:.9rem 0;border-top:1px solid #17352b33;line-height:1.45}
 .post-list small{opacity:.7;margin-left:.5rem}
 .feed-link{font-size:14px;margin:1.5rem 0}
@@ -311,11 +311,11 @@ body{overflow-x:clip}
 .people-col:last-child{flex:1;min-width:0}
 
 /* project page structure */
-.proj-facts{display:grid;grid-template-columns:max-content 1fr;gap:.9rem 2rem;margin:0 0 1rem;padding:0;max-width:720px;font-size:17px;line-height:1.5}
+.proj-facts{display:grid;grid-template-columns:max-content 1fr;gap:.9rem 2rem;margin:0 0 1rem;padding:0;max-width:100%;font-size:17px;line-height:1.5}
 .proj-facts dt{font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:600;opacity:.7;padding-top:.35rem}
 .proj-facts dd{margin:0}
 .proj-people{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem}
-.proj-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin:2rem 0;max-width:1100px}
+.proj-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin:2rem 0;max-width:100%}
 .proj-photos figure{margin:0}
 .proj-photos img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
 .proj-photos figcaption{font-size:13px;opacity:.75;margin-top:.5rem}
