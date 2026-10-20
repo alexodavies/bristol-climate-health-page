@@ -5,8 +5,8 @@ role: PhD Student
 title: PhD
 group: phds
 # Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
-start:
-end:
+start: 2024-09
+end: 2028-09
 order: 10
 image:
 orcid:
