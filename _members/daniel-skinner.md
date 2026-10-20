@@ -1,24 +1,26 @@
 ---
-name: Daniel Skinner
+name: Dan Skinner
 initials: DS
 role: Research Staff
 title: Senior Research Associate (BREATHE)
 group: postdocs
 # Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
-start:
+start: 2025-07
 end:
 order: 8
 image:
 orcid: 0000-0002-0086-5958
 links:
   profile: https://www.bristol.ac.uk/people/person/Daniel-Skinner-eb057bf1-af14-4b9d-96a2-7dd83ba11d28/
-  github:
-  scholar:
+  github: https://github.com/dtskinner
+  scholar: https://scholar.google.com/citations?user=vbvCz7QAAAAJ&hl=en
   # Email (optional): spam crawlers harvest plain addresses, so write it like
   # "first dot last at bristol.ac.uk" and the site turns it into a working link.
-  email:
+  email: dan dot skinner at bristol.ac.uk
+  orcid: https://orcid.org/0000-0002-0086-5958
 summary: Senior Research Associate (BREATHE) 
 ---
-I am a climate modeller with wide-ranging interests across weather and climate science. In particular, my more recent work has focussed on the use of intermediate-complexity climate models to run fast and flexible simulations with a focus on gaining a mechanistic understanding of various processes within the climate system. In my current project, BREATHE, I will be running counter-factual historical climate simulations on the HadCM3 model to assess the impacts of climate change on health around the globe.
 
-My previous work has looked at how the hydroclimate of the South Pacific has varied over the last few thousand years, using the IGCM4 model to assess the impact of different climatic drivers. Prior to this, I also studied how the weather in the tropics can help us to predict the weather in North America and Europe via atmospheric teleconnections.
+I’m climate scientist at the University of Bristol, working with the HadCM3B-ESM model to study detection and attribution, with particular focus on human health impacts. These detection and attribution simulations will be submitted to the 2nd phase of the Detection and Attribution Model Intercomparison Project (DAMIP2) - a part of CMIP7.
+
+My current work forms part of the wider [BREATHE](projects/breathe) project, a large consortium studying the attribution of climate-related health outcomes to human emissions.
