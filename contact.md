@@ -1,7 +1,7 @@
 ---
 permalink: /contact/
 title: Contact
-eyebrow: Join the community
+eyebrow: Join us
 description: 
 ---
 <h2 class="sub">Research Fellowships</h2>
