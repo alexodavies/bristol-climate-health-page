@@ -7,10 +7,10 @@ summary: Placeholder. Replace with a one-sentence summary of Futureproof.
 link:                  # optional external page; shown as a button on the project page
 link_text: Project website →
 status: current        # current or completed
-funder:       # Funded by
-pi: []                # PI(s): member file names, or plain names for people outside the group
+funder: UKRI Future Leaders Fellowships      # Funded by
+pi: [eunice-lo]                # PI(s): member file names, or plain names for people outside the group
 team: [eunice-lo]          # member file names, e.g. [ruby-lieber, eunice-lo]
-start:                # YYYY-MM (Duration)
+start:  2027-01              # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
 partners: []          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
 outputs: []           # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
