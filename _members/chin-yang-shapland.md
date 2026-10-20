@@ -1,27 +1,16 @@
 ---
 name: Chin Yang Shapland
-initials: CS
-role: Research Staff
+initials: CYS
+role: Affiliate
 title: Research Fellow
 group: affiliates
-# Photo and name on the Team page link out to this profile (temporarily her ORCID: replace with her page at her current organisation)
-external: https://orcid.org/0000-0002-5797-1241
-stage: later   # ring colour: phd, postdoc or later (defaults from group)
-# Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
-start: 2025-01
-end: 2025-12
-order: 4
+# Affiliates are people who work with the group but are not core members.
+# Their photo and name on the Team page link straight to this address instead of a page here.
+external: https://www.bristol.ac.uk/people/person/Chin%20Yang-Shapland-0138a68d-a957-4a7c-b967-03a88a56e01a/
+start:
+end:
+order: 90
 image:
-orcid: 0000-0002-5797-1241
 links:
-  profile:
-  github:
-  scholar:
-  # Email (optional): spam crawlers harvest plain addresses, so write it like
-  # "first dot last at bristol.ac.uk" and the site turns it into a working link.
-  email:
-summary: Epidemiology and Medical Statistics 
+  profile: ttps://www.bristol.ac.uk/people/person/Chin%20Yang-Shapland-0138a68d-a957-4a7c-b967-03a88a56e01a/
 ---
-I am a Research Fellow at the MRC Integrative Epidemiology Unit. My research interest is in the relationship of climate change on human health. To bridge the gap between the two research fields, I started collaborating with colleagues in Bristol Climate Dynamics Group in 2023. Within the group, I have been investigating the impacts of extreme temperatures on human mortality and hospitalisation, and predicting future heat-related mortality using heatwave attribution data.
-
-My expertise is in Bayesian approaches and causal inference, therefore aiming to infer causality between climate change and human health with these statistical methods.
