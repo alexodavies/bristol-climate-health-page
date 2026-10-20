@@ -2,8 +2,7 @@
 permalink: /research/
 title: Research
 eyebrow: 01 / Research
-description: Research themes and directions of the Climate Health group at the University of Bristol, covering heat, cold and health, climate change attribution, and forecasting for health resilience.
-lede: Heat, cold and morbidity; attribution and risk; and forecasting for resilience. See Projects for our funded work and Publications for our papers.
+description: Our research foci.
 ---
 <div class="themes">
 {% for r in site.data.research %}
