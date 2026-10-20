@@ -2,8 +2,7 @@
 permalink: /publications/
 title: Publications
 eyebrow: Publications
-description: Publications by the Climate Health group at the University of Bristol on heat, cold and health, climate change attribution, and forecasting for health resilience.
-lede: Journal articles from group members, updated automatically from ORCID. Each person's papers are shown for the period they were in the group.
+description: 
 ---
 {% include ring-key.html %}
 {% include pub-filter.html %}
