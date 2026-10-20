@@ -7,12 +7,11 @@ description:
 <h2 class="sub">Research Fellowships</h2>
 <p class="prose">The Climate and Health Group leads have held a NERC Independent Research Fellowship (Dann) and UKRI Future Leaders Fellowship (Eunice). We welcome research fellows to join our group. Please get in touch if you are interested in applying for the following:</p>
 <p>
-| **Fellowship** | **Information** |
-|---|---|
-| [**NERC IRF**](https://www.ukri.org/what-we-do/developing-people-and-skills/nerc/nerc-fellowships/) | Five-year Independent Research Fellowships for early-career researchers wishing to carry out independent research within NERC's remit. |
-| [**Leverhulme ECF**](https://www.leverhulme.ac.uk/early-career-fellowships) | Three-year Early Career Fellowships for researchers wishing to undertake a significant piece of publishable work. |
-| [**UKRI FLF**](https://www.ukri.org/what-we-do/developing-people-and-skills/future-leaders-fellowships/) | Seven-year Future Leaders Fellowships supporting ambitious research and innovation. |
-| [**Royal Society URF**](https://royalsociety.org/grants/university-research/) | University Research Fellowships for outstanding scientists pursuing independent research. |</p>
+- [**NERC IRF**](https://www.ukri.org/what-we-do/developing-people-and-skills/nerc/nerc-fellowships/). Five-year fellowships for early-career researchers wishing to carry out independent research within NERC's remit.
+- [**UKRI FLF**](https://www.ukri.org/what-we-do/developing-people-and-skills/future-leaders-fellowships/). Seven-year fellowships supporting ambitious research and innovation.
+- [**Royal Society URF**](https://royalsociety.org/grants/university-research/). Eight-year fellowships for outstanding scientists pursuing independent research.
+- [**Royal Society Dorothy Hodgkin Fellowships**](https://royalsociety.org/grants/dorothy-hodgkin-fellowship/). Eight-year fellowships for outstanding researchers to develop independent research, while benefiting from a flexible working pattern due to personal circumstances.
+</p>
 <p><a class="round-link inverse-pill" href="mailto:{{ site.email }}">{{ site.email }} <span>↗</span></a></p>
 
 -
