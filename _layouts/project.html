@@ -5,24 +5,57 @@ layout: default
   <p class="eyebrow">Project{% if page.tag %} · {{ page.tag }}{% endif %}</p>
   <h1>{{ page.title }}</h1>
   {% if page.summary %}<p class="dek">{{ page.summary }}</p>{% endif %}
-  {%- capture tl -%}{% include tenure-label.html m=page %}{%- endcapture -%}
-  {% if tl != "" or page.funder %}<p class="tenure">{% if page.funder %}Funded by {{ page.funder }}{% if tl != "" %} · {% endif %}{% endif %}{{ tl }}</p>{% endif %}
 </section>
 <section class="page-body prose reveal">
+{%- capture duration -%}{% include tenure-label.html m=page %}{%- endcapture -%}
+{%- assign pis = page.pi -%}
+{%- if page.funder or pis.size > 0 or page.team.size > 0 or duration != "" %}
+<dl class="proj-facts">
+  {%- if page.funder %}<dt>Funded by</dt><dd>{{ page.funder }}</dd>{% endif %}
+  {%- if pis.size > 0 %}<dt>PI</dt><dd class="proj-people">
+    {%- for s in pis %}{% assign found = false %}{% for m in site.members %}{% if m.slug == s %}{% assign found = true %}<span>{% include byline.html slug=s %}</span>{% endif %}{% endfor %}{% unless found %}<span>{{ s }}</span>{% endunless %}{% endfor -%}
+  </dd>{% endif %}
+  {%- if page.team.size > 0 %}<dt>Team</dt><dd class="proj-people">
+    {%- for s in page.team %}{% assign found = false %}{% for m in site.members %}{% if m.slug == s %}{% assign found = true %}<span>{% include byline.html slug=s %}</span>{% endif %}{% endfor %}{% unless found %}<span>{{ s }}</span>{% endunless %}{% endfor -%}
+  </dd>{% endif %}
+  {%- if duration != "" %}<dt>Duration</dt><dd>{{ duration }}</dd>{% endif %}
+</dl>
+{%- endif %}
+
+{%- assign body = content | strip -%}
+{% if body != "" %}
+<h2 class="sub">Summary</h2>
 {{ content }}
+{% endif %}
+
+{%- if page.photos.size > 0 %}
+<div class="proj-photos">
+  {%- for ph in page.photos %}
+  <figure><img src="{{ ph.image | relative_url }}" alt="{{ ph.caption | default: page.title | escape }}" loading="lazy">{% if ph.caption %}<figcaption>{{ ph.caption }}</figcaption>{% endif %}</figure>
+  {%- endfor %}
+</div>
+{%- endif %}
+
+{%- if page.outputs.size > 0 %}
+<h2 class="sub">Outputs</h2>
+<ul class="post-list">
+  {%- for o in page.outputs %}<li>{% if o.url %}<a href="{{ o.url }}"><b>{{ o.title }}</b> ↗</a>{% else %}<b>{{ o.title | default: o }}</b>{% endif %}{% if o.note %} <small>{{ o.note }}</small>{% endif %}</li>{% endfor %}
+</ul>
+{%- endif %}
+
+{%- if page.partners.size > 0 %}
+<h2 class="sub">Partners</h2>
+<ul class="post-list">
+  {%- for p in page.partners %}<li>{% if p.url %}<a href="{{ p.url }}"><b>{{ p.name }}</b> ↗</a>{% elsif p.name %}<b>{{ p.name }}</b>{% else %}<b>{{ p }}</b>{% endif %}</li>{% endfor %}
+</ul>
+{%- endif %}
+
 {% if page.link %}<p><a class="round-link inverse-pill" href="{{ page.link }}">{{ page.link_text | default: "Project website →" }} <span>↗</span></a></p>{% endif %}
 
 {%- if page.themes.size > 0 %}
 <p class="proj-themes"><small>Research themes</small>
   {%- for t in page.themes %}{% for r in site.data.research %}{% if r.id == t %}<a href="{{ '/research/#' | append: r.id | relative_url }}">{{ r.title }}</a>{% endif %}{% endfor %}{% endfor %}
 </p>
-{%- endif %}
-
-{%- if page.team.size > 0 %}
-<h2 class="sub">Team</h2>
-<ul class="post-list">
-  {%- for s in page.team %}{% for m in site.members %}{% if m.slug == s %}<li>{% include byline.html slug=s %} <small>{{ m.title }}</small></li>{% endif %}{% endfor %}{% endfor %}
-</ul>
 {%- endif %}
 
 {%- assign my_posts = site.posts | where_exp: "p", "p.projects contains page.slug" -%}

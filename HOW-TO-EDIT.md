@@ -357,35 +357,50 @@ The order in the file is the order on the page. The home page shows only the fir
 
 Only **explicitly funded projects** (for example BREATHE), current or finished, belong here. Broader directions belong in Research. Each project has its own file and its own page on the site, like a profile or a post. To add one, open any file in `_projects`, copy it, and create a new file such as `_projects/my-project.md`.
 
+Every project page has the same layout: **Funded by, PI, Team, Duration**, then **Summary**, **photos**, **Outputs** and **Partners**. Any part you leave empty is simply left out.
+
 ```
 ---
 title: BREATHE
 tag: Funded project
 themes: [attribution]
 image: /assets/images/heat.jpg
-summary: One sentence on the project, shown on its card and the top of its page.
-link: https://example.com/breathe
-link_text: Project website →
-funder: NERC
+summary: One sentence, shown on the project card and under the title.
+status: current
+funder: Wellcome Trust
+pi: [dann-mitchell]
+team: [ruby-lieber, daniel-skinner]
 start: 2024-04
 end:
-team: [ruby-lieber, eunice-lo]
+partners: [Met Office, {name: UKHSA, url: "https://www.gov.uk/ukhsa"}]
+outputs: [{title: Paper title, url: "https://doi.org/10.1000/xyz", note: Journal 2026}]
+photos: [{image: /assets/images/my-photo.jpg, caption: A caption}]
+link: https://example.com/breathe
+link_text: Project website →
 ---
-Write the project description here, in Markdown (see section 5): aims,
-methods, partners, outputs.
+- A bullet point for the Summary
+- Another one
+
+Or ordinary paragraphs. Everything below the second `---` is the Summary.
 ```
 
 | Line | What it does |
 |---|---|
-| `title`, `tag`, `summary` | The heading, the small label and the one-sentence description |
+| `title`, `tag`, `summary` | The heading, the small label, and the one-sentence description used on the card and under the title |
 | `themes` | The ids of the research themes it belongs to, in square brackets, such as `[attribution]` (or two, `[attribution, geoai]`) |
 | `image` | The card photo |
 | `status` | `current` or `completed`. Completed projects are listed under their own heading on the Projects page |
-| `link`, `link_text` | Optional. An external project website, shown as a button on the project page. Delete both lines if there isn't one |
-| `funder`, `start`, `end` | Optional. Shown under the title. Leave `end` blank for an ongoing project |
-| `team` | Optional. Member file names (as in section 4's `author`), such as `[ruby-lieber, eunice-lo]`. The people appear on the project page and its card, and the project appears on each person's profile |
+| `funder` | Shown as "Funded by" |
+| `pi` | The principal investigator(s). Use member file names (their photo shows), or plain names for people outside the group, such as `[dann-mitchell, Prof. Someone Else]` |
+| `team` | Member file names, such as `[ruby-lieber, eunice-lo]`. The project also appears on each person's profile |
+| `start`, `end` | Shown as "Duration", for example Apr 2024 – present. Leave `end` blank for an ongoing project |
+| `partners` | A list of names. To link one, write it as `{name: UKHSA, url: "https://..."}` |
+| `outputs` | A list of `{title: ..., url: "https://...", note: ...}`. Only `title` is required. For papers, a DOI link works well |
+| `photos` | A list of `{image: /assets/images/file.jpg, caption: ...}`. Upload the pictures to `assets/images` as in section 2. You can add as many as you like |
+| `link`, `link_text` | Optional. An external project website, shown as a button. Delete both lines if there isn't one |
+| Text below the second `---` | The **Summary**: bullet points, paragraphs, or both (see section 5). You can also put pictures or a video in it |
 
-Everything below the second `---` is the project's page text.
+Square brackets and curly brackets must be copied exactly. A blank list is written `[]`.
 
 **Linking things to a project:**
 - **Themes:** write them in the project's `themes:` line. The theme then shows that project, and the project shows its themes. You don't edit the Research file. A theme with no projects shows no project links. If a link is missing, check the ids are spelled exactly as in `_data/research.yaml`.
