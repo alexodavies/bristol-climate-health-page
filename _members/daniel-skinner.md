@@ -23,4 +23,4 @@ summary: Senior Research Associate (BREATHE)
 
 I’m climate scientist at the University of Bristol, working with the HadCM3B-ESM model to study detection and attribution, with particular focus on human health impacts. These detection and attribution simulations will be submitted to the 2nd phase of the Detection and Attribution Model Intercomparison Project (DAMIP2) - a part of CMIP7.
 
-My current work forms part of the wider [BREATHE](/projects/breathe) project, a large consortium studying the attribution of climate-related health outcomes to human emissions.
+My current work forms part of the wider [BREATHE]({{ site.baseurl }}/projects/breathe) project, a large consortium studying the attribution of climate-related health outcomes to human emissions.
