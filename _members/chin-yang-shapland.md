@@ -4,6 +4,8 @@ initials: CS
 role: Research Staff
 title: Research Fellow
 group: affiliates
+# Photo and name on the Team page link out to this profile (temporarily her ORCID: replace with her page at her current organisation)
+external: https://orcid.org/0000-0002-5797-1241
 stage: later   # ring colour: phd, postdoc or later (defaults from group)
 # Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
 start: 2025-01

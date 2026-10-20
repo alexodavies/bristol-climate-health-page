@@ -107,7 +107,7 @@ The photo is found automatically from its **file name**. It has to match the nam
 3. Click **Commit changes**.
 
 **Tips for a good photo:**
-- A head-and-shoulders photo, with your face in the **middle** of the picture (it is cropped into a hexagon).
+- A head-and-shoulders photo, with your face in the **middle** of the picture (it is cropped into a circle).
 - Roughly **800 pixels wide** is plenty. A huge file makes the site slow. Under 500 KB is ideal.
 - If you replace a photo, upload the new one with the **same name**.
 
@@ -316,7 +316,7 @@ Click the file, then the pencil, and change the words, being careful not to dele
 **Add someone:**
 1. Open `_members`, then open any existing person's file.
 2. Click the **copy icon** at the top right of the file contents (or select all the text and copy it).
-3. Go back to `_members`, click **Add file → Create new file**, name it after the person like `first-last.md`, paste in the text and change the details. Set `group:` to `leads`, `postdocs`, `phds` or `affiliates`. For an **affiliate** (not a core member), also add `external: https://their-own-page` and their photo and name will link there instead of to a page here.
+3. Go back to `_members`, click **Add file → Create new file**, name it after the person like `first-last.md`, paste in the text and change the details. Set `group:` to `leads`, `postdocs`, `phds` or `affiliates`. For an **affiliate** (not a core member), also add the link to their **profile at their current organisation**, either as `external:` or in the `profile:` line under `links:`. Their photo and name on the Team page then link straight there instead of to a page on this site. Every affiliate should have one.
 4. Upload their photo with the matching name (see section 2).
 
 **Remove someone:** open their file in `_members`, click the **⋯ menu → Delete file**, then commit. (They disappear from the Team page and the site, but their old photo file stays harmlessly in the images folder.)
@@ -411,7 +411,7 @@ The quickest way to do something new is to open a similar existing file, copy it
 | Add a **profile photo** | `assets/images/people/` (for example `eunice-lo.jpg` for `_members/eunice-lo.md`) | The photo's file name matches the profile file name |
 | Add a **card or theme image** | `assets/images/` (`heat.jpg`, `water.jpg`, `systems.jpg`) | Refer to it as `image: /assets/images/heat.jpg` |
 | Add a **research theme** | `_data/research.yaml` | One block per theme, with its colour and `id` |
-| Add an **affiliate** | `_members/affiliate-placeholder-external.md` (links to their own site) or `_members/affiliate-placeholder-in-site.md` (has a page here) | `group: affiliates` and optional `external:` link |
+| Add an **affiliate** | `_members/affiliate-placeholder-external.md` | `group: affiliates` and the `external:` profile link their photo and name go to. Delete the placeholder files once real affiliates exist |
 
 **Where uploaded files go**
 

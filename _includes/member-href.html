@@ -1,0 +1,5 @@
+{%- comment -%} Input: include.m. Sets `mhref` (link target) and `mext` (true if it leaves the site). Affiliates go to `external:`, else their `links.profile` (their profile at their own organisation); everyone else, and affiliates with neither, go to their page here. {%- endcomment -%}
+{%- assign mext = false -%}
+{%- if include.m.external -%}{%- assign mhref = include.m.external -%}{%- assign mext = true -%}
+{%- elsif include.m.group == "affiliates" and include.m.links.profile -%}{%- assign mhref = include.m.links.profile -%}{%- assign mext = true -%}
+{%- else -%}{%- assign mhref = include.m.url | relative_url -%}{%- endif -%}

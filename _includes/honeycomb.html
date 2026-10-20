@@ -1,17 +1,15 @@
-{%- comment -%} Honeycomb grid of hexagon photos with the name over each photo. Input: include.list (members, in display order). Fills columns of two; every other column drops by half a hexagon. {%- endcomment -%}
-{%- assign per_col = 2 -%}
+{%- comment -%} Grid of circular photos with the name underneath. Input: include.list (members, in display order). {%- endcomment -%}
 <div class="honeycomb" role="list">
 {%- for m in include.list -%}
-  {%- assign idx = forloop.index0 -%}
-  {%- assign slot = idx | modulo: per_col -%}
-  {%- if slot == 0 -%}<div class="hc-col">{%- endif -%}
   {%- include member-photo.html m=m -%}
   {%- include member-stage.html m=m -%}
+  {%- include member-href.html m=m -%}
   {%- assign v = m.order | default: 0 | modulo: 2 -%}
-  <a class="hc-hex p{{ v }} s-{{ stage }}" role="listitem" href="{{ m.url | relative_url }}" title="{{ m.name }} · {{ m.title }}">
-    {%- if photo != "" -%}<img src="{{ photo | relative_url }}" alt="" loading="lazy">{%- else -%}<span class="hc-initials" aria-hidden="true">{{ m.initials }}</span>{%- endif -%}
-    <span class="hc-name">{{ m.name }}</span>
-  </a>
-  {%- if slot == 1 or forloop.last -%}</div>{%- endif -%}
+  <div class="hc-person" role="listitem">
+    <a class="hc-hex p{{ v }} s-{{ stage }}" href="{{ mhref }}" title="{{ m.name }} · {{ m.title }}">
+      {%- if photo != "" -%}<img src="{{ photo | relative_url }}" alt="{{ m.name }}" loading="lazy">{%- else -%}<span class="hc-initials" aria-hidden="true">{{ m.initials }}</span>{%- endif -%}
+    </a>
+    <a class="hc-name" href="{{ mhref }}">{{ m.name }}</a>
+  </div>
 {%- endfor -%}
 </div>
