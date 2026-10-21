@@ -3,7 +3,7 @@ title: BREATHE
 tag: Funded project
 themes: [attribution]
 image: /assets/images/heat.jpg
-summary: Placeholder. Replace with a one-sentence summary of BREATHE.
+summary: Bridging Research on Environmental Attribution and Health Equity. Replace with a one-sentence summary of BREATHE.
 link: https://www.bristol.ac.uk/      # optional external page; shown as a button on the project page
 link_text: Read more →
 status: current       # current or completed
