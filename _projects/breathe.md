@@ -3,7 +3,7 @@ title: BREATHE
 tag: Funded project
 themes: [attribution]
 image: /assets/images/heat.jpg
-summary: Bridging Research on Environmental Attribution and Health Equity. Replace with a one-sentence summary of BREATHE.
+summary: Bridging Research on Environmental Attribution and Health Equity
 link: https://www.bristol.ac.uk/      # optional external page; shown as a button on the project page
 link_text: Read more →
 status: current       # current or completed
@@ -13,7 +13,7 @@ team: [eunice-lo, ruby-lieber, daniel-skinner, emily-vosper, rachel-james]      
 collaborators: []   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start:                # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
-partners: []          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
+partners: [CIDACS, EBD-CSIC, FFU, LSHTM, ONS, Oxford, PIK, UCT]          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
 outputs: []           # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
