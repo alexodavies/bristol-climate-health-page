@@ -370,12 +370,22 @@ status: current
 funder: Wellcome Trust
 pi: [dann-mitchell]
 team: [ruby-lieber, daniel-skinner]
-collaborators: [emily-ball, Dr Someone Outside]
+collaborators:
+  - emily-ball
+  - Dr Someone Outside
 start: 2024-04
 end:
-partners: [Met Office, {name: UKHSA, url: "https://www.gov.uk/ukhsa"}]
-outputs: [{title: Paper title, url: "https://doi.org/10.1000/xyz", note: Journal 2026}]
-photos: [{image: /assets/images/my-photo.jpg, caption: A caption}]
+partners:
+  - name: Met Office
+  - name: UKHSA
+    url: https://www.gov.uk/ukhsa
+outputs:
+  - title: Paper title
+    url: https://doi.org/10.1000/xyz
+    note: Journal 2026
+photos:
+  - image: /assets/images/my-photo.jpg
+    caption: A caption
 link: https://example.com/breathe
 link_text: Project website →
 ---
@@ -402,7 +412,9 @@ Or ordinary paragraphs. Everything below the second `---` is the Summary.
 | `link`, `link_text` | Optional. An external project website, shown as a button. Delete both lines if there isn't one |
 | Text below the second `---` | The **Summary**: bullet points, paragraphs, or both (see section 5). You can also put pictures or a video in it |
 
-Square brackets and curly brackets must be copied exactly. A blank list is written `[]`.
+**Lists** (`partners`, `outputs`, `photos`, `collaborators`) are written one entry per line, each starting with a dash and two spaces of indent, as in the example. Names can include commas and brackets. Put a name or title in quotes only if it contains a colon followed by a space. A short list can still be written in square brackets, such as `team: [ruby-lieber, eunice-lo]`, but then avoid commas inside the names. A blank list is written `[]`.
+
+**If the site stops updating after your edit,** a mistake in the top part of a project file is the usual cause (a missing comma or bracket, or wrong indentation). Open the repository's **Actions** tab: a red ✗ means the build failed. Compare your file with the example above, or ask a group lead.
 
 **Linking things to a project:**
 - **Themes:** write them in the project's `themes:` line. The theme then shows that project, and the project shows its themes. You don't edit the Research file. A theme with no projects shows no project links. If a link is missing, check the ids are spelled exactly as in `_data/research.yaml`.
