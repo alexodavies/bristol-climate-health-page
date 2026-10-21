@@ -1,8 +1,8 @@
 ---
 permalink: /projects/
 title: Projects
-eyebrow: 03/ Projects
-description: Our current funded projects.
+eyebrow: 03 / Projects
+description: Our funded projects.
 ---
 {% assign current = site.projects | where_exp: "p", "p.status != 'completed'" %}
 {% assign done = site.projects | where_exp: "p", "p.status == 'completed'" %}
