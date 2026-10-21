@@ -1,6 +1,6 @@
 ---
 name: Ana Bonell
-initials: CYS
+initials: AB
 role: Affiliate
 title: Assistant Professor at the London School of Hygiene and Tropical Medicine
 group: affiliates
