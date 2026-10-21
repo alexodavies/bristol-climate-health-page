@@ -7,9 +7,9 @@ description:
 <h2 class="sub">Research Fellowships</h2>
 <p class="prose">This group is led by a former NERC Independent Research Fellow (Dann) and a UKRI Future Leaders Fellow (Eunice). We welcome research fellows to join our group. Please get in touch if you are interested in applying for the following:</p>
 
-- [**Five-year NERC Independent Research Fellowships**](https://www.ukri.org/what-we-do/developing-people-and-skills/nerc/nerc-fellowships/)
+- [**Five-year NERC Independent Research Fellowships**](https://www.ukri.org/opportunity/?keywords=Independent+research+fellowship&filter_council%5B%5D=826&filter_funding_type%5B%5D=18&filter_status%5B%5D=open&filter_status%5B%5D=closed&filter_status%5B%5D=upcoming&filter_order=publication_date&filter_submitted=true)
   
-- [**Seven-year UKRI Future Leaders Fellowships**](https://www.ukri.org/what-we-do/developing-people-and-skills/future-leaders-fellowships/)
+- [**Seven-year UKRI Future Leaders Fellowships**](https://www.ukri.org/opportunity/?keywords=Independent+research+fellowship&filter_council%5B%5D=1730&filter_funding_type%5B%5D=18&filter_status%5B%5D=open&filter_status%5B%5D=closed&filter_status%5B%5D=upcoming&filter_order=publication_date&filter_submitted=true)
   
 - [**Eight-year Royal Society University Research Fellowships**](https://royalsociety.org/grants/university-research/)
 
@@ -18,10 +18,12 @@ description:
 <p><a class="round-link inverse-pill" href="mailto:{{ site.email }}">{{ site.email }} <span>↗</span></a></p>
 
 <h2 class="sub">Job openings</h2>
-<p class="prose">Live job advertisements will be posted here in Autumn 2026.</p>
+<p class="prose">Live job advertisements will be posted here between October and December 2026.</p>
+
 <h2 class="sub">PhD/MScR opportunities</h2>
 <p class="prose">We are currently not accepting new students.</p>
+
 <h2 class="sub">Media enquiries</h2>
-<p class="prose">Journalists and media: please contact the University of Bristol press office.</p>
+<p class="prose">Please contact the University of Bristol press office.</p>
 <p><a class="round-link inverse-pill" href="mailto:{{ site.press_email }}">{{ site.press_email }} <span>↗</span></a></p>
 
