@@ -21,7 +21,10 @@ layout: default
   </aside>
   <div class="member-main">
     <div class="prose">{{ content }}</div>
-    {%- assign my_projects = site.projects | where_exp: "p", "p.team contains page.slug or p.pi contains page.slug or p.collaborators contains page.slug" -%}
+    {%- assign my_projects = "" | split: "" -%}
+    {%- for p in site.projects -%}
+      {%- if p.team contains page.slug or p.pi contains page.slug or p.collaborators contains page.slug -%}{%- assign my_projects = my_projects | push: p -%}{%- endif -%}
+    {%- endfor -%}
     {% if my_projects.size > 0 %}
     <h2 class="sub">Projects</h2>
     <ul class="post-list">
