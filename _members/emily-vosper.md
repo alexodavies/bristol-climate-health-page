@@ -5,7 +5,7 @@ role: Research Staff
 title: Senior Research Associate
 group: postdocs
 # Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
-start: 2025-04
+start: 
 end:
 order: 9
 image:
