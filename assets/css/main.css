@@ -325,3 +325,8 @@ body{overflow-x:clip}
 .hexes.big .who span{margin-top:.2rem}
 .hexes.big .person small.who,.hexes.big .person.up small.who,.hexes.big .person.down small.who{width:calc(var(--w) + 1.6rem)}
 @media(min-width:801px){.nav nav{gap:clamp(1rem,2.2vw,2.4rem);font-size:clamp(14px,1.45vw,17px)}.nav nav a{white-space:nowrap}}
+/* publication author photos: wrap to a second row instead of running into the text */
+.citation.has-people{grid-template-columns:260px 1fr;align-items:start}
+.cite-people{flex-wrap:wrap;--w:72px;column-gap:.6rem;row-gap:.8rem}
+.cite-people .person small{height:auto;line-height:1.2;white-space:normal;text-align:center;margin-top:.3rem}
+@media(max-width:800px){.citation.has-people{grid-template-columns:1fr}.cite-people{--w:64px}}
