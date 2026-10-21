@@ -10,10 +10,10 @@ status: current       # current or completed
 funder: Wellcome Trust      # Funded by
 pi: [dann-mitchell]                # PI(s): member file names, or plain names for people outside the group
 team: [eunice-lo, ruby-lieber, daniel-skinner, emily-vosper, rachel-james]          # member file names, e.g. [ruby-lieber, eunice-lo]
-collaborators: []   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
+collaborators: [CIDACS (Centre for Data and Knowledge Integration for Health), Brazil , EBD-CSIC (), Spain, FFU (), Brazil, LSHTM, ONS, Oxford, PIK, UCT]   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start:                # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
-partners: [CIDACS, EBD-CSIC, FFU, LSHTM, ONS, Oxford, PIK, UCT]          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
+partners: []          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
 outputs: []           # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
