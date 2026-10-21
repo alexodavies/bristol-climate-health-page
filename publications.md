@@ -6,7 +6,7 @@ description:
 ---
 {% include ring-key.html %}
 {% include pub-filter.html %}
-{% assign sorted = site.data.citations | sort: "year" | reverse %}
+{% assign sorted = site.data.citations | sort: "date" | reverse %}
 {%- assign visible = "" | split: "" -%}
 {%- for c in sorted -%}{%- include tenure-orcids.html c=c -%}{%- if in_tenure -%}{%- assign visible = visible | push: c -%}{%- endif -%}{%- endfor -%}
 {% assign years = visible | map: "year" | uniq %}
