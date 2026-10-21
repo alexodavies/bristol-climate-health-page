@@ -20,7 +20,7 @@ partners: [{name: CIDACS (Centre for Data and Knowledge Integration for Health) 
 {name: Oxford (University of Oxford) UK, url: }, 
 {name: PIK (Potsdam Institute for Climate Impact Research) Germany, url: https://www.pik-potsdam.de/en}, 
 {name: UCT (University of Cape Town) South Africa, url: https://uct.ac.za/}, 
-{name: UFF (Fluminese Federal University) Brazil, url: https://international.uff.br/}]    # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
+{name: UFF (Fluminese Federal University) Brazil}]    # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
 outputs: [{title: Enhancing preparedness for the impending super El Niño, url: https://doi.org/10.1016/S0140-6736(26)01826-X, note: The Lancet 2026}
 {title:, url: note:}, 
 {}]    # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
