@@ -1,7 +1,7 @@
 ---
 permalink: /publications/
 title: Publications
-eyebrow: Publications
+eyebrow: 04 / Publications
 description: 
 ---
 {% include ring-key.html %}
