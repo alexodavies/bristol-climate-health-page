@@ -3,9 +3,9 @@
   label: Group leads
 - id: postdocs
   label: Research staff
-- id: phds
-  label: PhD students
 - id: project-staff
   label: Project Staff
+- id: phds
+  label: PhD students
 - id: affiliates
   label: Affiliate members
