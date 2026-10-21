@@ -72,7 +72,7 @@ Write your bio here as normal text. Leave a blank line between paragraphs.
 | `initials` | Shown if you don't have a photo yet |
 | `role` | Your short role, for example Research Staff or PhD Student |
 | `title` | Your full job title, shown under your name on the Team page |
-| `group` | Which section of the Team page you appear in: `leads`, `postdocs`, `phds` or `affiliates` |
+| `group` | Which section of the Team page you appear in: `leads`, `postdocs`, `phds`, `project-staff` or `affiliates` |
 | `stage` | Optional. The colour of the ring round your photo: `phd`, `postdoc` or `later` (later career). If you leave it out, it follows your `group` |
 | `start`, `end` | When you joined (and left) the group, as `2021-09`. Leave `end` blank while you are here. Your papers show on the main Publications page only for years inside this range |
 | `order` | A number, only used for ordering on the home page. Leave it as it is |
@@ -316,7 +316,7 @@ Click the file, then the pencil, and change the words, being careful not to dele
 **Add someone:**
 1. Open `_members`, then open any existing person's file.
 2. Click the **copy icon** at the top right of the file contents (or select all the text and copy it).
-3. Go back to `_members`, click **Add file → Create new file**, name it after the person like `first-last.md`, paste in the text and change the details. Set `group:` to `leads`, `postdocs`, `phds` or `affiliates`. For an **affiliate** (not a core member), also add the link to their **profile at their current organisation**, either as `external:` or in the `profile:` line under `links:`. Their photo and name on the Team page then link straight there instead of to a page on this site. Every affiliate should have one. Affiliates can also have an `orcid:` line: the site then shows them on group papers they co-authored, but it does **not** search for their other publications, and a paper never appears on the Publications page just because of an affiliate.
+3. Go back to `_members`, click **Add file → Create new file**, name it after the person like `first-last.md`, paste in the text and change the details. Set `group:` to `leads`, `postdocs`, `phds`, `project-staff` or `affiliates`. For an **affiliate** (not a core member; use `project-staff` instead for people who should behave like regular team members), also add the link to their **profile at their current organisation**, either as `external:` or in the `profile:` line under `links:`. Their photo and name on the Team page then link straight there instead of to a page on this site. Every affiliate should have one. Affiliates can also have an `orcid:` line: the site then shows them on group papers they co-authored, but it does **not** search for their other publications, and a paper never appears on the Publications page just because of an affiliate.
 4. Upload their photo with the matching name (see section 2).
 
 **Remove someone:** open their file in `_members`, click the **⋯ menu → Delete file**, then commit. (They disappear from the Team page and the site, but their old photo file stays harmlessly in the images folder.)
