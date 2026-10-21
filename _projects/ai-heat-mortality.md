@@ -3,7 +3,7 @@ title: AI for Heat Mortality
 tag: Funded project
 themes: [geoai]
 image: /assets/images/heat.jpg
-summary: Placeholder. Replace with a one-sentence summary of AI for Heat Mortality.
+summary: Using frontier AI methods and models to examine and understand the relationship between extreme heat and human mortality.
 link:                  # optional external page; shown as a button on the project page
 link_text: 
 status: current        # current or completed
