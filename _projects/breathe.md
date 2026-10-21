@@ -8,9 +8,8 @@ link: https://www.bristol.ac.uk/      # optional external page; shown as a butto
 link_text: Read more →
 status: current       # current or completed
 funder: Wellcome Trust      # Funded by
-pi: [dann-mitchell]                # PI(s): member file names, or plain names for people outside the group
-team: [eunice-lo, ruby-lieber, daniel-skinner, emily-vosper, rachel-james]          # member file names, e.g. [ruby-lieber, eunice-lo]
-
+pi: [dann-mitchell, eunice-lo, rachel-james]                # PI(s): member file names, or plain names for people outside the group
+team: [ruby-lieber, daniel-skinner, emily-vosper]          # member file names, e.g. [ruby-lieber, eunice-lo]
 collaborators: []   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start:                # 2025-03 (Duration)
 end:                  # YYYY-MM (blank = ongoing)
