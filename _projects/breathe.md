@@ -13,10 +13,8 @@ team: [ruby-lieber, daniel-skinner, emily-vosper, Roberto Andrade, Jony Arrais, 
 collaborators: []   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start: 2025-03    # YYYY-MM (Duration)
 end:             # YYYY-MM (blank = ongoing)
-partners: [{name: CIDACS (Centre for Data and Knowledge Integration for Health) Brazil, url: "https://cidacs.bahia.fiocruz.br/english/"}]      # e.g. [Met Office, {name: UKHSA, url: "https://www.gov.uk/ukhsa"}]
-outputs: [{title: Enhancing preparedness for the impending super El Niño, url: https://doi.org/10.1016/S0140-6736(26)01826-X, note: The Lancet 2026}
-{title:, url: note:}, 
-{}]    # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
+partners: []      # e.g. [Met Office, {name: UKHSA, url: "https://www.gov.uk/ukhsa"}]
+outputs: [{title: Enhancing preparedness for the impending super El Niño, url: https://doi.org/10.1016/S0140-6736(26)01826-X, note: The Lancet 2026} # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
 The BREATHE project is developing a framework for health impact attribution, applicable across geographical scales and socio-economic contexts. The project is attributing impacts for a range of weather events and climate patterns on different morbidity and mortality health outcomes. We will open up our output and methods via an open data platform (under development).
