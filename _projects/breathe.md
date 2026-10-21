@@ -9,7 +9,7 @@ link_text: Read more →
 status: current       # current or completed
 funder: Wellcome Trust      # Funded by
 pi: [dann-mitchell]                # PI(s): member file names, or plain names for people outside the group
-team: [eunice-lo, ruby-lieber, daniel-skinner, emily-vosper]          # member file names, e.g. [ruby-lieber, eunice-lo]
+team: [eunice-lo, ruby-lieber, daniel-skinner, emily-vosper, rachel-james]          # member file names, e.g. [ruby-lieber, eunice-lo]
 start:                # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
 partners: []          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
