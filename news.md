@@ -1,9 +1,9 @@
 ---
 permalink: /news/
 title: News & Media
-eyebrow: News & Media
-description: News, media coverage and blog posts from the Climate Health group at the University of Bristol.
-lede: Group news, coverage of our research in the media, and blog posts from group members.
+eyebrow: 05 / News & Media
+description: 
+lede: News, media interviews and blog posts from the group.
 ---
 {% assign blog_posts = site.posts %}
 {% assign by_author = blog_posts | where_exp: "p", "p.author" | group_by: "author" %}
