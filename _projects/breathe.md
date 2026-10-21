@@ -12,8 +12,8 @@ pi: [dann-mitchell, eunice-lo, rachel-james]                # PI(s): member file
 team: [ruby-lieber, daniel-skinner, emily-vosper]          # member file names, e.g. [ruby-lieber, eunice-lo]
 collaborators: [Mauricio Barreto, Katja Frieler, Antonio Gasparrini, Myer Glickman, Andy Haines, Veronika Huber, Mark New, Antje Weisheimer]   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start: 2025-03    # YYYY-MM (Duration)
-end: 2030-02            # YYYY-MM (blank = ongoing)
-partners: [CIDACS, {name: CIDACS, url:https://cidacs.bahia.fiocruz.br/english_/} EBD-CSIC, FFU, LSHTM, ONS, Oxford, PIK, UCT]          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
+end:             # YYYY-MM (blank = ongoing)
+partners: [CIDACS, {name: CIDACS, url:https://cidacs.bahia.fiocruz.br/english_/}]          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
 outputs: [{title:Enhancing preparedness for the impending super El Niño, url: https://doi.org/10.1016/S0140-6736(26)01826-X, note:The Lancet 2026}]           # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
