@@ -17,4 +17,4 @@ partners: []          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/
 outputs: []           # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
-Placeholder: project page content to be provided by Jo. Add the funder, award, dates, partners and aims here.
+The BREATHE project is developing a framework for health impact attribution, applicable across geographical scales and socio-economic contexts. The project is attributing impacts for a range of weather events and climate patterns on different morbidity and mortality health outcomes. We will open up our output and methods via open data platform (under development).
