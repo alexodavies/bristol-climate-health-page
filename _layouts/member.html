@@ -21,11 +21,11 @@ layout: default
   </aside>
   <div class="member-main">
     <div class="prose">{{ content }}</div>
-    {%- assign my_projects = site.projects | where_exp: "p", "p.team contains page.slug" -%}
+    {%- assign my_projects = site.projects | where_exp: "p", "p.team contains page.slug or p.pi contains page.slug" -%}
     {% if my_projects.size > 0 %}
     <h2 class="sub">Projects</h2>
     <ul class="post-list">
-      {% for p in my_projects %}<li><a href="{{ p.url | relative_url }}"><b>{{ p.title }}</b></a>{% if p.tag %} <small>{{ p.tag }}</small>{% endif %}{% if p.summary %}<br><span>{{ p.summary }}</span>{% endif %}</li>{% endfor %}
+      {% for p in my_projects %}<li><a href="{{ p.url | relative_url }}"><b>{{ p.title }}</b></a>{% if p.pi contains page.slug %} <small>PI</small>{% endif %}{% if p.tag %} <small>{{ p.tag }}</small>{% endif %}{% if p.summary %}<br><span>{{ p.summary }}</span>{% endif %}</li>{% endfor %}
     </ul>
     {% endif %}
     {%- assign my_posts = site.posts | where: "author", page.slug -%}

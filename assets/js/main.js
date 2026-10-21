@@ -63,6 +63,13 @@
     if (catSel) catSel.addEventListener('change', applyPosts);
   }
 
+  // Links to other websites open in a new tab (mailto: and same-site links are left alone)
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    if (!/^https?:/i.test(a.getAttribute('href')) || a.hostname === location.hostname) return;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+  });
+
   // "first dot last at bristol.ac.uk" -> a working mailto link (built in the browser so crawlers don't see an address)
   document.querySelectorAll('.email-obf').forEach(function (el) {
     var addr = (el.dataset.email || '').trim().replace(/\s+dot\s+/gi, '.').replace(/\s+at\s+/i, '@');

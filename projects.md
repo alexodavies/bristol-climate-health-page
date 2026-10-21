@@ -12,8 +12,8 @@ description: Our current funded projects.
 {% for p in current %}
   <div class="proj" id="{{ p.slug }}">
     <a href="{{ p.url | relative_url }}"><div class="news-art" style="background-image:url('{{ p.image | relative_url }}')"></div><small>{{ p.tag }}</small><h3>{{ p.title }}</h3><p>{{ p.summary }}</p><b>View project →</b></a>
-    {%- if p.team.size > 0 %}
-    <p class="proj-team">{% for s in p.team %}{% include byline.html slug=s %}{% endfor %}</p>
+    {%- if p.team.size > 0 or p.pi.size > 0 %}
+    <p class="proj-team">{% for s in p.pi %}{% include byline.html slug=s %}{% endfor %}{% for s in p.team %}{% unless p.pi contains s %}{% include byline.html slug=s %}{% endunless %}{% endfor %}</p>
     {%- endif %}
     {%- if p.themes.size > 0 %}
     <p class="proj-themes"><small>Research themes</small>
@@ -30,8 +30,8 @@ description: Our current funded projects.
 {% for p in done %}
   <div class="proj" id="{{ p.slug }}">
     <a href="{{ p.url | relative_url }}"><div class="news-art" style="background-image:url('{{ p.image | relative_url }}')"></div><small>{{ p.tag }}</small><h3>{{ p.title }}</h3><p>{{ p.summary }}</p><b>View project →</b></a>
-    {%- if p.team.size > 0 %}
-    <p class="proj-team">{% for s in p.team %}{% include byline.html slug=s %}{% endfor %}</p>
+    {%- if p.team.size > 0 or p.pi.size > 0 %}
+    <p class="proj-team">{% for s in p.pi %}{% include byline.html slug=s %}{% endfor %}{% for s in p.team %}{% unless p.pi contains s %}{% include byline.html slug=s %}{% endunless %}{% endfor %}</p>
     {%- endif %}
     {%- if p.themes.size > 0 %}
     <p class="proj-themes"><small>Research themes</small>

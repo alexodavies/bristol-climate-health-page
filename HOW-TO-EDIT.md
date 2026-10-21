@@ -391,7 +391,7 @@ Or ordinary paragraphs. Everything below the second `---` is the Summary.
 | `image` | The card photo |
 | `status` | `current` or `completed`. Completed projects are listed under their own heading on the Projects page |
 | `funder` | Shown as "Funded by" |
-| `pi` | The principal investigator(s). Use member file names (their photo shows), or plain names for people outside the group, such as `[dann-mitchell, Prof. Someone Else]` |
+| `pi` | The principal investigator(s). The project also appears on their profile, so there is no need to list them again under `team`. Use member file names (their photo shows), or plain names for people outside the group, such as `[dann-mitchell, Prof. Someone Else]` |
 | `team` | Member file names, such as `[ruby-lieber, eunice-lo]`. The project also appears on each person's profile |
 | `start`, `end` | Shown as "Duration", for example Apr 2024 – present. Leave `end` blank for an ongoing project |
 | `partners` | A list of names. To link one, write it as `{name: UKHSA, url: "https://..."}` |
