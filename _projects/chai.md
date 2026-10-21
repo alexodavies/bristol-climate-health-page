@@ -10,6 +10,7 @@ status: current        # current or completed
 funder:       # Funded by
 pi: []                # PI(s): member file names, or plain names for people outside the group
 team: [emily-vosper, dann-mitchell]          # member file names, e.g. [ruby-lieber, eunice-lo]
+collaborators: []   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start:                # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
 partners: []          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]

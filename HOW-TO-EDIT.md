@@ -316,7 +316,7 @@ Click the file, then the pencil, and change the words, being careful not to dele
 **Add someone:**
 1. Open `_members`, then open any existing person's file.
 2. Click the **copy icon** at the top right of the file contents (or select all the text and copy it).
-3. Go back to `_members`, click **Add file → Create new file**, name it after the person like `first-last.md`, paste in the text and change the details. Set `group:` to `leads`, `postdocs`, `phds` or `affiliates`. For an **affiliate** (not a core member), also add the link to their **profile at their current organisation**, either as `external:` or in the `profile:` line under `links:`. Their photo and name on the Team page then link straight there instead of to a page on this site. Every affiliate should have one.
+3. Go back to `_members`, click **Add file → Create new file**, name it after the person like `first-last.md`, paste in the text and change the details. Set `group:` to `leads`, `postdocs`, `phds` or `affiliates`. For an **affiliate** (not a core member), also add the link to their **profile at their current organisation**, either as `external:` or in the `profile:` line under `links:`. Their photo and name on the Team page then link straight there instead of to a page on this site. Every affiliate should have one. Affiliates can also have an `orcid:` line: the site then shows them on group papers they co-authored, but it does **not** search for their other publications, and a paper never appears on the Publications page just because of an affiliate.
 4. Upload their photo with the matching name (see section 2).
 
 **Remove someone:** open their file in `_members`, click the **⋯ menu → Delete file**, then commit. (They disappear from the Team page and the site, but their old photo file stays harmlessly in the images folder.)
@@ -357,7 +357,7 @@ The order in the file is the order on the page. The home page shows only the fir
 
 Only **explicitly funded projects** (for example BREATHE), current or finished, belong here. Broader directions belong in Research. Each project has its own file and its own page on the site, like a profile or a post. To add one, open any file in `_projects`, copy it, and create a new file such as `_projects/my-project.md`.
 
-Every project page has the same layout: **Funded by, PI, Team, Duration**, then **Summary**, **photos**, **Outputs** and **Partners**. Any part you leave empty is simply left out.
+Every project page has the same layout: **Funded by, PI, Team, Collaborators, Duration**, then **Summary**, **photos**, **Outputs** and **Partners**. Any part you leave empty is simply left out.
 
 ```
 ---
@@ -370,6 +370,7 @@ status: current
 funder: Wellcome Trust
 pi: [dann-mitchell]
 team: [ruby-lieber, daniel-skinner]
+collaborators: [emily-ball, Dr Someone Outside]
 start: 2024-04
 end:
 partners: [Met Office, {name: UKHSA, url: "https://www.gov.uk/ukhsa"}]
@@ -393,6 +394,7 @@ Or ordinary paragraphs. Everything below the second `---` is the Summary.
 | `funder` | Shown as "Funded by" |
 | `pi` | The principal investigator(s). The project also appears on their profile, so there is no need to list them again under `team`. Use member file names (their photo shows), or plain names for people outside the group, such as `[dann-mitchell, Prof. Someone Else]` |
 | `team` | Member file names, such as `[ruby-lieber, eunice-lo]`. The project also appears on each person's profile |
+| `collaborators` | Affiliates and other outside collaborators, shown under **Collaborators**: member file names (affiliates link to their external profile) or plain names. Any affiliate you list under `team` is automatically moved here too, so either works |
 | `start`, `end` | Shown as "Duration", for example Apr 2024 – present. Leave `end` blank for an ongoing project |
 | `partners` | A list of names. To link one, write it as `{name: UKHSA, url: "https://..."}` |
 | `outputs` | A list of `{title: ..., url: "https://...", note: ...}`. Only `title` is required. For papers, a DOI link works well |

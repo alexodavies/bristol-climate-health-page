@@ -9,15 +9,23 @@ layout: default
 <section class="page-body prose reveal">
 {%- capture duration -%}{% include tenure-label.html m=page %}{%- endcapture -%}
 {%- assign pis = page.pi -%}
-{%- if page.funder or pis.size > 0 or page.team.size > 0 or duration != "" %}
+{%- capture team_html -%}
+  {%- for s in page.team %}{% assign found = false %}{% assign aff = false %}{% for m in site.members %}{% if m.slug == s %}{% assign found = true %}{% if m.group == "affiliates" %}{% assign aff = true %}{% endif %}{% unless aff %}<span>{% include byline.html slug=s %}</span>{% endunless %}{% endif %}{% endfor %}{% unless found %}<span>{{ s }}</span>{% endunless %}{% endfor -%}
+{%- endcapture -%}
+{%- capture collab_html -%}
+  {%- for s in page.team %}{% for m in site.members %}{% if m.slug == s and m.group == "affiliates" %}<span>{% include byline.html slug=s %}</span>{% endif %}{% endfor %}{% endfor -%}
+  {%- for s in page.collaborators %}{% assign found = false %}{% for m in site.members %}{% if m.slug == s %}{% assign found = true %}<span>{% include byline.html slug=s %}</span>{% endif %}{% endfor %}{% unless found %}<span>{{ s }}</span>{% endunless %}{% endfor -%}
+{%- endcapture -%}
+{%- assign team_html = team_html | strip -%}
+{%- assign collab_html = collab_html | strip -%}
+{%- if page.funder or pis.size > 0 or team_html != "" or collab_html != "" or duration != "" %}
 <dl class="proj-facts">
   {%- if page.funder %}<dt>Funded by</dt><dd>{{ page.funder }}</dd>{% endif %}
   {%- if pis.size > 0 %}<dt>PI</dt><dd class="proj-people">
     {%- for s in pis %}{% assign found = false %}{% for m in site.members %}{% if m.slug == s %}{% assign found = true %}<span>{% include byline.html slug=s %}</span>{% endif %}{% endfor %}{% unless found %}<span>{{ s }}</span>{% endunless %}{% endfor -%}
   </dd>{% endif %}
-  {%- if page.team.size > 0 %}<dt>Team</dt><dd class="proj-people">
-    {%- for s in page.team %}{% assign found = false %}{% for m in site.members %}{% if m.slug == s %}{% assign found = true %}<span>{% include byline.html slug=s %}</span>{% endif %}{% endfor %}{% unless found %}<span>{{ s }}</span>{% endunless %}{% endfor -%}
-  </dd>{% endif %}
+  {%- if team_html != "" %}<dt>Team</dt><dd class="proj-people">{{ team_html }}</dd>{% endif %}
+  {%- if collab_html != "" %}<dt>Collaborators</dt><dd class="proj-people">{{ collab_html }}</dd>{% endif %}
   {%- if duration != "" %}<dt>Duration</dt><dd>{{ duration }}</dd>{% endif %}
 </dl>
 {%- endif %}

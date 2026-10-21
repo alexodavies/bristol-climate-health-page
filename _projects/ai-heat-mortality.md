@@ -10,6 +10,7 @@ status: current        # current or completed
 funder: University of Bristol Faculty of Science and Engineering Strategic Research Accelerator      # Funded by
 pi: [eunice-lo, rui-zhu]                # PI(s): member file names, or plain names for people outside the group
 team: [alex-davies]          # member file names, e.g. [ruby-lieber, eunice-lo]
+collaborators: []   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start: 2026-04               # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
 partners: []          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]

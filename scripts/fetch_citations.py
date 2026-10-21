@@ -26,9 +26,17 @@ def front_matter(path):
 
 
 def collect_orcids():
+    """ORCID iDs whose works are fetched: core members only.
+
+    Affiliates (`group: affiliates`) may have an `orcid:` so they are recognised as
+    co-authors on group papers (see member_names), but their own works are not searched for.
+    """
     ids = set()
     for p in (ROOT / "_members").glob("*.md"):
-        if o := (front_matter(p).get("orcid") or "").strip():
+        fm = front_matter(p)
+        if fm.get("group") == "affiliates":
+            continue
+        if o := (str(fm.get("orcid") or "")).strip():
             ids.add(o)
     sources = yaml.safe_load((ROOT / "_data" / "sources.yaml").read_text()) or {}
     ids.update(o.strip() for o in sources.get("group") or [] if o and o.strip())
@@ -160,6 +168,22 @@ def crossref_search(title):
     return None
 
 
+def assign_positions(w, raw, names):
+    """Find every group member on the author list, not only those whose ORCID lists the work.
+
+    A paper often sits on just one member's ORCID record, so other members who are
+    co-authors would otherwise be missing. They are matched by name (see author_position)
+    and added to `orcids` with their position.
+    """
+    w["n_authors"] = len(raw)
+    pos = {o: author_position(raw, o, names[o]) for o in names}
+    listed = set(w["orcids"])
+    w["positions"] = {o: n for o, n in sorted(pos.items()) if n}
+    for o in w["positions"]:
+        if o not in listed:
+            w["orcids"].append(o)
+
+
 def main():
     orcids = collect_orcids()
     sources = yaml.safe_load((ROOT / "_data" / "sources.yaml").read_text()) or {}
@@ -196,10 +220,8 @@ def main():
                     w[k] = v
             w["link"] = f"https://doi.org/{w['doi']}"
             if raw:
-                # author position of each listed member (1 = first author)
-                w["n_authors"] = len(raw)
-                pos = {o: author_position(raw, o, names[o]) for o in set(w["orcids"]) if o in names}
-                w["positions"] = {o: n for o, n in sorted(pos.items()) if n}
+                # author position of each member on the paper (1 = first author)
+                assign_positions(w, raw, names)
         src = w.pop("_src", None)
         if not w["authors"] and src:
             # no Crossref record: fall back to contributors on the ORCID entry
@@ -207,9 +229,7 @@ def main():
             if listed:
                 w["authors"] = listed
                 raw = [{"given": " ".join(n.split()[:-1]), "family": n.split()[-1]} for n in listed]
-                w["n_authors"] = len(raw)
-                pos = {o: author_position(raw, o, names[o]) for o in set(w["orcids"]) if o in names}
-                w["positions"] = {o: n for o, n in sorted(pos.items()) if n}
+                assign_positions(w, raw, names)
     out = sorted(works.values(), key=lambda w: (w["year"] or 0), reverse=True)
     for w in out:
         w["orcids"] = sorted(set(w["orcids"]))

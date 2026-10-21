@@ -10,6 +10,7 @@ status: current        # current or completed
 funder: UKRI Future Leaders Fellowships      # Funded by
 pi: [eunice-lo]                # PI(s): member file names, or plain names for people outside the group
 team: []          # member file names, e.g. [ruby-lieber, eunice-lo]
+collaborators: []   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start:  2027-01              # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
 partners: [UK Met Office, Cabinet Office, NHS, UK Health Security Agency, Public Health Scotland, Public Health Wales]          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
