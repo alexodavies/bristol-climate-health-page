@@ -8,12 +8,12 @@ link: https://www.bristol.ac.uk/      # optional external page; shown as a butto
 link_text: Read more →
 status: current       # current or completed
 funder: Wellcome Trust      # Funded by
-pi: [dann-mitchell, eunice-lo, rachel-james, Mauricio Barreto, Katja Frieler, Antonio Gasparrini, Myer Glickman, Andy Haines, Veronika Huber, Ludmilla Jacobson, Mark New, Antje Weisheimer]   # PI(s): member file names, or plain names for people outside the group
-team: [ruby-lieber, daniel-skinner, emily-vosper, Roberto Andrade, Jony Arrais, Huiqi Chen, Seongha Cho, Lei Gu, Zoe Haskell-Craig, Veronika Huber, Vijendra Ingole, Nick Leach, Queen Marekerah, Pierre Masselot, Dan McMyler, Danilo Nascimento, Kenechi Omeke, Jean Souza dos Reis, Jan Volkholz]          # member file names, e.g. [ruby-lieber, eunice-lo]
-collaborators: []   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
+pi: [dann-mitchell, eunice-lo, rachel-james]   # PI(s): member file names, or plain names for people outside the group
+team: [ruby-lieber, daniel-skinner, emily-vosper]          # member file names, e.g. [ruby-lieber, eunice-lo]
+collaborators: [Mauricio Barreto, Katja Frieler, Antonio Gasparrini, Myer Glickman, Andy Haines, Veronika Huber, Ludmilla Jacobson, Mark New, Antje Weisheimer, Roberto Andrade, Jony Arrais, Huiqi Chen, Seongha Cho, Lei Gu, Zoe Haskell-Craig, Veronika Huber, Vijendra Ingole, Nick Leach, Queen Marekerah, Pierre Masselot, Dan McMyler, Danilo Nascimento, Kenechi Omeke, Jean Souza dos Reis, Jan Volkholz]   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start: 2025-03    # YYYY-MM (Duration)
 end:             # YYYY-MM (blank = ongoing)
-partners: [{name: CIDACS (Centre for Data and Knowledge Integration for Health) Brazil, url: "https://cidacs.bahia.fiocruz.br/english/"}]          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
+partners: [{name: CIDACS (Centre for Data and Knowledge Integration for Health) Brazil, url: "https://cidacs.bahia.fiocruz.br/english/"},]          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
 outputs: []           # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
