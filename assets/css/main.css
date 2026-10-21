@@ -320,3 +320,8 @@ body{overflow-x:clip}
 .proj-photos img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
 .proj-photos figcaption{font-size:13px;opacity:.75;margin-top:.5rem}
 @media(max-width:800px){.proj-facts{grid-template-columns:1fr;gap:.2rem}.proj-facts dd{margin-bottom:.8rem}}
+.hexes.big .person small.who,.hexes.big .person.up small.who,.hexes.big .person.down small.who{height:auto;min-height:var(--cap);line-height:1.25;white-space:normal;overflow-wrap:anywhere}
+.hexes.big .who b,.hexes.big .who span{display:block;max-width:100%}
+.hexes.big .who span{margin-top:.2rem}
+.hexes.big .person small.who,.hexes.big .person.up small.who,.hexes.big .person.down small.who{width:calc(var(--w) + 1.6rem)}
+@media(min-width:801px){.nav nav{gap:clamp(1rem,2.2vw,2.4rem);font-size:clamp(14px,1.45vw,17px)}.nav nav a{white-space:nowrap}}

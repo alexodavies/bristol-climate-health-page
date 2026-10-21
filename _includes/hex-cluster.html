@@ -5,7 +5,7 @@
   {%- assign pc = pc | plus: 1 -%}
   {%- assign phase = pc | modulo: 2 -%}
   {%- include member-href.html m=m -%}
-  {%- capture cap -%}<small class="who"><b><a href="{{ mhref }}">{{ m.name }}{% if mext %} ↗{% endif %}</a></b><span>{{ m.title | truncate: 46 }}</span></small>{%- endcapture -%}
+  {%- capture cap -%}<small class="who"><b><a href="{{ mhref }}">{{ m.name }}{% if mext %} ↗{% endif %}</a></b><span>{{ m.title | truncate: 90 }}</span></small>{%- endcapture -%}
   {%- capture av -%}{% include avatar.html m=m title=m.name %}{%- endcapture -%}
   {%- if phase == 1 -%}<span class="person up">{{ cap }}{{ av }}</span>{%- else -%}<span class="person down">{{ av }}{{ cap }}</span>{%- endif -%}
 {%- endfor -%}
