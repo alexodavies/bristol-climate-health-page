@@ -14,13 +14,13 @@ collaborators: []   # affiliates and other collaborators: member file names or p
 start: 2025-03    # YYYY-MM (Duration)
 end:             # YYYY-MM (blank = ongoing)
 partners: [{name: CIDACS (Centre for Data and Knowledge Integration for Health) Brazil, url: https://cidacs.bahia.fiocruz.br/english_/}, 
-{name: EBD-CSIC () Spain, url: }, 
-{name: FFU () Brazil}, 
+{name: EBD-CSIC (Estación Biológica de Doñana-CSIC) Spain, url: https://www.ebd.csic.es/index.php/}, 
 {name: LSHTM (London School of Hygiene and Tropical Medicine,) UK}, 
-{name: ONS (Office for National Statistics), UK, url: }, 
-{name: Oxford (University of Oxford), UK, url: }, 
-{name: PIK (Potsdam), Germany, url:}, 
-{name: UCT (University of Cape Town) South Africa}]   # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
+{name: ONS (Office for National Statistics) UK, url: }, 
+{name: Oxford (University of Oxford) UK, url: }, 
+{name: PIK (Potsdam Institute for Climate Impact Research) Germany, url: https://www.pik-potsdam.de/en}, 
+{name: UCT (University of Cape Town) South Africa, url: https://uct.ac.za/}, 
+{name: UFF (Fluminese Federal University) Brazil, url: https://international.uff.br/}]   # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
 outputs: [{title: Enhancing preparedness for the impending super El Niño, url: https://doi.org/10.1016/S0140-6736(26)01826-X, note: The Lancet 2026}
 {title:, url: note:}, 
 {}]    # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
