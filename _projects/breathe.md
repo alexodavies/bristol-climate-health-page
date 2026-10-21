@@ -13,7 +13,7 @@ team: [ruby-lieber, daniel-skinner, emily-vosper, Roberto Andrade, Jony Arrais, 
 collaborators: []   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start: 2025-03    # YYYY-MM (Duration)
 end:             # YYYY-MM (blank = ongoing)
-partners: []          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
+partners: [{name: CIDACS (Centre for Data and Knowledge Integration for Health) Brazil, url: "https://cidacs.bahia.fiocruz.br/english/"}]          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
 outputs: []           # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
