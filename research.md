@@ -2,7 +2,8 @@
 permalink: /research/
 title: Research
 eyebrow: 02 / Research
-description: Our research foci.
+description: 
+lede: Our research foci.
 ---
 <div class="themes">
 {% for r in site.data.research %}
