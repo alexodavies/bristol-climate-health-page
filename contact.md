@@ -1,15 +1,18 @@
 ---
 permalink: /contact/
 title: Contact
-eyebrow: Join us
+eyebrow: 06 / Join us
 description: 
 ---
 <h2 class="sub">Research Fellowships</h2>
-<p class="prose">This group is led by a former NERC Independent Research Fellowship (Dann) and a current UKRI Future Leaders Fellowship (Eunice). We welcome research fellows to join our group. Please get in touch if you are interested in applying for the following:</p>
+<p class="prose">This group is led by a former NERC Independent Research Fellow (Dann) and a UKRI Future Leaders Fellow (Eunice). We welcome research fellows to join our group. Please get in touch if you are interested in applying for the following:</p>
 
 - [**Five-year NERC Independent Research Fellowships**](https://www.ukri.org/what-we-do/developing-people-and-skills/nerc/nerc-fellowships/)
+  
 - [**Seven-year UKRI Future Leaders Fellowships**](https://www.ukri.org/what-we-do/developing-people-and-skills/future-leaders-fellowships/)
+  
 - [**Eight-year Royal Society University Research Fellowships**](https://royalsociety.org/grants/university-research/)
+
 - [**Eight-year Royal Society Dorothy Hodgkin Fellowships**](https://royalsociety.org/grants/dorothy-hodgkin-fellowship/)
 
 <p><a class="round-link inverse-pill" href="mailto:{{ site.email }}">{{ site.email }} <span>↗</span></a></p>
