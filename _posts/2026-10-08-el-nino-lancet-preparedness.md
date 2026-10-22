@@ -2,7 +2,7 @@
 title: Five ways to prepare for the impending El Niño
 category: media
 author: ruby-lieber
-tag: Explainer
+tag: Video
 projects: [breathe]
 image: /assets/images/water.jpg
 paper: 10.1016/s0140-6736(26)01826-x
