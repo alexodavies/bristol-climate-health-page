@@ -1,5 +1,5 @@
 ---
-title: Eunice Lo at TEDxBristol
+title: Eunice Lo on Channel 4 News
 category: media
 author: eunice-lo
 tag: News
