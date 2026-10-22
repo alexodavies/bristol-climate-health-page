@@ -1,16 +1,17 @@
 ---
 title: Five ways to prepare for the impending El Niño
-category: news
+category: media
 author: ruby-lieber
-tag: El Niño
+tag: Explainer
+projects: [breathe]
 image: /assets/images/water.jpg
 paper: 10.1016/s0140-6736(26)01826-x
-link: https://www.linkedin.com/posts/our-climate-scientists-are-at-the-forefront-ugcPost-7513878709968236544-HxNM/
+link: https://www.youtube.com/watch?v=KQtlG50PxFU
 excerpt: Research led by Dr Ruby Lieber and Prof Dann Mitchell, published in The Lancet, identifies five key ways countries can prepare for the impending El Niño and reduce its toll on human health.
 ---
-{% include linkedin.html url="https://www.linkedin.com/posts/our-climate-scientists-are-at-the-forefront-ugcPost-7513878709968236544-HxNM/" title="LinkedIn post on the Lancet El Niño preparedness research" %}
+{% include youtube.html url="https://www.youtube.com/watch?v=KQtlG50PxFU" title="Explainer on the Lancet El Niño preparedness research" %}
 
-Research led by Dr Ruby Lieber and Prof Dann Mitchell, published in The Lancet, has identified five key ways countries across the globe can be better prepared for the impending El Niño, and reduce its potentially devastating toll on human health.
+Research led by Ruby Lieber and Dann Mitchell, published in The Lancet, has identified five key ways countries across the globe can be better prepared for the impending El Niño, and reduce its potentially devastating toll on human health.
 
 The points are:
 
