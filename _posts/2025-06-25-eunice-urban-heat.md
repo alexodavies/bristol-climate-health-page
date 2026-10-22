@@ -5,7 +5,7 @@ author: eunice-lo
 tag: Video
 image: /assets/images/heat.jpg
 link: https://youtube.com/shorts/HlbcsFgUWPI?si=XqKgQb5KZZ0MzndS
-excerpt: Eunice Lo on a mission to map how heat can affect people living in cities like Bristol
+excerpt: Eunice Lo on a mission to map how heat can affect people living in cities like Bristol.
 ---
 {% include youtube.html url="https://youtube.com/shorts/HlbcsFgUWPI?si=XqKgQb5KZZ0MzndS" title="Eunice Lo on urban heat" %}
 
