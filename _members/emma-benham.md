@@ -1,5 +1,5 @@
 ---
-name: Emma Scavetta
+name: Emma Benham
 initials: ES
 role: PhD Student
 title: PhD
