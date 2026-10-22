@@ -1,7 +1,7 @@
 ---
 title: University of Bristol Climate Change and Health Research
 category: media
-author: [dann-mitchell, eunice-lo]
+author: [dann-mitchell]
 tag: Video
 projects: 
 image: /assets/images/heat.jpg
