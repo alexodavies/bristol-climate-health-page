@@ -2,6 +2,7 @@
 title: BREATHE
 tag: Funded project
 themes: [attribution]
+hero:                 # optional wide photo behind the project title, e.g. /assets/images/my-hero.jpg
 image: /assets/images/heat.jpg
 summary: Bridging Research on Environmental Attribution and Health Equity
 link: https://www.bristol.ac.uk/      # optional external page; shown as a button on the project page

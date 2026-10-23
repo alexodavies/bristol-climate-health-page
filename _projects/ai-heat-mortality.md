@@ -2,6 +2,7 @@
 title: AI for Heat Mortality
 tag: Funded project
 themes: [geoai]
+hero: /assets/images/ai-heat-hero.png                # optional wide photo behind the project title, e.g. /assets/images/my-hero.jpg
 image: /assets/images/heat.jpg
 summary: Using frontier AI methods and models to examine and understand the relationship between extreme heat and human mortality.
 link:                  # optional external page; shown as a button on the project page
@@ -14,7 +15,10 @@ collaborators: []   # affiliates and other collaborators: member file names or p
 start: 2026-04               # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
 partners: []          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
-outputs: []           # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
+outputs:   # one entry per output; url and note are optional
+  - title: (Pre-Print) Demographically-Informed Heat-Mortality Risk Curves via Risk Graph Neural Networks
+    url: https://fm4urban.github.io/
+    note: Presented at FM4Urban at ECML-PKDD 2026, [arXiv](https://arxiv.org/abs/2607.21131), 
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
 It's long been understood that heat has an effect on health, and in extreme cases can cause death.

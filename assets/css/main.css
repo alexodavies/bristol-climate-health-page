@@ -330,3 +330,5 @@ body{overflow-x:clip}
 .cite-people{flex-wrap:wrap;--w:72px;column-gap:.6rem;row-gap:.8rem}
 .cite-people .person small{height:auto;line-height:1.2;white-space:normal;text-align:center;margin-top:.3rem}
 @media(max-width:800px){.citation.has-people{grid-template-columns:1fr}.cite-people{--w:64px}}
+.post-list small a{border-bottom:1px solid currentColor}.post-list small a:hover{color:var(--rust)}
+.page-hero.has-image{background-size:cover;background-position:center;min-height:min(70vh,640px);display:flex;flex-direction:column;justify-content:flex-end}

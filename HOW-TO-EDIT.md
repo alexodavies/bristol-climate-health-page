@@ -75,6 +75,7 @@ Write your bio here as normal text. Leave a blank line between paragraphs.
 | `group` | Which section of the Team page you appear in: `leads`, `postdocs`, `phds`, `project-staff` or `affiliates` |
 | `stage` | Optional. The colour of the ring round your photo: `phd`, `postdoc` or `later` (later career). If you leave it out, it follows your `group` |
 | `start`, `end` | When you joined (and left) the group, as `2021-09`. Leave `end` blank while you are here. Your papers show on the main Publications page only for years inside this range |
+| `hero` | Optional. A wide photo shown behind your name at the top of your profile page, such as `/assets/images/my-hero.jpg`. Upload it to `assets/images` as in section 2. Landscape, about 1600 pixels wide and under 500 KB. Leave the line out for the plain dark header |
 | `order` | A number, only used for ordering on the home page. Leave it as it is |
 | `orcid` | Your ORCID iD, which fills in your publications (see section 3) |
 | `links` | Your profile links (`profile`, `github`, `scholar` and `email`). Leave a link blank if you don't have one, or delete the line. Write any email address as `first dot last at bristol.ac.uk` (see below) |
@@ -364,6 +365,7 @@ Every project page has the same layout: **Funded by, PI, Team, Collaborators, Du
 title: BREATHE
 tag: Funded project
 themes: [attribution]
+hero: /assets/images/my-hero.jpg
 image: /assets/images/heat.jpg
 summary: One sentence, shown on the project card and under the title.
 status: current
@@ -399,7 +401,8 @@ Or ordinary paragraphs. Everything below the second `---` is the Summary.
 |---|---|
 | `title`, `tag`, `summary` | The heading, the small label, and the one-sentence description used on the card and under the title |
 | `themes` | The ids of the research themes it belongs to, in square brackets, such as `[attribution]` (or two, `[attribution, geoai]`) |
-| `image` | The card photo |
+| `image` | The card photo, shown on the Projects page |
+| `hero` | Optional. A wide photo shown behind the project's title at the top of its page, such as `/assets/images/my-hero.jpg`. Landscape photos about 1600 pixels wide work best, under 500 KB. Leave the line out (or blank) for the plain dark header |
 | `status` | `current` or `completed`. Completed projects are listed under their own heading on the Projects page |
 | `funder` | Shown as "Funded by" |
 | `pi` | The principal investigator(s). The project also appears on their profile, so there is no need to list them again under `team`. Use member file names (their photo shows), or plain names for people outside the group, such as `[dann-mitchell, Prof. Someone Else]` |
@@ -407,7 +410,7 @@ Or ordinary paragraphs. Everything below the second `---` is the Summary.
 | `collaborators` | Affiliates and other outside collaborators, shown under **Collaborators**: member file names (affiliates link to their external profile) or plain names. Any affiliate you list under `team` is automatically moved here too, so either works |
 | `start`, `end` | Shown as "Duration", for example Apr 2024 – present. Leave `end` blank for an ongoing project |
 | `partners` | A list of names. To link one, write it as `{name: UKHSA, url: "https://..."}` |
-| `outputs` | A list of `{title: ..., url: "https://...", note: ...}`. Only `title` is required. For papers, a DOI link works well |
+| `outputs` | A list of outputs, each with a `title`, and optionally a `url` and a `note`. The `note` can contain links written as `[text](https://...)`. Only `title` is required. For papers, a DOI link works well |
 | `photos` | A list of `{image: /assets/images/file.jpg, caption: ...}`. Upload the pictures to `assets/images` as in section 2. You can add as many as you like |
 | `link`, `link_text` | Optional. An external project website, shown as a button. Delete both lines if there isn't one |
 | Text below the second `---` | The **Summary**: bullet points, paragraphs, or both (see section 5). You can also put pictures or a video in it |

@@ -10,6 +10,7 @@ end:
 order: 12
 image:
 orcid: 0000-0002-5174-5657
+hero: /assets/images/ai-heat-hero.png
 links:
   profile: https://research-information.bris.ac.uk/en/persons/alex-o-davies-2/
   github: https://github.com/alexodavies
