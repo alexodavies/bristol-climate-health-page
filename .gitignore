@@ -7,3 +7,6 @@ Gemfile.lock
 .DS_Store
 __pycache__/
 assets/video/hero.mp4
+
+# raw source animations are too big for the repo: compress to assets/video first
+/*.gif
