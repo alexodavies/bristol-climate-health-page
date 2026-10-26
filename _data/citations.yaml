@@ -709,6 +709,27 @@
   positions:
     0000-0002-5174-5657: 1
   date: '2025-04-11'
+- title: 'Foot-and-mouth disease vaccine quality: A universal test for intact viral
+    capsids based on detection of VP4'
+  authors:
+  - S. Berryman
+  - A. Asfor
+  - E. Benham
+  - N. Howe
+  - A. Burman
+  - E. Brocchi
+  - S. Grazioli
+  - T.J. Tuthill
+  journal: Vaccine
+  year: 2025
+  doi: 10.1016/j.vaccine.2025.126845
+  orcids:
+  - 0009-0008-1431-1914
+  link: https://doi.org/10.1016/j.vaccine.2025.126845
+  n_authors: 8
+  positions:
+    0009-0008-1431-1914: 3
+  date: '2025-04-01'
 - title: No detectable decrease in extreme cold-related mortality in Canada from Arctic
     sea ice loss
   authors:
@@ -2251,20 +2272,21 @@
     0000-0002-0117-3486: 8
     0000-0002-7389-7272: 9
   date: '2020-05-15'
-- title: Mapping the Zonal Structure of Titan's Northern Polar Vortex
+- title: Mapping the zonal structure of Titan's northern polar vortex
   authors:
   - Jason Sharkey
-  - Nicholas A Teanby
-  - Melody A S Sylvestre
-  - Daniel M. Mitchell
-  - William J M Seviour
-  - CA Nixon
-  - PGJ Irwin
+  - Nicholas A. Teanby
+  - Melody Sylvestre
+  - Dann M. Mitchell
+  - William J.M. Seviour
+  - Conor A. Nixon
+  - Patrick G.J. Irwin
   journal: Icarus
   year: 2020
-  doi: null
+  doi: 10.1016/j.icarus.2019.113441
   orcids:
   - 0000-0002-0117-3486
+  link: https://doi.org/10.1016/j.icarus.2019.113441
   n_authors: 7
   positions:
     0000-0002-0117-3486: 4
