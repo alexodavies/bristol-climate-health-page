@@ -42,6 +42,7 @@ partners:   # one entry per partner; url is optional
   - name: CIDACS (Centre for Data and Knowledge Integration for Health) Brazil
     url: https://cidacs.bahia.fiocruz.br/english/
   - name: EBD-CSIC (Estación Biológica de Doñana-CSIC) Spain
+    url: https://www.ebd.csic.es/index.php/
   - name: LSHTM (London School of Hygiene and Tropical Medicine) UK
   - name: ONS (Office for National Statistics) UK
   - name: Oxford (University of Oxford) UK
@@ -55,6 +56,12 @@ outputs:   # one entry per output; url and note are optional
   - title: Approaches, challenges and applications of climate change impact attribution
     url: https://doi.org/10.1038/s43017-026-00798-8
     note: Nature Reviews Earth & Environment 2026
+  - title: Uncertain dynamic response of mid-latitude winter precipitation
+    url: https://doi.org/10.1038/s41586-026-10474-y
+    note: Nature 2026
+  - title: We need a global assessment of avoidable climate change risks
+    url: https://www.nature.com/articles/d41586-026-00544-6
+    note: Nature 2026
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
 The BREATHE project is developing a framework for health impact attribution, applicable across geographical scales and socio-economic contexts. The project is attributing impacts for a range of weather events and climate patterns on different morbidity and mortality health outcomes. We will open up our output and methods via an open data platform (under development).
