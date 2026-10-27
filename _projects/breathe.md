@@ -52,7 +52,7 @@ partners:   # one entry per partner; url is optional
 outputs:   # one entry per output; url and note are optional
   - title: Enhancing preparedness for the impending super El Niño
     url: https://doi.org/10.1016/S0140-6736(26)01826-X
-    note: The Lancet 2026
+    note: The Lancet 2026 **Lieber R**, **Mitchell DM** & **Haines A** 
   - title: Approaches, challenges and applications of climate change impact attribution
     url: https://doi.org/10.1038/s43017-026-00798-8
     note: Nature Reviews Earth & Environment 2026
@@ -62,6 +62,12 @@ outputs:   # one entry per output; url and note are optional
   - title: We need a global assessment of avoidable climate change risks
     url: https://www.nature.com/articles/d41586-026-00544-6
     note: Nature 2026
+  - title: Global excess deaths associated with heatwaves in 2023 and the contribution of human-induced climate change
+    url: https://doi.org/10.1016/j.xinn.2025.101110 
+    note: The Innovation 2025
+  - title: The attribution of human health outcomes to climate change: transdisciplinary practical guidance
+    url: https://doi.org/10.1007/s10584-025-03976-7
+    note: Climatic Change 2025
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
 The BREATHE project is developing a framework for health impact attribution, applicable across geographical scales and socio-economic contexts. The project is attributing impacts for a range of weather events and climate patterns on different morbidity and mortality health outcomes. We will open up our output and methods via an open data platform (under development). 
