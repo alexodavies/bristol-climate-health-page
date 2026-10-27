@@ -1,5 +1,5 @@
 ---
-name: Jo Godwin
+name: Joanne Godwin
 initials: JG
 role: Project Staff
 title: Research Project Manager (BREATHE/MOAP)
