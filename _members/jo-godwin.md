@@ -2,7 +2,7 @@
 name: Jo Godwin
 initials: JG
 role: Project Staff
-title: Research Project Manager (BREATHE and MOAP)
+title: Research Project Manager (BREATHE/MOAP)
 group: project-staff
 stage: postdoc   # ring colour: phd, postdoc or later (defaults from group; set it here for this section)
 # Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
@@ -10,7 +10,7 @@ start:
 end:
 order: 80
 image:
-orcid:
+orcid: 0000-0002-8053-1383
 links:
   profile: https://www.bristol.ac.uk/people/person/Joanne-Godwin-1ccfd577-3828-4002-a366-cd92e862f382/
   github:
@@ -22,4 +22,4 @@ summary:
 ---
 I am a Research Project Manager for the Wellcome-funded BREATHE (Bridging Research on Environmental Attribution and Health Equity) project and MOAP (Met Office Academic Partnership) which builds collaboration between the Met Office and the University of Bristol.
 
-I have worked in a number of research support roles, particularly policy engagement with local and national government, and am keen to make sure research knowledge and expertise are used to address societal challenges.
+I have worked in a number of research support roles, particularly supporting policy engagement with local and national government, and am keen to make sure research knowledge and expertise are used to address societal challenges.
