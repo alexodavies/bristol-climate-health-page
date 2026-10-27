@@ -64,4 +64,6 @@ outputs:   # one entry per output; url and note are optional
     note: Nature 2026
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
-The BREATHE project is developing a framework for health impact attribution, applicable across geographical scales and socio-economic contexts. The project is attributing impacts for a range of weather events and climate patterns on different morbidity and mortality health outcomes. We will open up our output and methods via an open data platform (under development).
+The BREATHE project is developing a framework for health impact attribution, applicable across geographical scales and socio-economic contexts. The project is attributing impacts for a range of weather events and climate patterns on different morbidity and mortality health outcomes. We will open up our output and methods via an open data platform (under development). 
+
+Key areas of work are i) global heat health attribution, ii) cause specific and equitable health attribution in Brazil, and iii) novel methods for climate attribution.
