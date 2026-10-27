@@ -52,7 +52,7 @@ partners:   # one entry per partner; url is optional
 outputs:   # one entry per output; url and note are optional
   - title: Enhancing preparedness for the impending super El Niño
     url: https://doi.org/10.1016/S0140-6736(26)01826-X
-    note:  **Lieber R**, **Mitchell DM** & **Haines A** 2026 The Lancet
+    note:  **Lieber R** **Mitchell DM** & **Haines A** 2026 The Lancet
   - title: Approaches, challenges and applications of climate change impact attribution
     url: https://doi.org/10.1038/s43017-026-00798-8
     note: Nature Reviews Earth & Environment 2026
