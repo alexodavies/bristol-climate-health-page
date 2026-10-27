@@ -65,9 +65,6 @@ outputs:   # one entry per output; url and note are optional
   - title: Global excess deaths associated with heatwaves in 2023 and the contribution of human-induced climate change
     url: https://doi.org/10.1016/j.xinn.2025.101110
     note: The Innovation 2025
-  - title: The attribution of human health outcomes to climate change: transdisciplinary practical guidance
-    url: https://doi.org/10.1007/s10584-025-03976-7
-    note: Climatic Change 2025
 photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
 The BREATHE project is developing a framework for health impact attribution, applicable across geographical scales and socio-economic contexts. The project is attributing impacts for a range of weather events and climate patterns on different morbidity and mortality health outcomes. We will open up our output and methods via an open data platform (under development). 
