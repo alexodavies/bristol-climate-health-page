@@ -2,7 +2,7 @@
 name: Jo Godwin
 initials: JG
 role: Project Staff
-title: Met Office Academic Partnership Manager; BREATHE Project Manager
+title: Research Project Manager (BREATHE and MOAP)
 group: project-staff
 stage: postdoc   # ring colour: phd, postdoc or later (defaults from group; set it here for this section)
 # Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
@@ -20,6 +20,6 @@ links:
   email:
 summary: 
 ---
-I am the Project Manager for the Bristol Met Office Academic Partnership (MOAP) and help to build collaborations between the university and the UK Met Office, and Project Manager for the Wellcome-funded BREATHE project.
+I am a Research Project Manager for the Wellcome-funded BREATHE (Bridging Research on Environmental Attribution and Health Equity) project and MOAP (Met Office Academic Partnership) which builds collaboration between the Met Office and the University of Bristol.
 
 I have worked in a number of research support roles, particularly policy engagement with local and national government, and am keen to make sure research knowledge and expertise are used to address societal challenges.
