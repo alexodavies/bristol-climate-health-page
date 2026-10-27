@@ -63,7 +63,7 @@ outputs:   # one entry per output; url and note are optional
     url: https://www.nature.com/articles/d41586-026-00544-6
     note: Nature 2026
   - title: Global excess deaths associated with heatwaves in 2023 and the contribution of human-induced climate change
-    url: https://doi.org/10.1016/j.xinn.2025.101110 
+    url: https://doi.org/10.1016/j.xinn.2025.101110
     note: The Innovation 2025
   - title: The attribution of human health outcomes to climate change: transdisciplinary practical guidance
     url: https://doi.org/10.1007/s10584-025-03976-7
