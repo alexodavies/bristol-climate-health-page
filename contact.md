@@ -19,11 +19,11 @@ description:
 
 <h2 class="sub">Job openings</h2>
 
-- **Three-year Research Fellow in Climate Change and Health**. [Click here for detials and apply.](https://www.bristol.ac.uk/jobs/find/details/?jobId=391986)
+- **Three-year Research Fellow in Climate Change and Health**. [Click here for details and apply.](https://www.bristol.ac.uk/jobs/find/details/?jobId=391986)
 
-- **2 x Three-year Postdocs in Weather and Health** [Click here for detials and apply.](https://www.bristol.ac.uk/jobs/find/details/?jobId=392035)
+- **2 x Three-year Postdocs in Weather and Health** [Click here for details and apply.](https://www.bristol.ac.uk/jobs/find/details/?jobId=392035)
   
-- **Postdoc in AI-Driven Downscaling Of Environmental Variables (until end of Mar 2028)** [Click here for detials and apply.](https://www.bristol.ac.uk/jobs/find/details/?jobId=391989)
+- **Postdoc in AI-Driven Downscaling Of Environmental Variables (until end of Mar 2028)** [Click here for details and apply.](https://www.bristol.ac.uk/jobs/find/details/?jobId=391989)
 
 <h2 class="sub">PhD/MScR opportunities</h2>
 <p class="prose">We are currently not accepting new students.</p>
