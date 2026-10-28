@@ -16,8 +16,8 @@
   text: Connecting near real-time observations, weather forecasts and large climate model ensembles with health models, to quantify impacts of past extreme events and anticipate future impacts and demand on public services.
 - id: geoai
   cls: geoai
-  tint: '#8a5a9e'
-  image: /assets/images/heat.jpg
+  tint: '#f79f60' #'#8a5a9e'
+  image: /assets/images/ai-heat-hero.png  #/assets/images/heat.jpg
   kicker: Modelling × Uncertainty
   title: GeoAI & Climate
   text: Developing machine learning methods to downscale climate simulations and foundation models to learn patterns about the environment and society, to answer complex questions about current and future changes and their uncertainty.

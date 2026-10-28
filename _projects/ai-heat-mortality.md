@@ -3,7 +3,7 @@ title: AI for Heat Mortality
 tag: Funded project
 themes: [geoai]
 hero: /assets/images/ai-heat-hero.png                # optional wide photo behind the project title, e.g. /assets/images/my-hero.jpg
-image: /assets/images/heat.jpg
+image: /assets/images/ai-heat-hero.png  # /assets/images/heat.jpg
 summary: Using frontier AI methods and models to examine and understand the relationship between extreme heat and human mortality.
 link:                  # optional external page; shown as a button on the project page
 link_text: 
