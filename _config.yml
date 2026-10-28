@@ -4,9 +4,9 @@ description: Climate and Health research group at the University of Bristol, led
 email: climate-dynamics-group@bristol.ac.uk
 # University of Bristol press office (media enquiries)
 press_email: press-office@bristol.ac.uk
-# GitHub Pages project site. For local preview use:  bundle exec jekyll serve --baseurl ""
-url: "https://alexodavies.github.io"
-baseurl: "/bristol-climate-health-page"
+# Custom domain served via GitHub Pages. For local preview use:  bundle exec jekyll serve
+url: "https://bristol-climate-health.com"
+baseurl: ""
 
 social:
   github: ""

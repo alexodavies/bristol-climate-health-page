@@ -10,7 +10,7 @@ Slack, Teams etc also work.
 
 You don't need to install anything or know how to code. Everything can be done in your web browser on GitHub, and every change can be undone.
 
-**The website:** https://alexodavies.github.io/bristol-climate-health-page/
+**The website:** https://bristol-climate-health.com/
 **The files:** https://github.com/alexodavies/bristol-climate-health-page
 
 **Jump to:** [Before you start](#before-you-start) · [Update your profile](#1-update-your-profile) · [Add your photo](#2-add-your-photo) · [Get your publications showing](#3-get-your-publications-showing) · [Write a blog post](#4-write-a-blog-post) · [Format your text (Markdown)](#5-format-your-text-markdown) · [Change other text](#6-change-other-text-on-the-site) · [Add a new person](#7-add-a-new-person-or-remove-one) · [Edit research themes and projects](#8-edit-research-themes-and-projects) · [Worked examples](#9-worked-examples-copy-these) · [If something goes wrong](#if-something-goes-wrong)
@@ -214,12 +214,12 @@ Start each line with a dash and a space for bullets, or a number and a full stop
 2. Add it to your text like this. Start with an exclamation mark and put a short description in the square brackets:
 
 ```
-![Map of UK heat deaths in 2022](/bristol-climate-health-page/assets/images/my-map.png)
+![Map of UK heat deaths in 2022](/assets/images/my-map.png)
 ```
 
-Notice that the address starts with `/bristol-climate-health-page/`. Leave that part exactly as it is and only change the file name at the end.
+Notice that the address starts with `/assets/`. Leave that part exactly as it is and only change the file name at the end.
 
-**Card images:** the `image:` line in a post, a project or a research theme sets its card photo. Upload the picture to `assets/images` as above and write `image: /assets/images/my-photo.jpg` (this one has no `/bristol-climate-health-page/` at the start).
+**Card images:** the `image:` line in a post, a project or a research theme sets its card photo. Upload the picture to `assets/images` as above and write `image: /assets/images/my-photo.jpg`.
 
 ### Videos
 
@@ -250,10 +250,10 @@ It only works for **public** posts. If the post looks cut off, add `height="800"
 **A video file of your own:** only for short, small clips (aim for under 20 MB; GitHub's web upload stops at 25 MB, and big files slow the whole site). Upload it to the **`assets/video`** folder (like a photo in section 2), then add:
 
 ```
-<video controls src="/bristol-climate-health-page/assets/video/my-clip.mp4"></video>
+<video controls src="/assets/video/my-clip.mp4"></video>
 ```
 
-Use `.mp4` files. As with pictures, keep the `/bristol-climate-health-page/` start of the address.
+Use `.mp4` files. As with pictures, keep the `/assets/` start of the address.
 
 #### Advanced: compressing a video
 
