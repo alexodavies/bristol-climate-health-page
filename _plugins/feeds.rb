@@ -1,5 +1,5 @@
 # Generates Atom feeds: /feed.xml (all posts) and /members/<name>/feed.xml (one per member).
-# A post belongs to a member when its front matter has `author: <member file name>`.
+# A post belongs to a member when its front matter has `author: <member file name>` (or a list of them).
 # Custom plugins need the Actions build (see .github/workflows/pages.yml); the classic
 # GitHub Pages branch builder would ignore this file.
 require "cgi"
@@ -14,7 +14,7 @@ module ClimateHealth
       site.pages << build(site, "", "feed.xml", "#{site.config['title']} — all posts", posts, "/")
       site.collections["members"].docs.each do |m|
         slug = m.basename_without_ext
-        mine = posts.select { |p| p.data["author"] == slug }
+        mine = posts.select { |p| Array(p.data["author"]).include?(slug) }
         site.pages << build(site, "members/#{slug}", "feed.xml", "#{m.data['name']} — #{site.config['title']}", mine, "/members/#{slug}.html")
       end
     end

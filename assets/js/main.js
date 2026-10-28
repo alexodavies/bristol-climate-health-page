@@ -54,7 +54,7 @@
   if (postSel || catSel) {
     var applyPosts = function () {
       document.querySelectorAll('#post-grid .post-row').forEach(function (a) {
-        var byAuthor = !postSel || postSel.value === '' || a.dataset.author === postSel.value;
+        var byAuthor = !postSel || postSel.value === '' || (a.dataset.author || '').split(' ').indexOf(postSel.value) !== -1;
         var byCat = !catSel || catSel.value === '' || a.dataset.category === catSel.value;
         a.hidden = !(byAuthor && byCat);
       });

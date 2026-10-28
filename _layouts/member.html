@@ -31,7 +31,7 @@ layout: default
       {% for p in my_projects %}<li><a href="{{ p.url | relative_url }}"><b>{{ p.title }}</b></a>{% if p.pi contains page.slug %} <small>PI</small>{% elsif p.collaborators contains page.slug or page.group == "affiliates" %} <small>Collaborator</small>{% endif %}{% if p.tag %} <small>{{ p.tag }}</small>{% endif %}{% if p.summary %}<br><span>{{ p.summary }}</span>{% endif %}</li>{% endfor %}
     </ul>
     {% endif %}
-    {%- assign my_posts = site.posts | where: "author", page.slug -%}
+    {%- assign my_posts = site.posts | where_exp: "p", "p.author contains page.slug" -%}
     {% if my_posts.size > 0 %}
     <h2 class="sub">Posts</h2>
     <ul class="post-list">

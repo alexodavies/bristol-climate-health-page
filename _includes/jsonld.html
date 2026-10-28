@@ -19,10 +19,11 @@
 {"@context":"https://schema.org","@type":"Person","name":{{ page.name | jsonify }},"jobTitle":{{ page.title | jsonify }},"url":{{ include.canonical | jsonify }},"image":{{ include.seo_image | jsonify }},"description":{{ include.seo_desc | jsonify }},"affiliation":{{ uob }},"worksFor":{"@type":"ResearchOrganization","name":"Climate Health research group","url":{{ '/' | absolute_url | jsonify }},"parentOrganization":{{ uob }}},"sameAs":[{{ same }}]}
 </script>
 {%- elsif page.layout == "post" -%}
-{%- assign au = nil -%}
-{%- for m in site.members -%}{%- if m.slug == page.author -%}{%- assign au = m -%}{%- endif -%}{%- endfor -%}
+{%- assign pslugs = page.author | join: "," | split: "," -%}
+{%- assign au = "" -%}
+{%- for s in pslugs -%}{%- for m in site.members -%}{%- if m.slug == s -%}{%- capture one_au -%}{"@type":"Person","name":{{ m.name | jsonify }},"url":{{ m.url | absolute_url | jsonify }}}{%- endcapture -%}{%- if au == "" -%}{%- assign au = one_au -%}{%- else -%}{%- capture au -%}{{ au }},{{ one_au }}{%- endcapture -%}{%- endif -%}{%- endif -%}{%- endfor -%}{%- endfor -%}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ page.title | jsonify }},"description":{{ include.seo_desc | jsonify }},"datePublished":{{ page.date | date_to_xmlschema | jsonify }},"image":{{ include.seo_image | jsonify }},"mainEntityOfPage":{{ include.canonical | jsonify }},"author":{% if au %}{"@type":"Person","name":{{ au.name | jsonify }},"url":{{ au.url | absolute_url | jsonify }}}{% else %}{"@type":"ResearchOrganization","name":"Climate Health research group"}{% endif %},"publisher":{{ uob }}{% if page.paper %},"citation":{{ page.paper | prepend: "https://doi.org/" | jsonify }}{% endif %}}
+{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ page.title | jsonify }},"description":{{ include.seo_desc | jsonify }},"datePublished":{{ page.date | date_to_xmlschema | jsonify }},"image":{{ include.seo_image | jsonify }},"mainEntityOfPage":{{ include.canonical | jsonify }},"author":{% if au != "" %}[{{ au }}]{% else %}{"@type":"ResearchOrganization","name":"Climate Health research group"}{% endif %},"publisher":{{ uob }}{% if page.paper %},"citation":{{ page.paper | prepend: "https://doi.org/" | jsonify }}{% endif %}}
 </script>
 {%- elsif page.url == "/publications/" -%}
 {%- assign arts = "" -%}

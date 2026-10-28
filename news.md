@@ -6,7 +6,8 @@ description:
 lede: News, media interviews and blog posts from the group.
 ---
 {% assign blog_posts = site.posts %}
-{% assign by_author = blog_posts | where_exp: "p", "p.author" | group_by: "author" %}
+{% assign by_author = "" | split: "" %}
+{% for m in site.members %}{% assign n = blog_posts | where_exp: "p", "p.author contains m.slug" %}{% if n.size > 0 %}{% assign by_author = by_author | push: m %}{% endif %}{% endfor %}
 <div class="pub-filter">
   <label for="cat-filter">Show</label>
   <select id="cat-filter">
@@ -19,19 +20,22 @@ lede: News, media interviews and blog posts from the group.
   <label for="post-filter">by</label>
   <select id="post-filter">
     <option value="">Everyone</option>
-    {% for g in by_author %}{% for m in site.members %}{% if m.slug == g.name %}<option value="{{ g.name }}">{{ m.name }} ({{ g.size }})</option>{% endif %}{% endfor %}{% endfor %}
+    {% for m in by_author %}{% assign n = blog_posts | where_exp: "p", "p.author contains m.slug" %}<option value="{{ m.slug }}">{{ m.name }} ({{ n.size }})</option>{% endfor %}
   </select>
   {% endif %}
 </div>
 {% if blog_posts.size == 0 %}<p class="prose">Nothing here yet. News and media items will appear as they are added.</p>{% endif %}
 <div class="post-rows" id="post-grid">
 {% for p in blog_posts %}
-{%- assign au = nil -%}
-{%- for m in site.members -%}{%- if m.slug == p.author -%}{%- assign au = m -%}{%- endif -%}{%- endfor %}
-<article class="post-row" data-author="{{ p.author }}" data-category="{{ p.category | default: 'blog' }}">
-  <div class="hexes big flat post-hex">
-    {%- if au -%}
-    <span class="person down">{% include avatar.html m=au title=au.name %}<small class="who"><b>{{ au.name }}</b><span>{{ au.title | truncate: 40 }}</span></small></span>
+{%- assign slugs = p.author | join: "," | split: "," -%}
+{%- assign nau = 0 -%}
+{%- capture people -%}{%- for s in slugs -%}{%- for m in site.members -%}{%- if m.slug == s -%}{%- assign nau = nau | plus: 1 -%}
+    <span class="person down">{% include avatar.html m=m title=m.name %}<small class="who"><b>{{ m.name }}</b>{% if slugs.size == 1 %}<span>{{ m.title | truncate: 40 }}</span>{% endif %}</small></span>
+{%- endif -%}{%- endfor -%}{%- endfor -%}{%- endcapture %}
+<article class="post-row" data-author="{{ slugs | join: ' ' }}" data-category="{{ p.category | default: 'blog' }}">
+  <div class="hexes big flat post-hex{% if nau == 2 %} multi-2{% elsif nau > 2 %} multi-3{% endif %}">
+    {%- if nau > 0 -%}
+    {{ people }}
     {%- else -%}
     <span class="person down"><span class="avatar p1"><span>CH</span></span><small class="who"><b>Climate Health</b><span>Group post</span></small></span>
     {%- endif -%}

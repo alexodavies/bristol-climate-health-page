@@ -156,7 +156,7 @@ asked, what you did, what you found, and what surprised you.
 | Line | What to put |
 |---|---|
 | `title` | The headline |
-| `author` | **The name of your profile file without `.md`**, for example `ruby-lieber`. This puts your photo on the post and makes it appear on your profile page |
+| `author` | **The name of your profile file without `.md`**, for example `ruby-lieber`. This puts your photo on the post and makes it appear on your profile page. For several authors use a list, e.g. `[dann-mitchell, eunice-lo]`, and everyone is shown |
 | `category` | `blog` (default), `news` or `media`. All three appear on the News & Media page, where visitors can filter by category. For `media`, add a `link:` line pointing at the coverage |
 | `tag` | Optional. A one-word label such as Heat |
 | `excerpt` | The one or two sentences shown in the blog list |

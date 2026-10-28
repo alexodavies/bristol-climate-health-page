@@ -332,3 +332,9 @@ body{overflow-x:clip}
 @media(max-width:800px){.citation.has-people{grid-template-columns:1fr}.cite-people{--w:64px}}
 .post-list small a{border-bottom:1px solid currentColor}.post-list small a:hover{color:var(--rust)}
 .page-hero.has-image{background-size:cover;background-position:center;min-height:min(70vh,640px);display:flex;flex-direction:column;justify-content:flex-end}
+/* multi-author posts: avatars side by side in one row, names beneath, as in publications */
+.hexes.big.flat.post-hex.multi-2{--w:84px}
+.hexes.big.flat.post-hex.multi-3{--w:62px}
+.hexes.big.flat.post-hex.multi-2,.hexes.big.flat.post-hex.multi-3{--cap:auto;flex-wrap:nowrap;align-items:flex-start;column-gap:.8rem;row-gap:0}
+.post-hex.multi-2 .person small.who,.post-hex.multi-3 .person small.who{width:calc(var(--w) + .8rem);height:auto;padding:.5rem 0 0;line-height:1.2}
+.post-hex.multi-2 .who b,.post-hex.multi-3 .who b{font-size:13px}
