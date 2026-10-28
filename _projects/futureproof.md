@@ -3,7 +3,7 @@ title: Futureproof
 tag: Funded project
 themes: [forecasting]
 hero:  /assets/images/futureproof.png               # optional wide photo behind the project title, e.g. /assets/images/my-hero.jpg
-image: /assets/images/futureproof.png
+image: /assets/images/systems.jpg
 summary: Pioneering a new field of weather-health prediction science to enhance resilience of NHS emergency care for future changes in extreme weather and climate.
 link:                  # optional external page; shown as a button on the project page
 link_text: 
