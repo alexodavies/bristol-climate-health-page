@@ -18,9 +18,12 @@ description:
 <p><a class="round-link inverse-pill" href="mailto:{{ site.email }}">{{ site.email }} <span>↗</span></a></p>
 
 <h2 class="sub">Job openings</h2>
-- **Three-year Research Fellow in Climate Change and Health**. [Click here for detials and apply](https://www.bristol.ac.uk/jobs/find/details/?jobId=391986)
-- **2 x Three-year Postdocs in Weather and Health** [Click here for detials and apply](https://www.bristol.ac.uk/jobs/find/details/?jobId=392035)
-- **Postdoc in AI-Driven Downscaling Of Environmental Variables (until end of Mar 2028)** [Click here for detials and apply](https://www.bristol.ac.uk/jobs/find/details/?jobId=391989)
+
+- **Three-year Research Fellow in Climate Change and Health**. [Click here for detials and apply.](https://www.bristol.ac.uk/jobs/find/details/?jobId=391986)
+
+- **2 x Three-year Postdocs in Weather and Health** [Click here for detials and apply.](https://www.bristol.ac.uk/jobs/find/details/?jobId=392035)
+  
+- **Postdoc in AI-Driven Downscaling Of Environmental Variables (until end of Mar 2028)** [Click here for detials and apply.](https://www.bristol.ac.uk/jobs/find/details/?jobId=391989)
 
 <h2 class="sub">PhD/MScR opportunities</h2>
 <p class="prose">We are currently not accepting new students.</p>
