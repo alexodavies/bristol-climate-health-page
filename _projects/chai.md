@@ -3,7 +3,7 @@ title: CHAI
 tag: Funded project
 themes: [geoai]
 hero:                 # optional wide photo behind the project title, e.g. /assets/images/my-hero.jpg
-image: /assets/images/hero.jpg
+image: /assets/images/chai.png
 summary: Using diffusion models to enhance coarse, health-relevant climate model data to 2.2–5 km, 3-hourly resolution over the UK climate, so that we can better understand how extreme weather affects health, particularly maternal health and hospitalisation.
 link:                  # optional external page; shown as a button on the project page
 link_text: Project website →
