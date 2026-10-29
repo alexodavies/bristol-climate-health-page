@@ -3,7 +3,7 @@ title: DELTA
 tag: Funded project
 themes: [attribution]
 hero:                 # optional wide photo behind the project title, e.g. /assets/images/my-hero.jpg
-image: /assets/images/delta x matrix.jpg
+image: /assets/images/delta_matrix.jpg
 summary: Downscaled Ensemble for Local-scale Trend Attribution. An open data platform that provides bias-corrected, downscaled temperature and precipitation timeseries for every country, under both observed and counterfactual (no human influence) climates, so that health researchers can carry out climate change attribution studies without having to process climate model data themselves.
 link:                  # optional external page; shown as a button on the project page
 link_text: Project website →
