@@ -78,14 +78,14 @@ The BREATHE project is developing a framework for health impact attribution, app
 
 Key areas of work are 1) global heat health attribution, 2) cause specific and equitable health attribution in Brazil, and 3) novel methods for climate attribution.
 
-##**1) Global heat health attribution**
+**1) Global heat health attribution**
 
-Drawing on data and expertise from the Multi-Country Multi-City (MCC) Collaborative Research Network coordinated by our partners at LSHTM, this area of work is focusing on the impacts of extreme heat on mortality and morbidity. 
+Drawing on data and expertise from the [Multi-Country Multi-City (MCC) Collaborative Research Network] (https://mccstudy.lshtm.ac.uk/) coordinated by our partners at LSHTM, this area of work is focusing on the impacts of extreme heat on mortality and morbidity. 
 
-##**2) Cause specific and equitable health attribution in Brazil**
+**2) Cause specific and equitable health attribution in Brazil**
 
 This work makes use of the Cohort of 100 Million Brazilians developed by our partners at CIDACS. To the best of our knowledge, this cohort is the world’s largest health longitudinal dataset linked with socioeconomic information.
 
-##**3) Novel methods for climate attribution**
+**3) Novel methods for climate attribution**
 
 Trend vs event vs forecast attribution
