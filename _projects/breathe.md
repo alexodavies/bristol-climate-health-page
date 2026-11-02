@@ -44,12 +44,15 @@ partners:   # one entry per partner; url is optional
   - name: EBD-CSIC (Estación Biológica de Doñana-CSIC) Spain
     url: https://www.ebd.csic.es/index.php/
   - name: LSHTM (London School of Hygiene and Tropical Medicine) UK
-    url: https://www.ons.gov.uk/
+    url: 
   - name: ONS (Office for National Statistics) UK
+    url: https://www.ons.gov.uk/
   - name: Oxford (University of Oxford) UK
+    url:
   - name: PIK (Potsdam Institute for Climate Impact Research) Germany
   - name: UCT (University of Cape Town) South Africa
-  - name: UFF (Fluminense Federal University) Brazil
+  - name: UFF (Universidade Federal Fluminense) Brazil
+    url: https://international.uff.br/
 outputs:   # one entry per output; url and note are optional
   - title: Enhancing preparedness for the impending super El Niño
     url: https://doi.org/10.1016/S0140-6736(26)01826-X
