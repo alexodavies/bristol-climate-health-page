@@ -181,6 +181,29 @@
     0000-0002-0117-3486: 29
     0000-0002-7389-7272: 7
   date: '2026-06-15'
+- title: Reducing risks from climate change by facilitating effective co-production
+  authors:
+  - L Archer
+  - L Devitt
+  - X Su
+  - P D Bates
+  - J L Godwin
+  - J Gregory
+  - A McNeill
+  - M D Palmer
+  - L Rees
+  - D Sifnioti
+  - D N Schmidt
+  journal: Environmental Research Communications
+  year: 2026
+  doi: 10.1088/2515-7620/ae7e53
+  orcids:
+  - 0000-0002-8053-1383
+  link: https://doi.org/10.1088/2515-7620/ae7e53
+  n_authors: 11
+  positions:
+    0000-0002-8053-1383: 5
+  date: '2026-06-01'
 - title: CMIP Community Workshop 2026
   authors:
   - Daniel T. Skinner
@@ -390,10 +413,12 @@
   doi: 10.1016/j.wace.2025.100840
   orcids:
   - 0000-0002-7389-7272
+  - 0000-0002-8053-1383
   link: https://doi.org/10.1016/j.wace.2025.100840
   n_authors: 6
   positions:
     0000-0002-7389-7272: 1
+    0000-0002-8053-1383: 2
   date: '2025-12-01'
 - title: Forecast attribution reveals enhanced heat mortality from climate change
     in British Columbia heatwave
@@ -691,10 +716,12 @@
   doi: 10.1088/1748-9326/adcbc5
   orcids:
   - 0000-0002-7389-7272
+  - 0000-0002-8053-1383
   link: https://doi.org/10.1088/1748-9326/adcbc5
   n_authors: 5
   positions:
     0000-0002-7389-7272: 2
+    0000-0002-8053-1383: 1
   date: '2025-05-01'
 - title: Towards Addressing Frontiers in Graph Generation
   authors:
@@ -944,11 +971,13 @@
   orcids:
   - 0000-0002-0117-3486
   - 0000-0002-7389-7272
+  - 0000-0002-8053-1383
   link: https://doi.org/10.1016/s2542-5196(24)00175-x
   n_authors: 20
   positions:
     0000-0002-0117-3486: 1
     0000-0002-7389-7272: 2
+    0000-0002-8053-1383: 4
   date: '2024-09-01'
 - title: Emergence of multivariate climate change signals
   authors:
@@ -2517,6 +2546,49 @@
   positions:
     0000-0002-7389-7272: 1
   date: '2018-12-01'
+- title: Experimental heatwaves compromise sperm function and cause transgenerational
+    damage in a model insect
+  authors:
+  - Kris Sales
+  - Ramakrishnan Vasudeva
+  - Matthew E. Dickinson
+  - Joanne L. Godwin
+  - Alyson J. Lumley
+  - Łukasz Michalczyk
+  - Laura Hebberecht
+  - Paul Thomas
+  - Aldina Franco
+  - Matthew J. G. Gage
+  journal: Nature Communications
+  year: 2018
+  doi: 10.1038/s41467-018-07273-z
+  orcids:
+  - 0000-0002-8053-1383
+  link: https://doi.org/10.1038/s41467-018-07273-z
+  n_authors: 10
+  positions:
+    0000-0002-8053-1383: 4
+  date: '2018-11-13'
+- title: Lineages evolved under stronger sexual selection show superior ability to
+    invade conspecific competitor populations
+  authors:
+  - Joanne L. Godwin
+  - Lewis G. Spurgin
+  - Łukasz Michalczyk
+  - Oliver Y. Martin
+  - Alyson J. Lumley
+  - Tracey Chapman
+  - Matthew J. G. Gage
+  journal: Evolution Letters
+  year: 2018
+  doi: 10.1002/evl3.80
+  orcids:
+  - 0000-0002-8053-1383
+  link: https://doi.org/10.1002/evl3.80
+  n_authors: 7
+  positions:
+    0000-0002-8053-1383: 1
+  date: '2018-10-01'
 - title: Global Freshwater Availability Below Normal Conditions and Population Impact
     Under 1.5 and 2 °C Stabilization Scenarios
   authors:
@@ -2952,6 +3024,46 @@
   positions:
     0000-0002-0117-3486: 3
   date: '2017-10-13'
+- title: Experimental evolution reveals that sperm competition intensity selects for
+    longer, more costly sperm
+  authors:
+  - Joanne L. Godwin
+  - Ramakrishnan Vasudeva
+  - Łukasz Michalczyk
+  - Oliver Y. Martin
+  - Alyson J. Lumley
+  - Tracey Chapman
+  - Matthew J. G. Gage
+  journal: Evolution Letters
+  year: 2017
+  doi: 10.1002/evl3.13
+  orcids:
+  - 0000-0002-8053-1383
+  link: https://doi.org/10.1002/evl3.13
+  n_authors: 7
+  positions:
+    0000-0002-8053-1383: 1
+  date: '2017-06-01'
+- title: Experimental evolution reveals that sperm competition intensity selects for
+    longer, more costly sperm
+  authors:
+  - Joanne L. Godwin
+  - Ramakrishnan Vasudeva
+  - Łukasz Michalczyk
+  - Oliver Y. Martin
+  - Alyson J. Lumley
+  - Tracey Chapman
+  - Matthew J. G. Gage
+  journal: Evolution Letters
+  year: 2017
+  doi: 10.1002/evl3.13
+  orcids:
+  - 0000-0002-8053-1383
+  link: https://doi.org/10.1002/evl3.13
+  n_authors: 7
+  positions:
+    0000-0002-8053-1383: 1
+  date: '2017-06-01'
 - title: 'weather@home 2: validation of an improved global–regional climate modelling
     system'
   authors:
@@ -3350,6 +3462,29 @@
   n_authors: 7
   positions:
     0000-0002-0117-3486: 4
+  date: '2015-05-18'
+- title: Sexual selection protects against extinction
+  authors:
+  - Alyson J. Lumley
+  - Łukasz Michalczyk
+  - James J. N. Kitson
+  - Lewis G. Spurgin
+  - Catriona A. Morrison
+  - Joanne L. Godwin
+  - Matthew E. Dickinson
+  - Oliver Y. Martin
+  - Brent C. Emerson
+  - Tracey Chapman
+  - Matthew J. G. Gage
+  journal: Nature
+  year: 2015
+  doi: 10.1038/nature14419
+  orcids:
+  - 0000-0002-8053-1383
+  link: https://doi.org/10.1038/nature14419
+  n_authors: 11
+  positions:
+    0000-0002-8053-1383: 6
   date: '2015-05-18'
 - title: 'Solar signals in CMIP‐5 simulations: the ozone response'
   authors:
