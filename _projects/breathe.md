@@ -80,7 +80,7 @@ Key areas of work are 1) global heat health attribution, 2) cause specific and e
 
 **1) Global heat health attribution**
 
-Drawing on data and expertise from the [Multi-Country Multi-City (MCC) Collaborative Research Network] (https://mccstudy.lshtm.ac.uk/) coordinated by our partners at LSHTM, this area of work is focusing on the impacts of extreme heat on mortality and morbidity. 
+Drawing on data and expertise from the Multi-Country Multi-City (MCC) Collaborative Research Network coordinated by our partners at LSHTM, this area of work is focusing on the impacts of extreme heat on mortality and morbidity. 
 
 **2) Cause specific and equitable health attribution in Brazil**
 
