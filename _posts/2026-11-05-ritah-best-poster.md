@@ -11,3 +11,5 @@ excerpt: Ritah Pavin Nakanjako wins Best Poster Award at Institute of Physics Pu
 Ritah Pavin Nakanjako wins Best Poster Award at the Institute of Physics Publishing Thermal Extremes and Health networking event!
 
 ![Ritah and her award](/assets/images/ritah-award2026.jpeg)
+
+![Team at event](/assets/images/group-iop2026.jpeg)
