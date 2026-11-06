@@ -1,5 +1,5 @@
 ---
-title: Five ways to prepare for the impending El Niño
+title: Ritah Pavin Nakanjako wins Best Poster Award
 category: news
 author: ritah-pavin-nakanjako
 tag: award
