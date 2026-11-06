@@ -3,7 +3,7 @@
 - id: attribution
   cls: attribution
   tint: '#1f6fa8'
-  image: /assets/images/water.jpg
+  image: /assets/images/impact-attribution.png
   kicker: Adaptation × Risk
   title: Impact Attribution
   text: Using observations, large climate model ensembles and counterfactual worlds, to attribute changes in climate, extreme events and their impacts to human-induced climate change and other anthropogenic and natural sources.
