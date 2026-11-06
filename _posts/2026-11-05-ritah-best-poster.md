@@ -1,5 +1,5 @@
 ---
-title: Ritah Pavin Nakanjako wins Best Poster Award
+title: Ritah Pavin Nakanjako won Best Poster Award
 category: news
 author: ritah-pavin-nakanjako
 tag: award
