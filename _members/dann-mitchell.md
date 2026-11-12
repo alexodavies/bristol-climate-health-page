@@ -21,15 +21,25 @@ summary: Met Office Chair in Climate Hazards
 ---
 ## About me
 
-I am a Professor of Climate Science at the University of Bristol, where I hold the Met Office Chair in Climate Hazards and the Shanta Professorial Chair in Planetary Health. I joined Bristol in 2016, establishing a research group focused on understanding contemporary climate change and its impacts on society. Before this, I spent four years as a postdoctoral researcher in the Atmospheric, Oceanic and Planetary Physics department at the University of Oxford, following a PhD in Meteorology at the University of Reading.
+I am a Professor of Climate Science at the University of Bristol, where I hold the Met Office Chair in Climate Hazards and the Shanta Professorial Chair in Planetary Health. My research spans the physical science of climate change through to its impacts on human health, ecosystems and society. I am particularly known for research in climate change attribution, including approaches to quantify the human health consequences of anthropogenic climate change.
 
-My research has always been driven by a fascination with how the climate system works, particularly the atmospheric circulation patterns that produce extreme weather. However, I am increasingly interested in what happens when those extremes meet people and societies. Much of my work now sits at the intersection of climate science, human health and public policy, bringing together researchers from disciplines that have traditionally worked separately.
+I am passionate about translating climate science into meaningful action. I have held several roles within the Intergovernmental Panel on Climate Change (IPCC), and led the Health and Wellbeing chapter of the UK's Fourth Climate Change Risk Assessment (CCRA4). My expertise also contributes to national and international policy, and to legal proceedings.
 
-I am particularly known for my work on **climate change attribution**, and for helping pioneer approaches that move beyond understanding how climate change influences extreme weather, to quantifying its impacts on human health. This includes asking questions such as how many people have died because of climate change, how health risks will evolve as the world warms, and how we might avoid those impacts. My research spans both the past, through attribution of observed events, and the future, through climate projections and assessments of emerging risks.
+I lead major international research programmes, including a Wellcome-funded consortium on climate and health, and have helped establish scientific initiatives such as HAPPI, investigating the impacts of different levels of global warming. My contributions have been recognised through prestigious awards, including the Royal Meteorological Society's Adrian Gill Award and its Award for Impact on Science, Policy or Society. I have also held NERC Independent Research and Alan Turing Fellowships.
 
-I am passionate about making climate science useful beyond academia. I lead major international research programmes on climate and health, including a Wellcome-funded consortium, and have led the Health and Wellbeing chapter of the UK's Fourth Climate Change Risk Assessment. Through my Met Office Chair, I also help coordinate the research partnership between the Met Office and the University of Bristol, bringing together climate modelling, hazards and societal impacts.
+I joined Bristol in 2016, following four years of postdoctoral research at the University of Oxford and a PhD in Meteorology from the University of Reading. Alongside my research, I enjoy bringing together scientists from different disciplines and building collaborations that connect fundamental science with real-world challenges.
 
-More recently, my Shanta Professorial Chair in Planetary Health has allowed me to develop research collaborations between Bristol and Mumbai, with a particular focus on **climate-resilient, healthy cities**. I am especially interested in how cities can adapt to extreme heat, flooding and other environmental pressures, while improving health and addressing inequalities. Increasingly, I want to see climate science translated into practical decisions, from urban planning and national policy to public health systems and clinical practice.
+### Research interests
+
+- Climate change attribution and future climate projections
+- Extreme weather, atmospheric dynamics and climate variability
+- Climate impacts on human health, ecosystems and society
+- Climate risk assessments, adaptation and resilience
+- Artificial intelligence and machine learning for climate science
+- Climate policy, litigation and expert witness work
+- Planetary health, trees, woodlands and nature-based wellbeing
+
+Ultimately, I am motivated by understanding how our planet works, how humans are changing it, and how science can help us build a healthier and more resilient future.
 
 Underpinning all of this is a belief that climate science should not stop at projections of temperature or rainfall. We need to understand what those changes mean for people's lives, and how scientific evidence can help create a healthier, more resilient future.
 
