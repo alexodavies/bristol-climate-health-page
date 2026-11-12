@@ -4,14 +4,14 @@ tag: Funded project
 themes: [geoai]
 hero:  /assets/images/chai2.jpg               # optional wide photo behind the project title, e.g. /assets/images/my-hero.jpg
 image: /assets/images/chai2.jpg
-summary: Using diffusion models to enhance coarse, health-relevant climate model data to 2.2–5 km, 3-hourly resolution over the UK climate, so that we can better understand how extreme weather affects health, particularly maternal health and hospitalisation.
+summary: The Shanta Planetary Health programme brings together researchers across Bristol and Mumbai to understand how climate change and environmental degradation affect human health. Our ambition is to translate cutting-edge climate and health research into practical solutions, from public policy to clinical practice.
 link:                  # optional external page; shown as a button on the project page
 link_text: Project website →
 status: current        # current or completed
 funder:       # Funded by
-pi: [emily-vosper, dann-mitchell]                # PI(s): member file names, or plain names for people outside the group
-team: [henry-addison, peter-watson]          # member file names, e.g. [ruby-lieber, eunice-lo]
-collaborators: [ana-bonell]   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
+pi: [dann-mitchell]                # PI(s): member file names, or plain names for people outside the group
+team: [ruby-lieber]          # member file names, e.g. [ruby-lieber, eunice-lo]
+collaborators: [eunice-lo, henry-addison]   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start:                # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
 partners: []          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
@@ -20,18 +20,23 @@ photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A ca
 ---
 ## Aims and outputs
 
-- **AI downscaling tool:** develop an open-source AI tool that turns coarse climate model output into high-resolution, health-relevant climate data. It will come with code, a pretrained UK model and tutorials.
-- **Open dataset:** create a ready-to-use, high-resolution dataset of current and future UK climate for the health community.
-- **Exposure and inequalities:** measure which communities are most exposed to extreme weather, with a focus on maternal health and hospitalisations.
-- **Policy and practice:** provide evidence to guide public health interventions and adaptation planning, including future UK Climate Change Risk Assessments.
+- **Climate and health research:** advance understanding of how climate change affects human health, particularly through extreme heat, flooding, air pollution and other environmental hazards.
+- **Climate-resilient communities:** investigate how climate risks interact with urban development, infrastructure, ecosystems and social inequalities, with a focus on Bristol and Mumbai.
+- **Planetary health and nature:** explore the connections between environmental change, biodiversity, green spaces and human wellbeing, including opportunities for healthier and more resilient environments.
+- **International collaboration:** establish a sustained research partnership between Bristol and Mumbai, supporting interdisciplinary research, early-career researchers and the development of new scientific approaches.
+- **Policy and clinical practice:** translate climate and health research into actionable evidence for public health, healthcare systems, urban planning and climate adaptation.
 
 ## Methods
 
-We are extending our diffusion-based emulator, originally developed to downscale UK precipitation and now taken in-house by the Met Office, to jointly simulate multiple health-relevant variables at sub-daily resolution, including temperature, humidity, heat stress, wind speed, direction and gusts, and precipitation. Using a video diffusion approach, the emulator will generate spatially and temporally coherent fields that preserve the physical relationships between variables, including their joint behaviour during extremes.
+The Shanta Planetary Health programme brings together expertise in climate science, epidemiology, medicine, environmental science and social science to investigate how environmental change affects human health and wellbeing. Centred on the University of Bristol's campuses in Bristol and Mumbai, the programme combines physical climate science with health data, interdisciplinary research and engagement with policymakers and practitioners.
 
-The emulator is being trained on the Met Office UKCP Local convection-permitting simulations on around 1,600 years of training data, so the emulator can learn a physically based climate change signal and represent extreme events with return periods of 100 years or more. We are evaluating performance against observational datasets (CEH-GEAR 1hr and MIDAS Open), with particular attention to extremes and inter-variable dependence.
+Our research uses climate observations, numerical modelling, future projections and climate change attribution to understand how environmental hazards are changing and how these changes affect human populations. We investigate the consequences of extreme heat, flooding, air pollution and wider environmental pressures, alongside the interactions between climate change, biodiversity, the built environment and social inequalities.
 
-We are then applying the trained emulator to downscale a large ensemble from the HadCM3b-ESM climate model, being developed in Bristol in preparation for CMIP7. This samples climate variability far more comprehensively than is possible with the original high-resolution simulations. We will downscale to 2.2–5 km resolution and mapp onto Lower Layer Super Output Areas (LSOAs), the spatial units used for UK health data, and combine with high-resolution population data to quantify exposure to single and compound hazards under current and future climates.
+A central ambition is to move beyond identifying climate-related hazards towards quantifying their health consequences and developing practical responses. This includes linking environmental exposures with epidemiological and clinical data, identifying vulnerable populations, and evaluating opportunities for adaptation and prevention.
+
+The programme also explores how natural environments, including trees, urban green spaces and healthy ecosystems, can help reduce climate risks while supporting physical and mental wellbeing.
+
+Through the Shanta Fellows in Planetary Health, we are building interdisciplinary collaborations between Bristol and Mumbai, developing new research programmes and strengthening links between academic research, healthcare, policy and practice. Ultimately, our goal is to translate climate science into healthier communities, more resilient health systems and evidence-based responses to planetary health challenges.population data to quantify exposure to single and compound hazards under current and future climates.
 
 ## Partners
 
