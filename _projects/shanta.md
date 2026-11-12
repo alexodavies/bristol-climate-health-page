@@ -1,5 +1,5 @@
 ---
-title: CHAI
+title: Shanta Planetary Health
 tag: Funded project
 themes: [geoai]
 hero:  /assets/images/chai2.jpg               # optional wide photo behind the project title, e.g. /assets/images/my-hero.jpg
