@@ -1,7 +1,7 @@
 ---
 title: Shanta Planetary Health
 tag: Funded project
-themes: [geoai]
+themes: [geoai, forecasting]
 hero:  /assets/images/mumbai.jpg               # optional wide photo behind the project title, e.g. /assets/images/my-hero.jpg
 image: /assets/images/mumbai.jpg
 summary: The Shanta Planetary Health programme brings together researchers across Bristol and Mumbai to understand how climate change and environmental degradation affect human health. Our ambition is to translate cutting-edge climate and health research into practical solutions, from public policy to clinical practice.
