@@ -2,13 +2,13 @@
 title: Shanta Planetary Health
 tag: Funded project
 themes: [geoai, forecasting]
-hero:  /assets/images/mumbai.jpg               # optional wide photo behind the project title, e.g. /assets/images/my-hero.jpg
-image: /assets/images/mumbai.jpg
+hero:  /assets/images/mumbai.jpeg               # optional wide photo behind the project title, e.g. /assets/images/my-hero.jpg
+image: /assets/images/mumbai.jpeg
 summary: The Shanta Planetary Health programme brings together researchers across Bristol and Mumbai to understand how climate change and environmental degradation affect human health. Our ambition is to translate cutting-edge climate and health research into practical solutions, from public policy to clinical practice.
 link:                  # optional external page; shown as a button on the project page
 link_text: Project website →
 status: current        # current or completed
-funder:       # Funded by
+funder: Shanta Foundation      # Funded by
 pi: [dann-mitchell]                # PI(s): member file names, or plain names for people outside the group
 team: [ruby-lieber]          # member file names, e.g. [ruby-lieber, eunice-lo]
 collaborators: [eunice-lo, henry-addison]   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
@@ -16,7 +16,7 @@ start:                # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
 partners: []          # e.g. [Met Office, {name: UKHSA, url: https://www.gov.uk/ukhsa}]
 outputs: []           # e.g. [{title: Paper title, url: https://doi.org/..., note: Journal 2026}]
-photos: []            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
+photos: [{image: /assets/images/mumbai.jpeg, caption: Navi Mumbai skyline © Zoshua Colah / Unsplash}]            # e.g. [{image: /assets/images/my-photo.jpg, caption: A caption}]
 ---
 ## Aims and outputs
 
