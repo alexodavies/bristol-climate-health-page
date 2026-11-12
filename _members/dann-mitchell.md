@@ -2,7 +2,7 @@
 name: Dann Mitchell
 initials: DM
 role: Group Lead
-title: Professor of Climate Science
+title: Shanta Professorial Chain in Planetary Health
 group: leads
 # Dates in the group (YYYY-MM). Leave `end:` blank while still here. Publications on the main page are limited to this period.
 start:
