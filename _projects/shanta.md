@@ -10,7 +10,7 @@ link_text: Project website →
 status: current        # current or completed
 funder: Shanta Foundation      # Funded by
 pi: [dann-mitchell]                # PI(s): member file names, or plain names for people outside the group
-team: [ruby-lieber]          # member file names, e.g. [ruby-lieber, eunice-lo]
+team: [ruby-lieber, josephine-walker, mrinalini-singha, tanzim-shaikh]          # member file names, e.g. [ruby-lieber, eunice-lo]
 collaborators: [eunice-lo, henry-addison]   # affiliates and other collaborators: member file names or plain names (affiliates listed in team also show here)
 start:                # YYYY-MM (Duration)
 end:                  # YYYY-MM (blank = ongoing)
